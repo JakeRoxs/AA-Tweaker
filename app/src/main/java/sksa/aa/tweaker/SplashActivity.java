@@ -66,36 +66,28 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MainActivity", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean("aa_speed_hack", false);
-        editor.putBoolean("assist_short", false);
         editor.putBoolean("aa_six_tap", false);
         editor.putBoolean("aa_startup_policy", false);
         editor.putBoolean("aa_patched_apps", false);
-        editor.putBoolean("aa_assistant_rail", false);
+        editor.putBoolean("aa_message_autoread", false);
         editor.putBoolean("aa_battery_outline", false);
-        editor.putBoolean("aa_sb_opaque", false);
         editor.putBoolean("force_ws", false);
         editor.putBoolean("force_no_ws", false);
         editor.putBoolean("aa_hun_ms", false);
         editor.putBoolean("aa_media_hun", false);
-        editor.putBoolean("bluetooth_pairing_off", false);
         editor.putBoolean("multi_display", false);
         editor.putBoolean("battery_saver_warning", false);
-        editor.putBoolean("aa_wallpapers", false);
-        editor.putBoolean("aa_night_mode_revert", false);
         editor.putBoolean("kill_telemetry", false);
         editor.putBoolean("calendar_aa_tweak", false);
-        editor.putBoolean("aa_messaging_apps", false);
-        editor.putBoolean("aa_media_tabs", false);
         editor.putBoolean("aa_bitrate_usb", false);
-        editor.putBoolean("aa_bitrate_wifi", false);
-        editor.putBoolean("aa_new_alphajump", false);
-        editor.putBoolean("aa_daynight_switch", false);
-        editor.putBoolean("aa_userseat_tweak", false);
+        editor.putBoolean("aa_bitrate_wireless", false);
         editor.putBoolean("aa_new_startup", false);
         editor.putBoolean("aa_activate_coolwalk", false);
         editor.putBoolean("aa_activate_declinesms", false);
-        editor.putBoolean("assistant_activate_transcript", false);
-        editor.putBoolean("aa_activate_mirrorapp", false);
+        editor.putBoolean("aa_activate_assistant_tips", false);
+        editor.putBoolean("aa_new_seekbar", false);
+        editor.putBoolean("uxprototype_tweak", false);
+        editor.putBoolean("aa_material_you", false);
         editor.commit();
 
         requestLatest();
@@ -147,7 +139,6 @@ public class SplashActivity extends AppCompatActivity {
     private void copyAssets() {
         String path = getApplicationInfo().dataDir;
         File file = new File(path, "sqlite3");
-        if (!file.exists()) {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -171,8 +162,8 @@ public class SplashActivity extends AppCompatActivity {
             } catch (IOException e) {
                 Log.e("sksa.aa.tweaker", "Failed to copy asset file: sqlite3", e);
             }
-            Log.v("sksa.aa.tweaker", runSuWithCmd("chmod 775 " + path + "/sqlite3").getStreamLogsWithLabels());
-        }
+            Log.v("sksa.aa.tweaker", runSuWithCmd("chmod 777 " + path + "/sqlite3").getStreamLogsWithLabels());
+
     }
 
     public String requestLatest() {

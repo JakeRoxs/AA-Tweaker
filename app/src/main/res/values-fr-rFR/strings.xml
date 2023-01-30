@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="main_string">Bienvenue sur AA AIO Tweaker\n
-Cette application vous permettra d\'appliquer diverses améliorations à Android Auto\n
-Sélectionnez simplement la modification que vous souhaitez appliquer :)\n
-Si vous n\'êtes pas certain de la signification d\'une modification, maintenez son bouton enfoncé et un tutoriel s\'affichera.</string>
+Cette application vous permettra d\'appliquer divers tweaks à Android Auto\n
+Sélectionnez simplement le tweak que vous souhaitez appliquer :)\n
+Si vous n\'êtes pas certain de la signification d\'un tweak, maintenez son bouton enfoncé et un tutoriel s\'affichera.</string>
     <string name="select_apps">Sélectionner les apps</string>
     <string name="enable_assistant_shortcuts">Raccourcis de l\'assistant</string>
     <string name="patch_custom_apps">Applications personnalisées</string>
     <string name="disable_speed_limitations">Limitation d\'appuis sur l\'écran</string>
     <string name="unlimited_scrolling_when_driving">restrictions en roulant</string>
-    <string name="enable_assistant_animation_in_navbar">Animation de l\'assistant dans la barre de navigation</string>
+    <string name="message_auto_read">Message lu automatiquement</string>
     <string name="splash">Cette application peut modifier le comportement d\'Android Auto et contourner certaines fonctionnalités de sécurité que Google a implémentées dans Android Auto.\n
 En utilisant ce logiciel, vous acceptez que VOUS, et VOUS SEUL, êtes entièrement responsable de toute conséquence éventuelle pouvant entraîner la modification des fonctions de sécurité, comme des blessures à vous-même et/ou à d\'autres personnes, des dommages matériels, la perte de vies humaines.\n
 L\'auteur de cette application n\'est en aucun cas responsable de son utilisation</string>
@@ -26,22 +26,22 @@ ROUGE = Patch non appliqué\n</string>
     <string name="force_widescreen_text">Écran large forcé</string>
     <string name="media_notification_duration_to">Durée de notification multimédia à</string>
     <string name="bluetooth_auto_connect">Connexion automatique au Bluetooth</string>
-    <string name="tutorial_nospeed">Cette modification fera croire à Android Auto que le véhicule est constamment à l\'arrêt. Par conséquent, Android Auto pourra afficher l\'aperçu des messages même en roulant. Cette modification ne s\'applique pas au clavier ni à la première configuration d\'Android Auto.</string>
-    <string name="tutorial_sixtap">Cette modification annulera la limite imposée par Android Auto des 6 appuis maximums sur l\'écran et permettra ainsi d\'avoir une navigation non restreinte.</string>
-    <string name="tutorial_shortcuts">Cette modification permettra de débloquer la nouvelle fonction de raccourcis pour l\'assistant. Une fois activée, rendez-vous dans les paramètres d\'Android Auto puis dans la section \"Personnaliser le lanceur\". Vous aurez la possibilité d\'ajouter des raccourcis aux commandes de l\'assistant Google</string>
-    <string name="tutorial_startup">Cette modification lancera au démarrage Android Auto sur l\'écran d\'accueil à la place de l\'application de navigation (qui est son mode de fonctionnement par défaut).\n
+    <string name="tutorial_nospeed">Ce tweak fera croire à Android Auto que le véhicule est constamment à l\'arrêt. Par conséquent, Android Auto pourra afficher l\'aperçu des messages même en roulant. Cette modification ne s\'applique pas au clavier ni à la première configuration d\'Android Auto.</string>
+    <string name="tutorial_sixtap">Ce tweak annulera la limite imposée par Android Auto des 6 appuis maximums sur l\'écran et permettra ainsi d\'avoir une navigation non restreinte.</string>
+    <string name="tutorial_shortcuts">Ce tweak permettra de débloquer la nouvelle fonction de raccourcis pour l\'assistant. Une fois activée, rendez-vous dans les paramètres d\'Android Auto puis dans la section \"Personnaliser le lanceur\". Vous aurez la possibilité d\'ajouter des raccourcis aux commandes de l\'assistant Google</string>
+    <string name="tutorial_startup">Ce tweak lancera au démarrage Android Auto sur l\'écran d\'accueil à la place de l\'application de navigation (qui est son mode de fonctionnement par défaut).\n
 Cela peut parfois échouer car il arrive qu\'Android Auto démarre automatiquement la navigation vers le domicile ou le lieu de travail.\n
 Dans certains cas, cette modification désactivera le démarrage automatique de la musique. Une solution connue consiste à désactiver et réactiver l\'option dans les paramètres d\'Android Auto.\n
 IL N\'EST PAS POSSIBLE DE DÉFINIR UNE APPLICATION SPÉCIFIQUE POUR QU\'ELLE DÉMARRE EN PREMIER.</string>
-    <string name="tutorial_widescreen">Cette modification forcera Android Auto en mode écran large.</string>
+    <string name="tutorial_widescreen">Ce tweak forcera Android Auto en mode écran large.</string>
     <string name="tutorial_no_widescreen">Cette modification empêchera Android Auto d\'activer le mode écran large.</string>
-    <string name="tutorial_animation">Cette modification permet d\'activer une animation de l\'assistant Google dans la barre de navigation.</string>
-    <string name="tutorial_statusbar_opaque">Cette modification affichera la barre d\'état avec un fond opaque (par défaut, elle est transparente).</string>
-    <string name="tutorial_battery_outline">Cette modification empêchera l\'icône de la batterie d\'avoir un contour rouge lorsque l\'économiseur de batterie est activé.</string>
-    <string name="tutorial_hun">Cette modification vous permet de définir une durée personnalisée pour les notifications flottantes</string>
-    <string name="tutorial_media_hun">Cette modification vous permet de définir une durée personnalisée pour les notifications multimédia dans la barre de navigation jusqu\'à 15 minutes.</string>
-    <string name="tutorial_bluetooth">Cette modification empêchera le Bluetooth de s\'activer automatiquement et de s\'appairer à votre voiture lorsque Android Auto est connecté. Cela ne fonctionnera pas si le Bluetooth est déjà activé.</string>
-    <string name="tutorial_patchapps">Cette modification permettra à des applications tierces conçues spécifiquement avec le SDK d\'Android Auto de fonctionner sous Android Auto.\n
+    <string name="tutorial_autoplay_message">Ce tweak permet de définir si Android Auto doit lire les messages entrants ou non. Android Auto 8.3 ou supérieur est requis.</string>
+    <string name="tutorial_statusbar_opaque">Ce tweak affichera la barre d\'état avec un fond opaque (par défaut, elle est transparente).</string>
+    <string name="tutorial_battery_outline">Ce tweak empêchera l\'icône de la batterie d\'avoir un contour rouge lorsque l\'économiseur de batterie est activé.</string>
+    <string name="tutorial_hun">Ce tweak vous permet de définir une durée personnalisée pour les notifications flottantes</string>
+    <string name="tutorial_media_hun">Ce tweak vous permet de définir une durée personnalisée pour les notifications multimédia dans la barre de navigation jusqu\'à 15 minutes.</string>
+    <string name="tutorial_bluetooth">Ce tweak empêchera le Bluetooth de s\'activer automatiquement et de s\'appairer à votre voiture lorsque Android Auto est connecté. Cela ne fonctionnera pas si le Bluetooth est déjà activé.</string>
+    <string name="tutorial_patchapps">Ce tweak permettra à des applications tierces conçues spécifiquement avec le SDK d\'Android Auto de fonctionner sous Android Auto.\n
 Si vous êtes familier avec AA Phenotype Patcher, ce module est à peu près identique à celui-ci.\n
 Vous ne pouvez pas ajouter d\'application à Android Auto mais il est possible de patcher des applications CONÇUES POUR ANDROID AUTO pour qu\'elles fonctionnent dans le véhicule.</string>
     <string name="multi_display_string">Multi-affichage</string>
@@ -52,7 +52,7 @@ Apparemment, seul Google Maps prend actuellement en charge ce mode.\n
 Cette fonctionnalité est probablement en cours de développement et pourrait ne pas fonctionner comme prévu.\n
 Android Auto 5.8 ou supérieur est requis.</string>
     <string name="battery_warning">Avertissement d\'économie de batterie</string>
-    <string name="tutorial_battery_saver_warning">Cette modification empêchera Android Auto d\'afficher des messages d\'avertissement lorsque le mode économie de batterie est activé</string>
+    <string name="tutorial_battery_saver_warning">Ce tweak empêchera Android Auto d\'afficher des messages d\'avertissement lorsque le mode économie de batterie est activé</string>
     <string name="disable_tweak_string">Désactiver\u0020</string>
     <string name="enable_tweak_string">Activer\u0020</string>
     <string name="re_enable_tweak_string">Réactiver\u0020</string>
@@ -75,22 +75,21 @@ Android Auto 5.8 ou supérieur est requis.</string>
     <string name="about_part_two"><![CDATA[Si vous aimez vraiment mon travail, s\'il vous plaît envisagez un don.<br> Vous pouvez me faire un don via <a href=\"http://www.paypal.me/grizzo96\">PayPal</a> ou vous pouvez copier mon adresse Bitcoin en cliquant sur le bouton ci-dessous.<br><br>Même un petit montant sera apprécié :)]]></string>
     <string name="copied_address_toast">Adresse BTC copiée dans le presse-papier</string>
     <string name="custom_wallpapers">Fonds d\'écran</string>
-    <string name="tutorial_wallpapers">Cette modification activera la nouvelle fonction permettant de changer les fonds d\'écran dans Android Auto. Android Auto 5.8 ou supérieur est requis.\nATTENTION : Si vous êtes un utilisateur de l\'application \'Wallpapers For Android Auto\', vous devrez la mettre à jour au moins à la version 3.0, sinon cette modification ne permettra pas de la faire fonctionner.</string>
+    <string name="tutorial_wallpapers">Ce tweak activera la nouvelle fonction permettant de changer les fonds d\'écran dans Android Auto. Android Auto 5.8 ou supérieur est requis.\nATTENTION : Si vous êtes un utilisateur de l\'application \'Wallpapers For Android Auto\', vous devrez la mettre à jour au moins à la version 3.0, sinon cette modification ne permettra pas de la faire fonctionner.</string>
     <string name="tutorial_dark_mode">À partir de décembre 2020, Google a rétabli un comportement qui était présent depuis Android 10. Auparavant, le mode jour/nuit sur Android Auto suivait le mode clair/sombre du téléphone et vice versa. Cela signifiait que le passage du téléphone en mode sombre affectait également la voiture, ou si le téléphone était en mode sombre et que la voiture avait ses feux éteints, il passait automatiquement en mode clair sur le téléphone.\n Toutefois, depuis que la fonction mode sombre \"indépendant\" a été introduite, les utilisateurs d\'autoradios de seconde monte n\'ont plus la possibilité de passer en mode sombre sans avoir à câbler l\'autoradio aux feux de la voiture.\n Ce changement garantit que le mode nuit dépend à nouveau du téléphone, et le passage du mode clair/sombre sur le téléphone aura également ses effets sur la voiture.</string>
     <string name="dark_mode_tweak">mode sombre indépendant</string>
     <string name="telemetry_string">télémétrie</string>
-    <string name="tutorial_telemetry">Ce n\'est un mystère pour personne que Google conserve beaucoup de nos données. Cette modification permettra de s\'assurer que les services Google ne garderont plus de trace d\'une grande partie de l\'activité d\'Android Auto.\n
-ATTENTION : Cette modification n\'a pas été testée de manière approfondie et pourrait potentiellement rendre Android Auto instable. Si vous constatez que cette modification ne fonctionne pas avec Android Auto, veuillez ouvrir un ticket sur GitHub.</string>
+    <string name="tutorial_telemetry">Ce n\'est pas un mystère que Google enregistre beaucoup de données sur nous. Ce tweak fera en sorte que les services Google Play cessent de suivre et d\'enregistrer de nombreuses activités.\n
+AVERTISSEMENT : Ce tweak n\'a pas été testé de manière approfondie et pourrait potentiellement casser Android Auto. Si vous constatez que ce tweak casse Android Auto, veuillez ouvrir un sujet sur GitHub.</string>
     <string name="reboot_prompt">Redémarrer le téléphone maintenant ?</string>
     <string name="rebooting_action">Redémarrage en cours…</string>
-    <string name="negative_button">annuler</string>
     <string name="added_app_action">"Ajouté : "</string>
     <string name="removed_app_action">Supprimé\u0020</string>
     <string name="root_access_warning">Accès Root refusé. Veuillez autoriser l\'accès root.</string>
-    <string name="revert_everything_dialog">Voulez-vous réinitialiser toutes les modifications ? L\'application devra être redémarrée manuellement pour que les changements prennent effet</string>
+    <string name="revert_everything_dialog">Voulez-vous réinitialiser toutes les tweaks ? L\'application devra être redémarrée manuellement pour que les changements prennent effet</string>
     <string name="calendar_tweak">Définir %1$s jours visibles dans le calendrier</string>
     <string name="calendar_tweak_single">Définir %1$s jour visible dans le calendrier</string>
-    <string name="tutorial_calendar_tweak">Cette modification permettra à l\'application Calendrier dans Android Auto d\'afficher plusieurs jours plutôt qu\'un seul. Veuillez noter que même en augmentant le nombre de jours, il n\'est toujours pas possible de distinguer le jour dont vous consultez les événements. Android Auto se contentera d\'afficher le nombre d\'événements programmés dans une journée et n\'indiquera pas de quel jour il s\'agit.</string>
+    <string name="tutorial_calendar_tweak">Ce tweak permettra à l\'application Calendrier dans Android Auto d\'afficher plusieurs jours plutôt qu\'un seul. Veuillez noter que même en augmentant le nombre de jours, il n\'est toujours pas possible de distinguer le jour dont vous consultez les événements. Android Auto se contentera d\'afficher le nombre d\'événements programmés dans une journée et n\'indiquera pas de quel jour il s\'agit.</string>
     <string name="choose_apps_warning">Choisir les applications à mettre sur liste blanche</string>
     <string name="log_first_line">JOURNAUX :\n</string>
     <string name="menu_aa_settings">Paramètres Android Auto</string>
@@ -98,15 +97,15 @@ ATTENTION : Cette modification n\'a pas été testée de manière approfondie et
     <string name="not_installed_warning">Android Auto n\'est pas installé</string>
     <string name="currently_set">"Actuellement défini : "</string>
     <string name="no_accounts_warning">AA AIO TWEAKER n\'a pu trouver aucun compte dans la base de données des services Google Play. Cela peut être dû à différentes raisons :\n • Appareil qui n\'est généralement pas connecté à internet\n • Nouvelle installation du téléphone\n • Base de données des services Google Play corrompue\n • Suppression du ou des comptes Google du téléphone\n • Données effacées des services Google Play\n\nSi vous êtes dans l\'un de ce ces cas de figure, AA AIO TWEAKER ne fonctionnera pas correctement. Si vous avez récemment supprimé un compte Google ou effacé les données des services Google Play, veuillez garder le téléphone connecté à Internet et le laisser reconstruire entièrement la base de données des services Google Play. Cela peut prendre plusieurs heures, voire des jours dans certains cas.\n\nSi vous n\'êtes pas dans l\'une des conditions ci-dessus, merci d\'ouvrir un ticket sur GitHub.</string>
-    <string name="tweak_loading">Application de la modification...</string>
+    <string name="tweak_loading">Application du tweak...</string>
     <string name="loading">Chargement, veuillez patienter...</string>
-    <string name="tutorial_bitrate">Cette modification augmentera ou diminuera le débit vidéo en fonction du multiplicateur défini (jusqu\'à 2.0x). Une augmentation du débit (plus de 1.0x) signifie que davantage de données seront transmises en continu à la voiture et que la qualité visuelle de la diffusion vidéo pourrait être améliorée, mais cela peut potentiellement générer une instabilité. Une diminution du débit (moins de 1.0x) compressera le flux et la qualité sera diminuée, mais elle permettra d\'obtenir une connexion plus fiable et plus rapide.</string>
+    <string name="tutorial_bitrate">Ce tweak augmentera ou diminuera le débit vidéo en fonction du multiplicateur défini (jusqu\'à 2.0x). Une augmentation du débit (plus de 1.0x) signifie que davantage de données seront transmises en continu à la voiture et que la qualité visuelle de la diffusion vidéo pourrait être améliorée, mais cela peut potentiellement générer une instabilité. Une diminution du débit (moins de 1.0x) compressera le flux et la qualité sera diminuée, mais elle permettra d\'obtenir une connexion plus fiable et plus rapide.</string>
     <string name="set_wifi_tweak">Débit vidéo du Wi-Fi à</string>
     <string name="set_usb_bitrate">Débit vidéo de l\'USB à</string>
     <string name="choose_value_first">Choisissez d\'abord une valeur</string>
     <string name="open_issue_button">Ouvrir un ticket</string>
     <string name="error_generic">La commande a échoué. Veuillez patienter quelques minutes et réessayer. Si le problème est toujours en cours, veuillez ouvrir un ticket sur GitHub</string>
-    <string name="tutorial_alphajump">Cette modification activera un nouveau design de bouton pour faire défiler rapidement les listes par lettre. Au lieu du bouton A-Z en haut de la liste, le bouton apparaîtra sur la barre de défilement lorsque la liste n\'est pas en mouvement et vous n\'aurez plus besoin d\'aller en haut pour naviguer par lettre.</string>
+    <string name="tutorial_alphajump">Ce tweak activera un nouveau design de bouton pour faire défiler rapidement les listes par lettre. Au lieu du bouton A-Z en haut de la liste, le bouton apparaîtra sur la barre de défilement lorsque la liste n\'est pas en mouvement et vous n\'aurez plus besoin d\'aller en haut pour naviguer par lettre.</string>
     <string name="alpha_jump_tweak">nouveau design de bouton alphabétique</string>
     <string name="choose_accounts">Choisissez un compte</string>
     <string name="use_all">Tout utiliser (EXPÉRIMENTAL)</string>
@@ -118,25 +117,33 @@ ATTENTION : Cette modification n\'a pas été testée de manière approfondie et
     <string name="ignore_for_now">Ignorer pour l\'instant</string>
     <string name="many_accounts_warning">AA AIO TWEAKER a détecté un grand nombre (%1$s) de comptes Google enregistrés sur l\'appareil.\nCela peut avoir un impact négatif sur la réussite de l\'exécution du patch et AA AIO TWEAKER pourrait être amené à échouer.\nVous pouvez soit choisir le(s) compte(s) que vous utilisez principalement avec les services Google Play pour n\'appliquer le patch qu\'à eux (2 ou moins est recommandé), soit activer un mode expérimental qui corrigera tous les comptes.\nVEUILLEZ NOTER que le mode expérimental peut provoquer des plantages du téléphone pendant l\'exécution du patch.</string>
     <string name="dark_switch_tweak">Mode jour/nuit</string>
-    <string name="tutorial_darkmodeswitch">Cette modification activera un bouton dédié dans les paramètres génériques d\'Android Auto (à la fois pour la voiture et le téléphone) qui peut contrôler l\'état du mode jour/nuit sur Android Auto. Cette option est différente de celle des paramètres du développeur car elle ne nécessite pas un redémarrage d\'Android Auto et elle aura un effet sur l\'utilisation après l\'activation par Google du mode sombre indépendant. Android Auto 6.3 ou supérieur est requis.</string>
+    <string name="tutorial_assistant_suggestions">This tweak will activate a new feature that adds some quick shortcuts to Assistant actions on top of home screen.</string>
     <string name="remove_paired_car">Supprimer une voiture appairée</string>
     <string name="choose_cars">Sélectionner la ou les voitures</string>
     <string name="tutorial_carremover">Saviez-vous que sous Android Auto, il est uniquement possible de supprimer d\'un coup l\'intégralité des voitures appairées et non une à la fois ? Cette option sera très utile si vous voulez faire des suppressions spécifiques. Pour cela, il suffit de sélectionner la ou les voitures que vous voulez et elles seront supprimées.</string>
     <string name="custom_startup_option">Option de démarrage personnalisée</string>
-    <string name="tutorial_custom_startup_option">Cette modification activera une nouvelle option dans les paramètres d\'Android Auto permettant à l\'utilisateur de définir ce qui doit s\'ouvrir au démarrage d\'Android Auto. Vous pouvez choisir d\'ouvrir la dernière application de navigation, la dernière application de musique ou simplement le lanceur. Android Auto 6.8 ou supérieur est requis.</string>
+    <string name="tutorial_custom_startup_option">Ce tweak activera une nouvelle option dans les paramètres d\'Android Auto permettant à l\'utilisateur de définir ce qui doit s\'ouvrir au démarrage d\'Android Auto. Vous pouvez choisir d\'ouvrir la dernière application de navigation, la dernière application de musique ou simplement le lanceur. Android Auto 6.8 ou supérieur est requis.</string>
     <string name="custom_hotseat_option">Option du siège conducteur</string>
-    <string name="tutorial_hotseat_option">Cette modification activera une nouvelle option dans les paramètres d\'Android Auto permettant à l\'utilisateur de décider si la position de conduite est à gauche ou à droite afin qu\'Android Auto puisse adapter son interface utilisateur. Android Auto 6.9 ou supérieur est requis.</string>
-    <string name="tutorial_coolwalk">Cette modification activera un nouveau design dans Android Auto (nom de code Coolwalk) qui peut être activé dans les paramètres d\'Android Auto et qui modifie un peu l\'apparence sur les écrans plus petits. Ce design comporte un panneau latéral toujours visible et des graphiques différents. Cette fonctionnalité n\'en est qu\'à ses débuts pour le moment. Android Auto 6.9 ou supérieur est requis.</string>
+    <string name="tutorial_coolwalk">Ce tweak activera un nouveau design dans Android Auto (nom de code Coolwalk) qui peut être activé dans les paramètres d\'Android Auto et qui modifie un peu l\'apparence sur les écrans plus petits. Ce design comporte un panneau latéral toujours visible et des graphiques différents. Cette fonctionnalité n\'en est qu\'à ses débuts pour le moment. Android Auto 6.9 ou supérieur est requis.</string>
     <string name="coolwalk_tweak">Affichage Coolwalk</string>
-    <string name="tutorial_focus_settings">Cette modification activera une nouvelle option dans les paramètres d\'Android Auto pour personnaliser manuellement si Android Auto doit être lancé dès que vous connectez votre téléphone avec la voiture. Android Auto 6.8 ou supérieur est requis.</string>
+    <string name="tutorial_focus_settings">Ce tweak activera une nouvelle option dans les paramètres d\'Android Auto pour personnaliser manuellement si Android Auto doit être lancé dès que vous connectez votre téléphone avec la voiture. Android Auto 6.8 ou supérieur est requis.</string>
     <string name="focus_tweak">Paramètres de mise au point</string>
-    <string name="casting_app">Application de diffusion</string>
-    <string name="tutorial_mirroring_app">Cette mystérieuse application est fournie à partir de la version 7.1 d\'Android Auto. Il s\'agirait d\'une application de mise en miroir d\'écran, probablement destinée aux passagers. Elle pourrait ne pas fonctionner correctement.</string>
+    <string name="assistant_tips">Astuces de l\'assistant</string>
+    <string name="tutorial_mirroring_app">Ce tweak va activer les astuces de l\'assistant en haut de l\'écran d\'accueil pour les actions les plus utilisées. Android Auto 8.2 ou supérieur est requis.</string>
     <string name="decline_message_tweak">Décliner le message</string>
-    <string name="tutorial_decline_message">Cette modification permettra de refuser un appel entrant avec SMS (avec Google Assistant).</string>
-    <string name="section_one">Modifications générales</string>
-    <string name="section_two">Modifications de l\'apparence de l\'écran</string>
-    <string name="section_three">Modifications de l\'apparence</string>
+    <string name="tutorial_decline_message">Ce tweak permettra de refuser un appel entrant avec SMS (avec Google Assistant).</string>
+    <string name="section_one">Tweaks généraux</string>
+    <string name="section_two">Tweaks liés à l\'apparence de l\'écran</string>
+    <string name="section_three">Tweaks liés à l\'apparence</string>
     <string name="section_four">Paramètres de qualité vidéo</string>
     <string name="section_five">Fonctionnalités préactivées</string>
+    <string name="restricted_coolwalk">Cette option ne fonctionnera pas si Coolwalk est activé.</string>
+    <string name="warning_patch_apps">Attention ! Cette opération EFFACERA TOUTES LES DONNÉES des applis sélectionnées. Veuillez vous assurer que vous avez une sauvegarde des données. Voulez-vous quand même procéder ?</string>
+    <string name="tappable_progress">Nouvelle barre de progression</string>
+    <string name="tappable_progress_tutorial">Enfin, nous bénéficions d\'une barre de progression tactile pour la lecture sur Android Auto. Oui, on peut naviguer dans la piste en cours. Nécessite Android Auto 8.3 ou supérieur.</string>
+    <string name="uxprototype_tutorial">Ce tweak permet de créer un raccourci sur la page d\'accueil pour ouvrir une page web. Il s\'agit d\'un œuf de Pâques caché dans Android Auto sorti le 1er avril 2022. Activez \"Développeur\" dans les \"Paramètres pour développeurs\" sous \"Mode de application\". C\'est le seul moyen d\'avoir une véritable application plein écran sur Android Auto pour le moment. AVERTISSEMENT : Impossible à fermer, utilisez ceci si vous ne prévoyez de l\'utiliser que sur votre voiture. Il n\'y a pas non plus de bouton retour.</string>
+    <string name="uxprototype_dialog">Entrez une URL valide</string>
+    <string name="uxprototype_tweak">Raccourci personnalisé</string>
+    <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
+    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

@@ -9,7 +9,7 @@ Nếu bạn chưa chắc chắn gì những gì công cụ sẽ làm, chỉ cầ
     <string name="patch_custom_apps">ứng dụng tùy chỉnh</string>
     <string name="disable_speed_limitations">giới hạn số lần chạm</string>
     <string name="unlimited_scrolling_when_driving">giới hạn tốc độ</string>
-    <string name="enable_assistant_animation_in_navbar">Biểu tượng trợ lý trên thanh điều hướng</string>
+    <string name="message_auto_read">Message auto-read</string>
     <string name="splash">Ứng dụng này có thể thay đổi một vài thông số của Android Auto và bỏ qua một số tính năng an toàn mà Google đã tích hợp trong Android Auto.\n
 Khi sử dụng ứng dụng này, bạn đồng ý với BẠN, và CHỈ MÌNH BẠN sẽ chịu trách nhiệm với những vấn đề có thể xảy ra khi thay đổi các tính năng an toàn như thương tật, thiệt hại tài sản, mất mạng.\n
 Trong mọi trường hợp, tác giả của ứng dụng này không chịu trách nhiệm về việc bạn sử dụng nó</string>
@@ -34,7 +34,7 @@ Trong một vài trường hợp, tùy chỉnh này có thể vô hiệu hóa t�
 KHÔNG THỂ THIẾT LẬP ỨNG DỤNG CỤ THỂ NÀO SẼ KHỞI ĐỘNG ĐẦU TIÊN.</string>
     <string name="tutorial_widescreen">Tùy chỉnh này sẽ ép Android Auto hoạt động trong chế độ màn hình dài.</string>
     <string name="tutorial_no_widescreen">Tùy chỉnh này sẽ ép Android Auto không hoạt động trong chế độ màn hình dài.</string>
-    <string name="tutorial_animation">Tùy chỉnh này sẽ hiển thị biểu tượng Google Assistant trên thanh điều hướng.</string>
+    <string name="tutorial_autoplay_message">This tweak enables the possibility to set whether Android Auto must read the incoming messages or not. Android Auto 8.3 or superior is required.</string>
     <string name="tutorial_statusbar_opaque">Tùy chỉnh nà sẽ làm thanh trạng tháo luôn màu đen.</string>
     <string name="tutorial_battery_outline">Tùy chỉnh này sẽ ngăn biểu tượng pin với đường viền đỏ hiển thị khi chế độ tiết kiệm pin được bật.</string>
     <string name="tutorial_hun">Tùy chỉnh này cho phép bạn điều chỉnh thời lượng hiển thị thông báo</string>
@@ -78,11 +78,10 @@ Yêu cầu sử dụng Android Auto 5.8 hoặc cao hơn.</string>
     <string name="tutorial_dark_mode">Bắt đầu từ tháng 12 năm 2020, Google đã hoàn nguyên một hành động kể từ Android 10. Trước đây, chế độ sáng / tối trên Android Auto được đặt theo chế độ sáng / tối trên điện thoại và ngược lại. Điều này có nghĩa là việc chuyển điện thoại sang chế độ tối sẽ ảnh hưởng đến ô tô hoặc nếu điện thoại ở chế độ tối và ô tô tắt đèn, nó được sử dụng để bật chủ đề sáng trên điện thoại. \n Tuy nhiên, vì tính năng chế độ tối \"độc lập\" đã được giới thiệu, người dùng không có cách nào để chuyển sang chế độ tối nữa mà không thực sự kết nối với ô tô. \n Tùy chỉnh này đảm bảo rằng chế độ ban đêm lại phụ thuộc vào điện thoại và chuyển đổi chế độ sáng / tối trên điện thoại cũng sẽ ảnh hưởng đến ô tô.</string>
     <string name="dark_mode_tweak">chế độ tối độc lập</string>
     <string name="telemetry_string">từ xa</string>
-    <string name="tutorial_telemetry">Nếu không nhầm thì Google ghi lại rất nhiều dữ liệu về chúng tôi. Tùy chỉnh này sẽ làm cho Google Play Services dừng thu thập nhật ký hoạt động.\n
-CẢNH BÁO: Tùy chỉnh này chưa được thử nghiệm rộng rãi và có khả năng phá hỏng Android Auto. Nếu bạn phát hiện ra tùy chỉnh này phá hỏng Android Auto, vui lòng mở gợi ý sự cố trên GitHub.</string>
+    <string name="tutorial_telemetry">It\'s no mystery that Google logs a lot of data about us. This tweak will make so that Google Play Services will stop a lot of tracking and logging activity.\n
+WARNING: This tweak has not been extensively tested and could potentially break Android Auto. If you find out that this tweak breaks Android Auto, please open an issue on GitHub.</string>
     <string name="reboot_prompt">Khởi động lại điện thoại ngay bây giờ?</string>
     <string name="rebooting_action">Đang khởi động lại...</string>
-    <string name="negative_button">hủy</string>
     <string name="added_app_action">"Đã thêm: "</string>
     <string name="removed_app_action">Đã gỡ bỏ\u0020</string>
     <string name="root_access_warning">Quyền root bị từ chối. Vui lòng cho phép truy cập quyền root.</string>
@@ -117,25 +116,33 @@ CẢNH BÁO: Tùy chỉnh này chưa được thử nghiệm rộng rãi và có
     <string name="ignore_for_now">Bỏ qua bây giờ</string>
     <string name="many_accounts_warning">AA AIO TWEAKER đã tìm thấy một số lượng lớn (%1$s) tài khoản Google được lưu trong thiết bị.\nĐiều này có thể ảnh hưởng tiêu cực đến sự thành công của quá trình vá lỗi và AA AIO TWEAKER có thể không thành công.\nBạn có thể chọn (các) tài khoản mà bạn chủ yếu sử dụng với Dịch vụ Google Play để chỉ áp dụng bản vá cho chúng (khuyến nghị 2 hoặc ít hơn) hoặc kích hoạt chế độ thử nghiệm vá tất cả các tài khoản.\nHÃY LƯU Ý rằng chế độ thử nghiệm có thể gây ra một số sự cố cho điện thoại trong khi vá đang chạy.</string>
     <string name="dark_switch_tweak">lựa chọn ngày/đêm</string>
-    <string name="tutorial_darkmodeswitch">Tinh chỉnh này sẽ kích hoạt một nút bật tắt chuyên dụng trong cài đặt chung của Android Auto (cả ô tô và điện thoại) có thể kiểm soát trạng thái của chế độ ngày/đêm trên Android Auto. Tùy chọn này khác với tùy chọn trong cài đặt dành cho nhà phát triển vì nó không cần khởi động lại Android Auto và nó sẽ thực sự ảnh hưởng đến việc sử dụng sau khi Google bật chế độ tối độc lập. Android Auto 6.3 trở lên là bắt buộc. </string>
+    <string name="tutorial_assistant_suggestions">This tweak will activate a new feature that adds some quick shortcuts to Assistant actions on top of home screen.</string>
     <string name="remove_paired_car">Xoá xe đã kết nối</string>
     <string name="choose_cars">Chọn xe</string>
     <string name="tutorial_carremover">Bạn có biết rằng bạn chỉ có thể xóa tất cả ô tô đã ghép nối khỏi Android Auto và không thể xóa từng ô tô một không? Tùy chọn này sẽ giải cứu bạn nếu bạn muốn xóa ô tô khỏi Android Auto, chỉ cần chọn (các) ô tô bạn muốn và nó/chúng sẽ bị xóa.</string>
     <string name="custom_startup_option">Custom boot option</string>
     <string name="tutorial_custom_startup_option">This tweak will activate a new option inside Android Auto\'s settings that will let the user set what to open when Android Auto is started. You can choose to open latest navigation app, latest music app or just the launcher. Android Auto 6.8 or superior is required.</string>
     <string name="custom_hotseat_option">Custom seating option</string>
-    <string name="tutorial_hotseat_option">This tweak will activate a new option inside Android Auto\'s settings that will let the user decide whether the driving position is left or right so that Android Auto can adapt its UI. Android Auto 6.9 or superior is required.</string>
     <string name="tutorial_coolwalk">This tweak will activate a new design in Android Auto (codename Coolwalk) that can be toggled in Android Auto\'s settings and that tweaks a bit the appearance on smaller screens. This design features a always on side panel and some different graphics. This feature is in early stage at the moment. Android Auto 6.9 or superior is required.</string>
     <string name="coolwalk_tweak">Coolwalk design</string>
     <string name="tutorial_focus_settings">This tweak will activate a new options in Android Auto settings to manually customize whether Android Auto must be launched as soon as you connect your phone with the car. Android Auto 6.8 or superior is required.</string>
     <string name="focus_tweak">Focus settings</string>
-    <string name="casting_app">Casting app</string>
-    <string name="tutorial_mirroring_app">This mysterious app is bundled starting from Android Auto 7.1 and it\'s supposedly a screen mirroring app, probably destined to passenger\'s Android Auto. Might not function properly.</string>
+    <string name="assistant_tips">Assistant tips</string>
+    <string name="tutorial_mirroring_app">This tweak will enable Assistant Tips on the top of the home screen for most used actions. Android Auto 8.2 or superior is required.</string>
     <string name="decline_message_tweak">Decline with message</string>
     <string name="tutorial_decline_message">This tweak will enable the possibility to decline an incoming call with SMS (with Google Assistant).</string>
     <string name="section_one">General tweaks</string>
     <string name="section_two">Screen setup tweaks</string>
-    <string name="section_three">Appeareance tweaks</string>
+    <string name="section_three">Appearance tweaks</string>
     <string name="section_four">Video quality settings</string>
     <string name="section_five">Pre-activate features</string>
+    <string name="restricted_coolwalk">This option will not work with Coolwalk enabled.</string>
+    <string name="warning_patch_apps">Warning! This operation will ERASE ALL THE DATA from the selected app(s). Please make sure you have a backup of the data. Do you want to proceed anyways?</string>
+    <string name="tappable_progress">New progress bar</string>
+    <string name="tappable_progress_tutorial">Finally we are gaining a touchable progress bar for what\'s playing on Android Auto. Yes, we can seek through the current track Requires Android Auto 8.3 or superior.</string>
+    <string name="uxprototype_tutorial">All this tweak does is basically creates a free shortcut on the home page to open a web page. It involves an Easter egg hidden in Android Auto released on 1st of April 2022. Activate \"Developer mode\" in \"Developer settings\" under \"Application mode\". It\'s the only way to have an actual fullscreen app on Android Auto right now. WARNING: Not exitable, use this if you only plan on using this on your car. There\'s no back button either.</string>
+    <string name="uxprototype_dialog">Enter a valid full URL</string>
+    <string name="uxprototype_tweak">Custom shortcut</string>
+    <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
+    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

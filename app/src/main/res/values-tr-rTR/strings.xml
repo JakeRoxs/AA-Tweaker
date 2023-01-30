@@ -9,7 +9,7 @@ Bir ayarın ne yaptığından emin değilseniz, üzerine uzun basın ve bir öğ
     <string name="patch_custom_apps">Özel uygulama</string>
     <string name="disable_speed_limitations">dokunma kısıtlamaları</string>
     <string name="unlimited_scrolling_when_driving">hız kısıtlamaları</string>
-    <string name="enable_assistant_animation_in_navbar">Alt çubukta asistan animasyonu</string>
+    <string name="message_auto_read">Message auto-read</string>
     <string name="splash">Bu uygulama, Android Auto davranışını değiştirebilir ve Google tarafından Android Auto uygulamasına yerleştirilen bazı güvenlik özelliklerini atlayabilir.\n
 Bu yazılımı kullanarak, kendinize ve / veya başkalarına zarar verme, mal hasarı, can kaybı gibi güvenlik özelliklerinin değiştirilmesine neden olabilecek olası sonuçlardan yalnızca SİZ ve YALNIZCA SİZİN sorumlu olduğunu kabul edersiniz.\n
 Hiçbir koşulda, bu uygulamanın yazarı kullanımından sorumlu değildir</string>
@@ -34,7 +34,7 @@ Bazı durumlarda bu ince ayar, müziğin otomatik başlatılmasını devre dış
 Önce başlatmak için belirli bir uygulama belirlemek mümkün değildir.</string>
     <string name="tutorial_widescreen">Bu ayar, Android Auto\'yu geniş ekran modunda zorlayacaktır.</string>
     <string name="tutorial_no_widescreen">Bu ayar, Android Auto\'yu geniş ekran modunda zorlayacaktır.</string>
-    <string name="tutorial_animation">Bu ayar, gezinme çubuğunda Google asistan animasyonunu etkinleştirmenizi sağlar.</string>
+    <string name="tutorial_autoplay_message">This tweak enables the possibility to set whether Android Auto must read the incoming messages or not. Android Auto 8.3 or superior is required.</string>
     <string name="tutorial_statusbar_opaque">Bu ayar, durum çubuğunu her zaman siyah hale getirecektir.</string>
     <string name="tutorial_battery_outline">Bu ayar, pil tasarrufu açıkken pil simgesinin kırmızı bir konturla görünmesini önleyecektir.</string>
     <string name="tutorial_hun">Bu ayar, uyarı bildirimleri için özel bir süre ayarlamanıza olanak tanır</string>
@@ -78,11 +78,10 @@ Android Auto 5.8 veya üstü gereklidir.</string>
     <string name="tutorial_dark_mode">Aralık 2020\'den itibaren Google, Android 10\'ten bu yana olan bir davranışı geri döndürdü. Önceden, Android Auto\'daki açık / koyu modu, telefondaki açık / koyu modu takip ediyordu ve bunun tersi de geçerliydi. Bu, telefonu karanlık moda geçirmenin araba üzerinde bir etkisi olduğu anlamına geliyordu ya da telefon karanlık moddaysa ve araba ışıkları kapalıysa, telefondaki ışık temasını açmak için kullanıldı.\nBununla birlikte, \"bağımsız\" karanlık modun bu özelliği tanıtıldığında, Satış Sonrası headunit\'lere sahip kullanıcıların stereoyu aracın ışıklarına aktarmadan artık karanlık moda geçmelerinin bir yolu yoktur.\nBu ayar, gece modunun yine telefondan bağımlı olduğundan ve telefondaki açık / karanlık modu değiştirmenin de otomobiller üzerinde etkileri olacağından emin olur.</string>
     <string name="dark_mode_tweak">bağımsız karanlık modu</string>
     <string name="telemetry_string">telemetri</string>
-    <string name="tutorial_telemetry">Google\'ın Hakkımızda çok fazla veri kaydetmesi bir gizem değil. Bu ayar, Google Play hizmetlerinin çok sayıda izleme ve günlüğe kaydetme etkinliğini durdurmasını sağlayacaktır.\n
-UYARI: Bu ince ayar kapsamlı bir şekilde test edilmiştir ve Android Auto\'ya potansiyel olarak son verebilir. Bu ince ayarın Android Auto\'yu kırdığını öğrenirseniz, lütfen GitHub\'da bir sorun açın.</string>
+    <string name="tutorial_telemetry">It\'s no mystery that Google logs a lot of data about us. This tweak will make so that Google Play Services will stop a lot of tracking and logging activity.\n
+WARNING: This tweak has not been extensively tested and could potentially break Android Auto. If you find out that this tweak breaks Android Auto, please open an issue on GitHub.</string>
     <string name="reboot_prompt">Telefon Yeniden Başlatılsın mı?</string>
     <string name="rebooting_action">Yeniden başlatılıyor…</string>
-    <string name="negative_button">iptal</string>
     <string name="added_app_action">"Eklendi: "</string>
     <string name="removed_app_action">Kaldırıldı\u0020</string>
     <string name="root_access_warning">Kök erişimi reddedildi. Lütfen kök erişimine izin verin.</string>
@@ -118,25 +117,33 @@ UYARI: Bu ince ayar kapsamlı bir şekilde test edilmiştir ve Android Auto\'ya 
     <string name="ignore_for_now">Şimdilik yoksay</string>
     <string name="many_accounts_warning">AA AIO TWEAKER, cihazda kayıtlı çok sayıda (%1$s) Google Hesabı buldu.\nBu, yamalama işleminin başarısını olumsuz yönde etkileyebilir ve AA Aio Tweaker başarısız olabilir.\nÇoğunlukla Google Play Servisleri ile birlikte kullandığınız hesapları seçebilirsiniz (2 veya daha az önerilir) veya tüm hesapları düzeltmesi gereken deneysel bir modu etkinleştirin.\nLütfen, deney modunun, yama çalışırken telefona bazı çöküşlere neden olabileceğini unutmayın.</string>
     <string name="dark_switch_tweak">gündüz/gece seçeneği</string>
-    <string name="tutorial_darkmodeswitch">Bu ince ayar, Android Auto\'da gündüz / gece modunun durumunu kontrol edebilecek Android Auto genel ayarlarında (hem araba hem de telefon) özel bir geçiş etkinleştirecektir. Bu seçenek geliştirici ayarlarındakinden farklıdır, çünkü Android Auto\'nun yeniden başlatılmasına ihtiyaç duymaz ve Google bağımsız karanlık modu etkinleştirdikten sonra kullanım üzerinde etkili olacaktır. Android Auto 6.3 veya üstü gereklidir.</string>
+    <string name="tutorial_assistant_suggestions">This tweak will activate a new feature that adds some quick shortcuts to Assistant actions on top of home screen.</string>
     <string name="remove_paired_car">Eşleştirilmiş bir arabayı kaldırma</string>
     <string name="choose_cars">Araba(ları) Seç</string>
     <string name="tutorial_carremover">Android Auto\'dan yalnızca eşleştirilmiş tüm arabaları kaldırabileceğinizi ve aynı anda yalnızca birini kaldıramayacağınızı biliyor muydunuz? Android Otomatik\'ten bir arabayı silmek istiyorsanız, bu seçenek sizi kurtarır, sadece istediğiniz arabaları seçin ve kaldırılır.</string>
     <string name="custom_startup_option">Özel başlatma seçeneği</string>
     <string name="tutorial_custom_startup_option">öğretici özel başlatma seçeneği</string>
     <string name="custom_hotseat_option">Özel oturma seçeneği</string>
-    <string name="tutorial_hotseat_option">Yönünü seç</string>
     <string name="tutorial_coolwalk">This tweak will activate a new design in Android Auto (codename Coolwalk) that can be toggled in Android Auto\'s settings and that tweaks a bit the appearance on smaller screens. This design features a always on side panel and some different graphics. This feature is in early stage at the moment. Android Auto 6.9 or superior is required.</string>
     <string name="coolwalk_tweak">Geniş gidiş dizaynı </string>
     <string name="tutorial_focus_settings">This tweak will activate a new options in Android Auto settings to manually customize whether Android Auto must be launched as soon as you connect your phone with the car. Android Auto 6.8 or superior is required.</string>
     <string name="focus_tweak">Focus settings</string>
-    <string name="casting_app">Casting app</string>
-    <string name="tutorial_mirroring_app">This mysterious app is bundled starting from Android Auto 7.1 and it\'s supposedly a screen mirroring app, probably destined to passenger\'s Android Auto. Might not function properly.</string>
+    <string name="assistant_tips">Assistant tips</string>
+    <string name="tutorial_mirroring_app">This tweak will enable Assistant Tips on the top of the home screen for most used actions. Android Auto 8.2 or superior is required.</string>
     <string name="decline_message_tweak">Decline with message</string>
     <string name="tutorial_decline_message">This tweak will enable the possibility to decline an incoming call with SMS (with Google Assistant).</string>
     <string name="section_one">General tweaks</string>
     <string name="section_two">Screen setup tweaks</string>
-    <string name="section_three">Appeareance tweaks</string>
+    <string name="section_three">Appearance tweaks</string>
     <string name="section_four">Video quality settings</string>
     <string name="section_five">Pre-activate features</string>
+    <string name="restricted_coolwalk">This option will not work with Coolwalk enabled.</string>
+    <string name="warning_patch_apps">Warning! This operation will ERASE ALL THE DATA from the selected app(s). Please make sure you have a backup of the data. Do you want to proceed anyways?</string>
+    <string name="tappable_progress">New progress bar</string>
+    <string name="tappable_progress_tutorial">Finally we are gaining a touchable progress bar for what\'s playing on Android Auto. Yes, we can seek through the current track Requires Android Auto 8.3 or superior.</string>
+    <string name="uxprototype_tutorial">All this tweak does is basically creates a free shortcut on the home page to open a web page. It involves an Easter egg hidden in Android Auto released on 1st of April 2022. Activate \"Developer mode\" in \"Developer settings\" under \"Application mode\". It\'s the only way to have an actual fullscreen app on Android Auto right now. WARNING: Not exitable, use this if you only plan on using this on your car. There\'s no back button either.</string>
+    <string name="uxprototype_dialog">Enter a valid full URL</string>
+    <string name="uxprototype_tweak">Custom shortcut</string>
+    <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
+    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

@@ -9,7 +9,7 @@
     <string name="patch_custom_apps">použiteľné aplikácie</string>
     <string name="disable_speed_limitations">limit kliknutí</string>
     <string name="unlimited_scrolling_when_driving">obmedzenia rýchlosti</string>
-    <string name="enable_assistant_animation_in_navbar">Animácia asistenta v navigačnom poli</string>
+    <string name="message_auto_read">Message auto-read</string>
     <string name="splash">Táto aplikácia môže meniť chovanie Android Auto a premostiť niektoré ochranné funkcie  ktoré Google implementoval do Android Auto.\n
         Používaním tohto softvéru súhlasíte že VY a LEN VY,  ste výlučne zodpovedný za možné dôsledky ktoré môžu vyplývať zo zmeny bezpečnostných funkcií ako ochrana seba sama a/alebo
         ostatných, zničenie majetku, straty života.\n
@@ -37,7 +37,7 @@ V niektorých prípadoch táto úprava zakáže automatické spustenie hudby. Zn
 NIE JE MOŽNÉ NASTAVIŤ KONKRÉTNU APLIKÁCIU KTORÁ SA SPUSTÍ AKO PRVÁ.</string>
     <string name="tutorial_widescreen">Toto vylepšenie vnúti Android Auto širokouhlé zobrazenie.</string>
     <string name="tutorial_no_widescreen">Toto vylepšenie vnúti Android Auto aby neprechádzal do širokouhlého módu.</string>
-    <string name="tutorial_animation">Toto vylepšenie povolí animáciu Google Asistenta na navigačnej lište.</string>
+    <string name="tutorial_autoplay_message">This tweak enables the possibility to set whether Android Auto must read the incoming messages or not. Android Auto 8.3 or superior is required.</string>
     <string name="tutorial_statusbar_opaque">Toto vylepšenie spôsobí, že stavový riadok bude mať vždy nepriehľadné pozadie (predvolené nastavenie je transparentné)</string>
     <string name="tutorial_battery_outline">Toto vylepšenie zabráni ikone batérie zobrazenie červeným obrysom, keď je zapnutý šetrič batérie.</string>
     <string name="tutorial_hun">Toto vylepšenie vám dovolí nastaviť trvanie upozornení heads up</string>
@@ -81,11 +81,10 @@ Do aplikácie Android Auto nie je možné pridať ľubovoľnú aplikáciu, ale j
     <string name="tutorial_dark_mode">Od decembra 2020 Google vrátil správanie, ktoré bolo od Androidu 10. Predtým svetlý / tmavý režim v aplikácii Android Auto nasledoval svetlý / tmavý režim v telefóne a naopak. To znamenalo, že prepnutie telefónu do tmavého režimu malo vplyv na auto, alebo ak bol telefón v tmavom režime a auto malo vypnuté svetlá, používalo sa na zapnutie svetlej témy na telefóne.\n Odkedy však bola predstavená táto funkcia „nezávislého“ tmavého režimu, používatelia s jednotkami Aftermarket už nemajú možnosť prepnúť do tmavého režimu bez toho, aby skutočne zapojili signál jednotky do svetiel vozidla.\n Toto vylepšenie zaisťuje, že nočný režim opäť závisí od telefónu a prepínanie svetlého / tmavého režimu na telefóne bude mať vplyv aj na auto.</string>
     <string name="dark_mode_tweak">nezávislý tmavý mód</string>
     <string name="telemetry_string">telemetria</string>
-    <string name="tutorial_telemetry">Nie je tajomstvo že Google zbiera veľa dát o nás. Toto vylepšenie zastaví množstvo sledovaní a zbieranie dát s Google Play Services.\n
-UPOZORNENIE: Toto vylepšenie nebolo podrobne testované a mohlo by potenciálne poškodiť Android Auto. Ak zistíte že toto vylepšenie porušuje Android Auto, otvorte problém na GitHub.</string>
+    <string name="tutorial_telemetry">It\'s no mystery that Google logs a lot of data about us. This tweak will make so that Google Play Services will stop a lot of tracking and logging activity.\n
+WARNING: This tweak has not been extensively tested and could potentially break Android Auto. If you find out that this tweak breaks Android Auto, please open an issue on GitHub.</string>
     <string name="reboot_prompt">Reštartovať telefón teraz?</string>
     <string name="rebooting_action">Reštartovanie…</string>
-    <string name="negative_button">zrušenie</string>
     <string name="added_app_action">"Pridané: "</string>
     <string name="removed_app_action">Odobraté\u0020</string>
     <string name="root_access_warning">Zamietnutý Root prístup. Prosím povoľte Root prístup.</string>
@@ -120,20 +119,19 @@ UPOZORNENIE: Toto vylepšenie nebolo podrobne testované a mohlo by potenciálne
     <string name="ignore_for_now">Nateraz ignorovať</string>
     <string name="many_accounts_warning">AA AIO TWEAKER našiel veľké množstvo (%1$s) účtov Google uložených v tomto zariadení.\n To môže mať negatívny dopad na úspešnosť procesu opravy a AA AIO TWEAKER môže zlyhať.\nMôžete si vybrať účty, ktoré väčšinou používate so službami Google Play, aby ste použili opravu iba na ne (odporúčajú sa 2 alebo menej), alebo aktivovať experimentálny režim, ktorý by mal opraviť všetky účty.\nUPOZORŇUJEM, že experimentálny režim môže počas spustenia opravy spôsobiť niektoré poruchy telefónu.</string>
     <string name="dark_switch_tweak">voľba deň/noc</string>
-    <string name="tutorial_darkmodeswitch">Toto vylepšenie aktivuje vyhradené prepínanie vo všeobecných nastaveniach Android Auto (auto aj telefón), ktoré dokáže ovládať stav denného / nočného režimu v Android Auto. Táto možnosť sa líši od možnosti v nastaveniach vývojára, pretože nepotrebuje reštartovanie aplikácie Android Auto a bude mať skutočne vplyv na použitie po tom, čo Google povolí nezávislý tmavý režim. Vyžaduje sa Android Auto 6.3 alebo vyšší.</string>
+    <string name="tutorial_assistant_suggestions">This tweak will activate a new feature that adds some quick shortcuts to Assistant actions on top of home screen.</string>
     <string name="remove_paired_car">Odobrať spárované vozidlo</string>
     <string name="choose_cars">Výber auta (áut)</string>
     <string name="tutorial_carremover">Vedeli ste, že Android Auto vie odstrániť iba všetky spárované autá a nemôžete odstrániť jedno po druhom? Táto možnosť vám pomôže, ak chcete vymazať jednotlivo autá z Android Auto, stačí zvoliť, ktoré auto (autá) chcete, a to bude odstránené.</string>
     <string name="custom_startup_option">Vlastná možnosť boot-u</string>
     <string name="tutorial_custom_startup_option">Toto vylepšenie aktivuje novú možnosť v nastaveniach Android Auto, ktorá umožní používateľovi nastaviť, čo má otvoriť, keď sa spustí Android Auto. Môžete sa rozhodnúť otvoriť poslednú navigačnú aplikáciu, poslednú hudobnú aplikáciu alebo iba spúšťač. Vyžaduje sa Android Auto 6.8 alebo novší.</string>
     <string name="custom_hotseat_option">Vlastná možnosť miesta</string>
-    <string name="tutorial_hotseat_option">Toto vylepšenie aktivuje novú možnosť v nastaveniach systému Android Auto, ktorá umožní používateľovi rozhodnúť sa, či je pozícia vodiča vľavo alebo vpravo, aby si Android Auto mohol prispôsobiť svoje používateľské rozhranie. Vyžaduje sa Android Auto 6.9 alebo novší.</string>
     <string name="tutorial_coolwalk">Toto vylepšenie aktivuje nový dizajn v Android Auto (kódové označenie Coolwalk), ktorý je možné prepínať v nastaveniach Android Auto a ktorý trochu upraví vzhľad na menších obrazovkách. Tento dizajn obsahuje vždy zapnutý bočný panel a rôzne grafické prvky. Táto funkcia je momentálne v počiatočnom štádiu. Vyžaduje sa Android Auto 6.9 alebo vyšší.</string>
     <string name="coolwalk_tweak">Coolwalk dizajn</string>
     <string name="tutorial_focus_settings">Toto vylepšenie aktivuje nové možnosti v nastaveniach Android Auto na manuálne prispôsobenie toho, či sa Android Auto musí spustiť hneď po pripojení telefónu k autu. Vyžaduje sa Android Auto 6.8 alebo vyšší.</string>
     <string name="focus_tweak">Nastavenia Focus</string>
-    <string name="casting_app">Aplikácie na prenášanie</string>
-    <string name="tutorial_mirroring_app">Táto tajomná aplikácia je súčasťou balíka od Android Auto 7.1 a je to údajne aplikácia na zrkadlenie obrazovky, pravdepodobne určená pre Android Auto spolujazdca. Nemusí fungovať správne.</string>
+    <string name="assistant_tips">Assistant tips</string>
+    <string name="tutorial_mirroring_app">This tweak will enable Assistant Tips on the top of the home screen for most used actions. Android Auto 8.2 or superior is required.</string>
     <string name="decline_message_tweak">Odmietnuť správou</string>
     <string name="tutorial_decline_message">Toto vylepšenie umožní odmietnuť prichádzajúci hovor pomocou SMS (s Google Asistentom).</string>
     <string name="section_one">Všeobecné vylepšenia</string>
@@ -141,4 +139,13 @@ UPOZORNENIE: Toto vylepšenie nebolo podrobne testované a mohlo by potenciálne
     <string name="section_three">Vylepšenia vzhľadu</string>
     <string name="section_four">Nastavenia kvality videa</string>
     <string name="section_five">Vopred aktivujte funkcie</string>
+    <string name="restricted_coolwalk">This option will not work with Coolwalk enabled.</string>
+    <string name="warning_patch_apps">Warning! This operation will ERASE ALL THE DATA from the selected app(s). Please make sure you have a backup of the data. Do you want to proceed anyways?</string>
+    <string name="tappable_progress">New progress bar</string>
+    <string name="tappable_progress_tutorial">Finally we are gaining a touchable progress bar for what\'s playing on Android Auto. Yes, we can seek through the current track Requires Android Auto 8.3 or superior.</string>
+    <string name="uxprototype_tutorial">All this tweak does is basically creates a free shortcut on the home page to open a web page. It involves an Easter egg hidden in Android Auto released on 1st of April 2022. Activate \"Developer mode\" in \"Developer settings\" under \"Application mode\". It\'s the only way to have an actual fullscreen app on Android Auto right now. WARNING: Not exitable, use this if you only plan on using this on your car. There\'s no back button either.</string>
+    <string name="uxprototype_dialog">Enter a valid full URL</string>
+    <string name="uxprototype_tweak">Custom shortcut</string>
+    <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
+    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

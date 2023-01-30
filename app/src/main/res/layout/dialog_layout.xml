@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/dialog_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -54,6 +55,48 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"/>
+
+        <EditText
+            android:id="@+id/textuxprototype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/uxprototype_dialog"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:autofillHints=""
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="rtl"
+            android:textAlignment="viewEnd">
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/yes"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/ok"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/no"
+                android:layout_margin="30dp"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@android:string/cancel"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                style="?android:attr/buttonBarButtonStyle" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

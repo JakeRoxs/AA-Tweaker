@@ -9,7 +9,7 @@
     <string name="patch_custom_apps">カスタムアプリ</string>
     <string name="disable_speed_limitations">タップの制限</string>
     <string name="unlimited_scrolling_when_driving">速度制限</string>
-    <string name="enable_assistant_animation_in_navbar">ナビゲーションバーのアシスタントのアニメーション</string>
+    <string name="message_auto_read">Message auto-read</string>
     <string name="splash">本アプリは、Android Autoの動作を変更し、GoogleがAndroid Autoに実装した複数の安全機能を回避できます。\n
 本アプリを使用することにより、安全機能を変更した場合に発生する可能性のある結果、あなた自身および他人の負傷、物的損害、人命の損失などに対して、あなただけが単独で責任を負うことに同意するものとします。\n
 いかなる状況においても、本アプリの作者はその使用に責任を負いません。</string>
@@ -34,7 +34,7 @@
 特定のアプリを最初に起動するように設定することはできません。</string>
     <string name="tutorial_widescreen">この調整は、Android Autoのワイドスクリーンモードを強制的に有効にします。</string>
     <string name="tutorial_no_widescreen">この調整は、Android Autoのワイドスクリーンモードを強制的に無効にします。</string>
-    <string name="tutorial_animation">この調整は、ナビゲーションバーのGoogle Assistantのアニメーションを有効にします。</string>
+    <string name="tutorial_autoplay_message">This tweak enables the possibility to set whether Android Auto must read the incoming messages or not. Android Auto 8.3 or superior is required.</string>
     <string name="tutorial_statusbar_opaque">この調整は、ステータスバーを常に黒くします。</string>
     <string name="tutorial_battery_outline">この調整は、バッテリーセーバーがオンのときにバッテリーアイコンの赤い輪郭が表示されないようにします。</string>
     <string name="tutorial_hun">この調整は、ヘッドアップ通知に任意の継続時間を設定します。</string>
@@ -82,7 +82,6 @@ Android Auto 5.8以降が必要です。</string>
 警告: この調整は広範囲にテストされておらず、Android Autoを壊す可能性があります。もし、この調整がAndroid Autoを壊すことが判明したら、GitHubでissueを立ててください。</string>
     <string name="reboot_prompt">端末を再起動しますか?</string>
     <string name="rebooting_action">再起動中…</string>
-    <string name="negative_button">キャンセル</string>
     <string name="added_app_action">"追加済: "</string>
     <string name="removed_app_action">削除済\u0020</string>
     <string name="root_access_warning">rootアクセスが拒否されました。rootアクセスを許可してください。</string>
@@ -117,25 +116,33 @@ Android Auto 5.8以降が必要です。</string>
     <string name="ignore_for_now">今は無視</string>
     <string name="many_accounts_warning">AA AIO TWEAKERは、デバイスに保存されている多数 (%1$s) のGoogleアカウントを検出しました。\nこれはパッチ適用プロセスに悪影響を与える可能性があり、AA AIO TWEAKERは失敗しやすくなります。\nGoogle Play 開発者サービスで主に使うアカウントを選択 (2個以下を推奨) し、パッチを適用するか、すべてのアカウントにパッチを適用する実験的なモードを有効にします。\n実験的なモードでは、パッチの適用中にスマホがクラッシュする可能性があることに注意してください。</string>
     <string name="dark_switch_tweak">昼/夜オプション</string>
-    <string name="tutorial_darkmodeswitch">この調整により、Android Autoの一般的な設定 (車とスマホの両方) で専用のトグルがアクティブになり、Android Autoの昼/夜モードを制御できます。このオプションは、Android Autoを再起動する必要がなく、Googleが独立したダークモードを有効にした後の使用時に影響するため、デベロッパー向けの設定にある項目とは異なります。 Android Auto 6.3以降が必要です。</string>
+    <string name="tutorial_assistant_suggestions">This tweak will activate a new feature that adds some quick shortcuts to Assistant actions on top of home screen.</string>
     <string name="remove_paired_car">ペアリングされた車を削除</string>
     <string name="choose_cars">車を選択</string>
     <string name="tutorial_carremover">ペアリングされた全ての車を一括でAndroid Autoから削除することしかできず、一度に1台だけ削除することはできないことをご存知ですか？このオプションは、車をAndroid Autoから削除したい場合に役立ちます。必要な車を選択するだけで、その車が削除されます。</string>
     <string name="custom_startup_option">カスタム起動設定</string>
     <string name="tutorial_custom_startup_option">この調整は、Android Autoの起動時に何を開くかをユーザーが設定できるようにする、Android Autoの設定内の新しい項目を有効にします。最後のナビアプリ、最後の音楽アプリ、またはランチャーを開くように選択できます。Android Auto 6.8以降が必要です。</string>
     <string name="custom_hotseat_option">カスタム座席設定</string>
-    <string name="tutorial_hotseat_option">この調整は、Android AutoのUIを運転席の位置によって最適化するために、運転席が左右のどちらかにあるかを設定できる、Android Autoの設定内の新しい設定項目を有効にします。Android Auto 6.9以降が必要です。</string>
     <string name="tutorial_coolwalk">この調整は、Android Autoの新しいデザイン (コードネーム Coolwalk) を有効にします。これはAndroid Auto内の設定で切り替えることができ、小さな画面での表示を微調整します。このデザインでは、常にサイドパネルといくつかの異なるグラフィックを備えています。現在、この機能は初期段階にあります。Android Auto 6.9以降が必要です。</string>
     <string name="coolwalk_tweak">Coolwalkのデザイン</string>
-    <string name="tutorial_focus_settings">This tweak will activate a new options in Android Auto settings to manually customize whether Android Auto must be launched as soon as you connect your phone with the car. Android Auto 6.8 or superior is required.</string>
-    <string name="focus_tweak">Focus settings</string>
-    <string name="casting_app">Casting app</string>
-    <string name="tutorial_mirroring_app">This mysterious app is bundled starting from Android Auto 7.1 and it\'s supposedly a screen mirroring app, probably destined to passenger\'s Android Auto. Might not function properly.</string>
-    <string name="decline_message_tweak">Decline with message</string>
-    <string name="tutorial_decline_message">This tweak will enable the possibility to decline an incoming call with SMS (with Google Assistant).</string>
+    <string name="tutorial_focus_settings">この微調整は、車と携帯電話を接続してすぐにAndroid Autoを起動する設定を有効化します。Android Auto 6.8以上が必要です。</string>
+    <string name="focus_tweak">フォーカス設定</string>
+    <string name="assistant_tips">アシスタントのヒント</string>
+    <string name="tutorial_mirroring_app">この調整は、よく使う操作について、ホーム画面の上部にアシスタントのヒントを表示するようにします。Android 8.2以降が必要です。</string>
+    <string name="decline_message_tweak">メッセージを拒否する</string>
+    <string name="tutorial_decline_message">この調整は、SMSで着信拒否を可能にします(Googleアシスタント使用時)。</string>
     <string name="section_one">一般的な調整</string>
-    <string name="section_two">Screen setup tweaks</string>
+    <string name="section_two">画面セットアップの調整</string>
     <string name="section_three">外観の調整</string>
     <string name="section_four">ビデオの品質設定</string>
-    <string name="section_five">Pre-activate features</string>
+    <string name="section_five">予め起動している機能</string>
+    <string name="restricted_coolwalk">このオプションは、Coolwalkが有効になっていると動作しません。</string>
+    <string name="warning_patch_apps">警告! この操作は選択したアプリのすべてのデータを消去します。 データのバックアップがあることを確認してください。とにかく続行しますか?</string>
+    <string name="tappable_progress">新しいプログレスバー</string>
+    <string name="tappable_progress_tutorial">ついに、Android Autoで再生中のコンテンツを調整するためのタッチ可能なスライド式プログレスバーが登場しました。はい、現在再生中のトラックをスクロールすることができます。Android Auto 8.3以降が必要です。</string>
+    <string name="uxprototype_tutorial">All this tweak does is basically creates a free shortcut on the home page to open a web page. It involves an Easter egg hidden in Android Auto released on 1st of April 2022. Activate \"Developer mode\" in \"Developer settings\" under \"Application mode\". It\'s the only way to have an actual fullscreen app on Android Auto right now. WARNING: Not exitable, use this if you only plan on using this on your car. There\'s no back button either.</string>
+    <string name="uxprototype_dialog">Enter a valid full URL</string>
+    <string name="uxprototype_tweak">カスタムショートカット</string>
+    <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
+    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

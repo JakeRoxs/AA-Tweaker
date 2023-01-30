@@ -9,7 +9,7 @@ Wenn Sie sich nicht sicher sind, was eine Optimierung bewirkt, drücken Sie lang
     <string name="patch_custom_apps">Benutzerdefinierte Apps</string>
     <string name="disable_speed_limitations">Tipp-Einschränkungen</string>
     <string name="unlimited_scrolling_when_driving">Geschwindigkeitsbeschränkungen</string>
-    <string name="enable_assistant_animation_in_navbar">Assistant-Animation in der Navigationsleiste</string>
+    <string name="message_auto_read">Nachricht automatisch lesen</string>
     <string name="splash">Diese App kann das Verhalten von Android Auto ändern und einige Sicherheitsfunktionen umgehen, die Google in Android Auto implementiert hat.\n
 Durch die Verwendung dieser Software erklären Sie sich damit einverstanden, dass SIE, und NUR SIE, die alleinige Verantwortung für alle möglichen Folgen tragen, die sich aus der Änderung von Sicherheitsfunktionen ergeben können, wie z. B. Verletzungen bei Ihnen selbst und/oder Anderen, Sachschäden, Verlust des Lebens.\n
 Der Autor dieser App ist unter keinen Umständen für deren Verwendung verantwortlich</string>
@@ -35,7 +35,7 @@ In einigen Fällen deaktiviert diese Optimierung den automatischen Start von Mus
 ES IST NICHT MÖGLICH, EINE BESTIMMTE APP SO EINZUSTELLEN, DASS SIE ZUERST GESTARTET WIRD.</string>
     <string name="tutorial_widescreen">Diese Optimierung erzwingt Android Auto im Breitbild-Modus.</string>
     <string name="tutorial_no_widescreen">Diese Optimierung zwingt Android Auto in keinen Breitbild-Modus.</string>
-    <string name="tutorial_animation">Diese Optimierung aktiviert eine Google Assistant Animation in der Navigationsleiste.</string>
+    <string name="tutorial_autoplay_message">Dieser Tweak ermöglicht die Einstellung, ob Android Auto die eingehenden Nachrichten lesen muss oder nicht. Android Auto 8.3 oder höher ist erforderlich.</string>
     <string name="tutorial_statusbar_opaque">Mit dieser Optimierung ist die Statusleiste immer schwarz.</string>
     <string name="tutorial_battery_outline">Diese Optimierung verhindert das Batteriesymbol mit der roten Umrandung, wenn der Batterieschoner eingeschaltet ist.</string>
     <string name="tutorial_hun">Mit dieser Optimierung können Sie eine benutzerdefinierte Dauer für Head-Up-Benachrichtigungen festlegen</string>
@@ -79,11 +79,10 @@ Es ist nicht möglich, irgendeine App zu Android Auto hinzuzufügen, aber es ist
     <string name="tutorial_dark_mode">Ab Dezember 2020 hat Google ein Verhalten rückgängig gemacht, das seit Android 10 auftrat. Zuvor folgte der Hell/Dunkel-Modus auf Android Auto dem Hell/Dunkel-Modus auf dem Telefon und umgekehrt. Das bedeutete, dass das Umschalten des Telefons in den dunklen Modus Auswirkungen auf das Auto hatte, oder wenn das Telefon im dunklen Modus war und das Auto die Lichter ausgeschaltet hatte, schaltete es den hellen Modus auf dem Telefon ein.\n Seitdem diese Funktion des \"unabhängigen\" dunklen Modus eingeführt wurde, haben Benutzer mit Aftermarket-Headunits jedoch keine Möglichkeit mehr, in den dunklen Modus zu wechseln, ohne die Stereoanlage tatsächlich mit den Lichtern des Autos zu verkabeln.\n Diese Optimierung stellt sicher, dass der Nachtmodus wieder vom Telefon abhängig ist und das Umschalten des hellen/dunklen Modus auf dem Telefon auch Auswirkungen auf das Auto hat.</string>
     <string name="dark_mode_tweak">unabhängigen Darkmode</string>
     <string name="telemetry_string">Telemetrie</string>
-    <string name="tutorial_telemetry">Es ist kein Geheimnis, dass Google eine Menge an Daten über uns protokolliert. Diese Optimierung sorgt dafür, dass die Google Play Services viele Tracking- und Logging-Aktivitäten deaktivieren.\n
-WARNUNG: Diese Optimierung wurde nicht ausgiebig getestet und könnte möglicherweise Fehler in Android Auto verursachen. Wenn Sie herausfinden, dass diese Optimierung in Android Auto Fehler erzeugt, eröffnen Sie bitte ein Problem auf GitHub.</string>
+    <string name="tutorial_telemetry">Es ist kein Geheimnis, dass Google eine Menge Daten über uns protokolliert. Dieser Tweak sorgt dafür, dass Google Play Services eine Menge Tracking- und Protokollierungsaktivitäten stoppt.\n
+WARNUNG: Dieser Tweak wurde nicht ausgiebig getestet und könnte möglicherweise Fehler in Android Auto verursachen. Wenn du herausfindest, dass dieser Tweak Android Auto beeinträchtigt, öffne bitte einen Ticket auf GitHub.</string>
     <string name="reboot_prompt">Gerät jetzt neu starten?</string>
     <string name="rebooting_action">Neustart…</string>
-    <string name="negative_button">abbrechen</string>
     <string name="added_app_action">"Hinzugefügt: "</string>
     <string name="removed_app_action">Entfernt\u0020</string>
     <string name="root_access_warning">Root-Zugriff verweigert. Bitte erlauben Sie Root-Zugriff.</string>
@@ -118,25 +117,33 @@ WARNUNG: Diese Optimierung wurde nicht ausgiebig getestet und könnte möglicher
     <string name="ignore_for_now">Vorläufig ignorieren</string>
     <string name="many_accounts_warning">AA AIO TWEAKER hat eine große Zahl von Google-Konten, die auf dem Gerät gespeichert sind, gefunden (%1$s).\nDies kann sich negativ auf den Erfolg des Patching-Prozesses auswirken und AA AIO TWEAKER könnte fehlschlagen.\nSie können entweder die Konten wählen, die Sie hauptsächlich mit den Google Play Services verwenden, um den Patch nur auf sie anzuwenden (2 oder weniger wird empfohlen) oder einen experimentellen Modus aktivieren, der alle Konten patchen soll.\nBITTE BEACHTEN SIE, dass der experimentelle Modus einige Abstürze auf dem Telefon verursachen könnte, während der Patch läuft.</string>
     <string name="dark_switch_tweak">Tag/Nacht Option</string>
-    <string name="tutorial_darkmodeswitch">Diese Einstellung aktiviert einen dedizierten Schalter in den allgemeinen Android Auto Einstellungen (Auto und Telefon), die den Status des Tag/Nacht-Modus innerhalb von Android Auto steuern können. Diese Option unterscheidet sich von der in den Entwickler-Einstellungen, da sie keinen Neustart von Android Auto benötigt und sie tatsächlich Auswirkungen auf die Nutzung hat, nachdem Google den unabhängigen Darkmode aktiviert hat. Android Auto 6.3 oder höher wird benötigt.</string>
+    <string name="tutorial_assistant_suggestions">Mit diesem Tweak wird eine neue Funktion aktiviert, die einige Schnellverknüpfungen für Assistant-Aktionen oben auf dem Startbildschirm hinzufügt.</string>
     <string name="remove_paired_car">Ein gekoppeltes Fahrzeug entfernen</string>
     <string name="choose_cars">Fahrzeug(e) wählen</string>
     <string name="tutorial_carremover">Wussten Sie, dass Sie nur alle gekoppelten Fahrzeuge gleichzeitig innerhalb von Android Auto entfernen können und nicht nur ein einzelnes? Diese Option wird Sie retten, wenn Sie ein Fahrzeug von Android Auto löschen wollen, wählen Sie einfach das/die gewünschte(n) Fahrzeug(e) aus und diese werden entfernt.</string>
-    <string name="custom_startup_option">Custom boot option</string>
-    <string name="tutorial_custom_startup_option">This tweak will activate a new option inside Android Auto\'s settings that will let the user set what to open when Android Auto is started. You can choose to open latest navigation app, latest music app or just the launcher. Android Auto 6.8 or superior is required.</string>
-    <string name="custom_hotseat_option">Custom seating option</string>
-    <string name="tutorial_hotseat_option">This tweak will activate a new option inside Android Auto\'s settings that will let the user decide whether the driving position is left or right so that Android Auto can adapt its UI. Android Auto 6.9 or superior is required.</string>
-    <string name="tutorial_coolwalk">This tweak will activate a new design in Android Auto (codename Coolwalk) that can be toggled in Android Auto\'s settings and that tweaks a bit the appearance on smaller screens. This design features a always on side panel and some different graphics. This feature is in early stage at the moment. Android Auto 6.9 or superior is required.</string>
-    <string name="coolwalk_tweak">Coolwalk design</string>
-    <string name="tutorial_focus_settings">This tweak will activate a new options in Android Auto settings to manually customize whether Android Auto must be launched as soon as you connect your phone with the car. Android Auto 6.8 or superior is required.</string>
-    <string name="focus_tweak">Focus settings</string>
-    <string name="casting_app">Casting app</string>
-    <string name="tutorial_mirroring_app">This mysterious app is bundled starting from Android Auto 7.1 and it\'s supposedly a screen mirroring app, probably destined to passenger\'s Android Auto. Might not function properly.</string>
-    <string name="decline_message_tweak">Decline with message</string>
-    <string name="tutorial_decline_message">This tweak will enable the possibility to decline an incoming call with SMS (with Google Assistant).</string>
-    <string name="section_one">General tweaks</string>
-    <string name="section_two">Screen setup tweaks</string>
-    <string name="section_three">Appeareance tweaks</string>
-    <string name="section_four">Video quality settings</string>
-    <string name="section_five">Pre-activate features</string>
+    <string name="custom_startup_option">Benutzerdefinierte Boot-Option</string>
+    <string name="tutorial_custom_startup_option">Mit diesem Tweak wird eine neue Option in den Einstellungen von Android Auto aktiviert, mit der der Benutzer festlegen kann, was beim Starten von Android Auto geöffnet werden soll. Sie können wählen, ob Sie die neueste Navigations-App, die neueste Musik-App oder nur den Launcher öffnen möchten. Android Auto 6.8 oder höher ist erforderlich.</string>
+    <string name="custom_hotseat_option">Eigene Sitzoption</string>
+    <string name="tutorial_coolwalk">Dieser Tweak aktiviert ein neues Design in Android Auto (Codename Coolwalk), das in den Einstellungen von Android Auto umgeschaltet werden kann und das Aussehen auf kleineren Bildschirmen ein wenig verändert. Dieses Design bietet ein immer vorhandenes Seitenpanel und einige andere Grafiken. Diese Funktion befindet sich derzeit in einem frühen Stadium. Android Auto 6.9 oder höher ist erforderlich.</string>
+    <string name="coolwalk_tweak">Coolwalk-Design</string>
+    <string name="tutorial_focus_settings">Dieser Tweak aktiviert eine neue Option in den Android Auto-Einstellungen, mit der Sie manuell festlegen können, ob Android Auto gestartet werden muss, sobald Sie Ihr Telefon mit dem Auto verbinden. Android Auto 6.8 oder höher ist erforderlich.</string>
+    <string name="focus_tweak">Fokus-Einstellungen</string>
+    <string name="assistant_tips">Assistenten-Tipps</string>
+    <string name="tutorial_mirroring_app">Diese Einstellung aktiviert Assistent-Tipps oben auf dem Startbildschirm für die meisten verwendeten Aktionen. Android Auto 8.2 oder höher ist erforderlich.</string>
+    <string name="decline_message_tweak">Mit Nachricht ablehnen</string>
+    <string name="tutorial_decline_message">Diese Einstellung ermöglicht die Möglichkeit, einen eingehenden Anruf mit SMS (mit Google Assistant) abzulehnen.</string>
+    <string name="section_one">Allgemeine Tweaks</string>
+    <string name="section_two">Bildschirm-Setup-Optimierungen</string>
+    <string name="section_three">Erscheinungs-Tweaks</string>
+    <string name="section_four">Videoqualitätseinstellungen</string>
+    <string name="section_five">Funktionen vor Aktivierung</string>
+    <string name="restricted_coolwalk">Diese Option funktioniert nicht mit aktiviertem Coolwalk.</string>
+    <string name="warning_patch_apps">Warnung! Dieser Vorgang wird ALLE DATEN von den ausgewählten App(s) löschen. Bitte stellen Sie sicher, dass Sie eine Sicherung der Daten haben. Möchten Sie trotzdem fortfahren?</string>
+    <string name="tappable_progress">Neuer Fortschrittsbalken</string>
+    <string name="tappable_progress_tutorial">Endlich gibt es einen berührbaren Fortschrittsbalken für die Wiedergabe auf Android Auto. Ja, wir können durch den aktuellen Titel suchen. Erfordert Android Auto 8.3 oder höher.</string>
+    <string name="uxprototype_tutorial">Alles, was dieser Tweak tut, ist im Grunde eine freie Verknüpfung auf der Startseite zum Öffnen einer Webseite zu erstellen. Es handelt sich um ein Easter-Egg, das in Android Auto versteckt ist, welches am 1. April 2022 veröffentlicht wurde. Aktivieren Sie den \"Entwicklermodus\" in den \"Entwicklereinstellungen\" unter \"Anwendungsmodus\". Das ist im Moment die einzige Möglichkeit, eine echte Vollbild-App auf Android Auto zu haben. WARNUNG: Nicht ausschaltbar - verwenden Sie diesen Modus nur, wenn Sie dies in Ihrem Auto verwenden möchten. Es gibt auch keine Zurück-Taste.</string>
+    <string name="uxprototype_dialog">Eine gültige URL eingeben</string>
+    <string name="uxprototype_tweak">Benutzerdefinierte Verknüpfung</string>
+    <string name="tutorial_new_seekbar">"Dieser Tweak ermöglicht eine bewegliche Suchleiste für Medien-Apps."</string>
+    <string name="tutorial_materialyou">"Dieser Tweak ermöglicht den \"Material You\"-Style für die Android Auto-Einstellungen auf dem Telefon. Dies funktioniert nur auf Android Auto 8.8&gt; wie aktuell getestet"</string>
 </resources>

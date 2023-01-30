@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="main_string">Welcome in AA AIO Tweaker\n
-This app will let you apply some tweaks to Android Auto\n
-Simply select what tweak you want to apply :)\n
-If you are unsure of what a tweak does, long press on it and a tutorial will show up.</string>
+    <string name="main_string">Benvenuto in AA AIO Tweaker\n
+Questa app ti permetterà di applicare alcuni tweaks su Android Auto\n
+Basta selezionare quale tweak vuoi applicare :)\n
+Se non sei sicuro di ciò che un tweak fa, premi a lungo su di esso e un tutorial verrà visualizzato.</string>
     <string name="select_apps">App selezionate</string>
     <string name="enable_assistant_shortcuts">Scorciatoie dell\'assistente</string>
     <string name="patch_custom_apps">app personalizzate</string>
     <string name="disable_speed_limitations">limite tocchi</string>
     <string name="unlimited_scrolling_when_driving">restrizioni in marcia</string>
-    <string name="enable_assistant_animation_in_navbar">Animazione assistente in navbar</string>
+    <string name="message_auto_read">Lettura automatica messaggi</string>
     <string name="splash">Questa app può modificare il comportamento di Android Auto e bypassare alcune caratteristiche di sicurezza che Google ha implementato in Android Auto.\n
 Utilizzando questo software, accetti che TU, e SOLAMENTE TU, sei responsabile di eventuali conseguenze dell\'alterazione di impostazioni di sicurezza come: lesioni a se stessi e/o ad altri, danni alla proprietà, perdita di vita/e.\n
 In nessuna circostanza l\'autore di questa app è responsabile per il suo uso.</string>
@@ -35,7 +35,7 @@ In alcuni casi questo tweak disabiliterà l\'avvio automatico della musica. Una 
 NON È POSSIBILE IMPOSTARE UN\'APP SPECIFICA ALL\'AVVIO.</string>
     <string name="tutorial_widescreen">Questo trucco forzerà Android Auto in modalità widescreen.</string>
     <string name="tutorial_no_widescreen">Questo trucco impedirà ad Android Auto di attivare la modalità widescreen.</string>
-    <string name="tutorial_animation">Questo trucco abilita un\'animazione dell\'Assistente Google nella barra di navigazione.</string>
+    <string name="tutorial_autoplay_message">Questa modifica consente la possibilità di impostare se Android Auto deve leggere i messaggi in arrivo o meno. Android Auto 8.3 o superiore è richiesto.</string>
     <string name="tutorial_statusbar_opaque">Questo trucco renderà la barra di stato sempre opaca.</string>
     <string name="tutorial_battery_outline">Questo trucco impedirà che l\'icona della batteria abbia un contono rosso quando il risparmio batteria è acceso.</string>
     <string name="tutorial_hun">Questo trucco consente di impostare una durata personalizzata per le notifiche fluttuanti</string>
@@ -80,10 +80,9 @@ Questa funzione è probabilmente in fase di sviluppo e potrebbe non funzionare c
     <string name="dark_mode_tweak">modalità scura indipendente</string>
     <string name="telemetry_string">Telemetria</string>
     <string name="tutorial_telemetry">Non è un mistero che Google mantenga molti dei nostri dati. Questo tweak farà in modo che i Servizi Google non terranno più traccia di molte attività di Android Auto.\n
-ATTENZIONE: Questo tweak non è stato testato estensivamente e potenzialmente può rompere il funzionamento di Android Auto. Se scopri che questo tweak non fa più funzionare Android Auto, per favore, apri una segnalazione su GitHub. </string>
+ATTENZIONE: Questo tweak non è stato testato estensivamente e potenzialmente può rompere il funzionamento di Android Auto. Se scopri che questo tweak non fa più funzionare Android Auto, per favore, apri una segnalazione su GitHub.</string>
     <string name="reboot_prompt">Riavviare il telefono ora?</string>
     <string name="rebooting_action">Riavvio in corso…</string>
-    <string name="negative_button">annulla</string>
     <string name="added_app_action">"Aggiunta: "</string>
     <string name="removed_app_action">Rimossa\u0020</string>
     <string name="root_access_warning">Accesso root negato. Consenti l\'accesso root.</string>
@@ -118,20 +117,19 @@ ATTENZIONE: Questo tweak non è stato testato estensivamente e potenzialmente pu
     <string name="ignore_for_now">Ignora per ora</string>
     <string name="many_accounts_warning">AA AIO TWEAKER ha trovato un gran numero (%1$s) di account Google salvati nel dispositivo.\nQuesto può avere un impatto negativo sul successo del processo di patch e AA AIO TWEAKER potrebbe fallire.\nPuoi decidere di scegliere gli account più utilizzati con i Servizi Google e attivare la patch su di essi oppure attivare una modalità sperimentale che applica la patch per tutti gli account.\nNOTA BENE che la modalità sperimentale potrebbe causare alcuni crash al sistema mentre la patch è in esecuzione.</string>
     <string name="dark_switch_tweak">opzione giorno/notte</string>
-    <string name="tutorial_darkmodeswitch">Questo tweak attiverà un\'opzione dedicata nelle impostazioni generiche di Android Auto (sia auto che telefono) in grado di controllare lo stato della modalità giorno/notte su Android Auto. Questa opzione è diversa da quella nelle impostazioni sviluppatore perché non ha bisogno di un riavvio di Android Auto e avrà effettivamente effetto sull\'utilizzo dopo che Google ha abilitato la modalità scura indipendente. Android Auto 6.3 o superiore è richiesto.</string>
+    <string name="tutorial_assistant_suggestions">Questa modifica attiverà una nuova funzione che aggiunge alcune rapide scorciatoie alle azioni di Assistente Google nella schermata iniziale.</string>
     <string name="remove_paired_car">Rimuovere un\'auto accoppiata</string>
     <string name="choose_cars">Scegliere auto</string>
     <string name="tutorial_carremover">Sapevi che su Android Auto non è possibile eliminare una singola auto accoppiata ma è solamente possibile eliminarle tutte in un colpo solo? Quest\'opzione ti verrà in aiuto nel caso si ha la necessità di rimuovere solo un\'auto. Basterà selezionarla ed eliminarla dal bottone dedicato.</string>
     <string name="custom_startup_option">Avvio personalizzato</string>
     <string name="tutorial_custom_startup_option">Questa modifica attiverà una nuova opzione all\'interno delle impostazioni di Android Auto, che permetterà all\'utente di impostare cosa aprire quando Android Auto viene avviato. È possibile scegliere di aprire l\'ultima app di navigazione, ultima app musicale o solo il launcher. È richiesto Android Auto 6.8 o superiore.</string>
     <string name="custom_hotseat_option">Opzione posto guida</string>
-    <string name="tutorial_hotseat_option">Questa modifica attiverà una nuova opzione all\'interno delle impostazioni di Android Auto che permette all\'utente di decidere se la posizione di guida è a sinistra o a destra in modo che Android Auto possa adattare la sua interfaccia. È richiesto Android Auto 6.9 o superiore.</string>
     <string name="tutorial_coolwalk">Questo tweak attiverà un nuovo design di Android Auto (nome in codice Coolwalk) che può essere attivato nelle impostazioni di Android Auto e che modifica l\'aspetto su schermi più piccoli. Questo design è caratterizzato da un pannello laterale sempre e da una grafica diversa. Questa funzione è in fase iniziale al momento. Android Auto 6.9 o superiore è richiesto.</string>
     <string name="coolwalk_tweak">Coolwalk design</string>
     <string name="tutorial_focus_settings">Questa modifica attiverà una nuova opzione nelle impostazioni di Android Auto per personalizzare manualmente se Android Auto deve essere lanciato non appena si collega il telefono con l\'auto. Android Auto 6.8 o superiore è richiesto.</string>
     <string name="focus_tweak">Impostazione Focus</string>
-    <string name="casting_app">App Casting</string>
-    <string name="tutorial_mirroring_app">Questa app misteriosa è integrata a partire da Android Auto 7.1 ed è presumibilmente un app di mirroring dello schermo, probabilmente destinata al passeggero Android Auto. Potrebbe non funzionare correttamente.</string>
+    <string name="assistant_tips">Suggerimenti assistente</string>
+    <string name="tutorial_mirroring_app">Questa modifica attiverà i suggerimenti per le azioni più utilizzate dell\'Assistente nella parte superiore della schermata iniziale. È richiesta Android Auto 8.2 o superiore.</string>
     <string name="decline_message_tweak">Rifiuta con messaggio</string>
     <string name="tutorial_decline_message">Questa modifica consentirà la possibilità di rifiutare una chiamata in arrivo con SMS (con Google Assistant).</string>
     <string name="section_one">Tweak generali</string>
@@ -139,4 +137,13 @@ ATTENZIONE: Questo tweak non è stato testato estensivamente e potenzialmente pu
     <string name="section_three">Impostazioni aspetto</string>
     <string name="section_four">Impostazioni di qualità grafica</string>
     <string name="section_five">Funzioni pre-attivabili</string>
+    <string name="restricted_coolwalk">Questa opzione non funzionerà con Coolwalk abilitato.</string>
+    <string name="warning_patch_apps">Attenzione! Questa operazione eliminerà TUTTI I DATI dalle app selezionate. Assicurati di avere un backup dei dati. Vuoi procedere comunque?</string>
+    <string name="tappable_progress">Nuova barra di avanzamento</string>
+    <string name="tappable_progress_tutorial">Finalmente sembra che sarà nostro destino ottenere una barra di avanzamento toccabile per ciò che è in riproduzione su Android Auto. Sì, possiamo saltare tra il brano corrente. Richiede Android Auto 8.3 o superiore.</string>
+    <string name="uxprototype_tutorial">Tutto ciò che fa questo tweak è fondamentalmente creare una scorciatoia gratuita sulla home page per aprire una pagina web. Si tratta di un easter egg nascosto in Android Auto rilasciato il 1 aprile 2022. Attivare la \"Modalità sviluppatore\" in \"Impostazioni sviluppatore\" sotto la voce \"Modalità applicazione\". È l\'unico modo per avere un\'app a schermo intero su Android Auto in questo momento. ATTENZIONE: Non si può uscire dall\'app, utilizzare questo se si prevede solo di utilizzare questo sulla vostra auto. Non esiste un pulsante per andare indietro di pagina.</string>
+    <string name="uxprototype_dialog">Inserisci un URL completo valido</string>
+    <string name="uxprototype_tweak">Collegamento personalizzato</string>
+    <string name="tutorial_new_seekbar">"Questo tweak attiverà una barra di avanzamento spostabile per le applicazioni multimediali."</string>
+    <string name="tutorial_materialyou">"Questa modifica abilita il Material You per le impostazioni di Android Auto sul telefono. Questo funziona correttamente solo su Android Auto 8.8&gt; come testato"</string>
 </resources>
