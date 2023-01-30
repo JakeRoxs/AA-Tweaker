@@ -1028,8 +1028,8 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (load("aa_kill_switches")) {
-                            revert("aa_kill_switches");
+                        if (load("kill_telemetry")) {
+                            revert("kill_telemetry");
                             disableTelemetryButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.telemetry_string));
                             changeStatus(telemetryStatus, 0, true);
                             showRebootButton();
