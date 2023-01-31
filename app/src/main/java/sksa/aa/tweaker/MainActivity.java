@@ -142,13 +142,15 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        Bundle extras = getIntent().getExtras();
 
+        Bundle extras = new Bundle()    ;
 
+        try {
+            extras = getIntent().getExtras();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
 
-        urlprototype = false;
-
-        accountsPrefs =  getSharedPreferences("accountsList", 0);
 
         final String path = getApplicationInfo().dataDir;
         appDirectory = path;
@@ -1208,7 +1210,7 @@ public class MainActivity extends AppCompatActivity {
         newSeekbarTweakStatus = findViewById(R.id.newseekbar_tweak_status);
 
 
-        if (load("aa_new_sekbar")) {
+        if (load("aa_new_seekbar")) {
             newSeekbarTweakButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.tappable_progress));
             changeStatus(newSeekbarTweakStatus, 2, false);
         } else {
@@ -1220,8 +1222,8 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (load("aa_new_sekbar")) {
-                            revert("aa_new_sekbar");
+                        if (load("aa_new_seekbar")) {
+                            revert("aa_new_seekbar");
                             newSeekbarTweakButton.setText(getString(R.string.enable_tweak_string) + getString(R.string.tappable_progress));
                             changeStatus(newSeekbarTweakStatus, 0, true);
                             showRebootButton();
