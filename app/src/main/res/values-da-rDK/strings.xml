@@ -120,8 +120,8 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="remove_paired_car">Fjern en parret bil</string>
     <string name="choose_cars">Vælg biler</string>
     <string name="tutorial_carremover">Vidste du, at du kun kan fjerne alle de parrede biler fra Android Auto og du kan ikke fjerne bare én ad gangen? Denne indstilling vil redde dig, hvis du ønsker at slette en bil fra Android Auto, bare vælge, hvilke biler du ønsker, og det/de vil blive fjernet.</string>
-    <string name="custom_startup_option">Custom boot option</string>
-    <string name="tutorial_custom_startup_option">This tweak will activate a new option inside Android Auto\'s settings that will let the user set what to open when Android Auto is started. You can choose to open latest navigation app, latest music app or just the launcher. Android Auto 6.8 or superior is required.</string>
+    <string name="coolwalk_daynight_tweak">Custom boot option</string>
+    <string name="coolwalk_daynight_tutorial">This tweak will activate a new option inside Android Auto\'s settings that will let the user set what to open when Android Auto is started. You can choose to open latest navigation app, latest music app or just the launcher. Android Auto 6.8 or superior is required.</string>
     <string name="custom_hotseat_option">Custom seating option</string>
     <string name="tutorial_coolwalk">This tweak will activate a new design in Android Auto (codename Coolwalk) that can be toggled in Android Auto\'s settings and that tweaks a bit the appearance on smaller screens. This design features a always on side panel and some different graphics. This feature is in early stage at the moment. Android Auto 6.9 or superior is required.</string>
     <string name="coolwalk_tweak">Coolwalk design</string>

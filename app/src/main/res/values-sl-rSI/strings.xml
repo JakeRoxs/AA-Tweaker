@@ -123,8 +123,8 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="remove_paired_car">Odstrani povezan avto</string>
     <string name="choose_cars">Izberite avto/e</string>
     <string name="tutorial_carremover">Ali ste vedeli, da je iz Android Auto programa mogoče odstraniti le vse avte na enkrat, ne pa vsakega posamezno? Ta funkcija vam pride na pomoč: izberite avte, ki jih hočete odstraniti iz Android Auto in samo izbrani bodo odstranjeni.</string>
-    <string name="custom_startup_option">Možnosti za zagon po meri</string>
-    <string name="tutorial_custom_startup_option">Popravek aktivira novo možnost v nastavitvah Android Auto, katera dopusti uporabniku, da sam nastavi katero aplikacijo odpreti ob zagonu. Izberete lahko najnovejšo navigacijo, glasbeni predvajalnik, ali preprosto zaganjalnik. Potrebno je posodobiti Android Auto na verzijo 6.8 ali kasnejšo.</string>
+    <string name="coolwalk_daynight_tweak">Možnosti za zagon po meri</string>
+    <string name="coolwalk_daynight_tutorial">Popravek aktivira novo možnost v nastavitvah Android Auto, katera dopusti uporabniku, da sam nastavi katero aplikacijo odpreti ob zagonu. Izberete lahko najnovejšo navigacijo, glasbeni predvajalnik, ali preprosto zaganjalnik. Potrebno je posodobiti Android Auto na verzijo 6.8 ali kasnejšo.</string>
     <string name="custom_hotseat_option">Možnosti prilagajanja sedeža</string>
     <string name="tutorial_coolwalk">This tweak will activate a new design in Android Auto (codename Coolwalk) that can be toggled in Android Auto\'s settings and that tweaks a bit the appearance on smaller screens. This design features a always on side panel and some different graphics. This feature is in early stage at the moment. Android Auto 6.9 or superior is required.</string>
     <string name="coolwalk_tweak">Coolwalk design</string>

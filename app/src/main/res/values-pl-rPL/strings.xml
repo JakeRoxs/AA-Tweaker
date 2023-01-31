@@ -123,8 +123,8 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="remove_paired_car">Usuń sparowany samochód</string>
     <string name="choose_cars">Wybierz samochód (y) </string>
     <string name="tutorial_carremover">Czy wiesz, że możesz usunąć wszystkie sparowane samochody z Android Auto na raz i nie musisz usunąć ich pojedynczo? Jeśli chcesz usunąć samochód z Android Auto, po prostu wybierz, który samochód (y) chcesz usunąć, a on / one zostaną usunięte. </string>
-    <string name="custom_startup_option">Wybór akcji po uruchomieniu Android Auto.</string>
-    <string name="tutorial_custom_startup_option">Ta poprawka aktywuje nową opcję w ustawieniach Android Auto, która pozwoli użytkownikowi ustawić, co ma otwierać po uruchomieniu Android Auto. Możesz wybrać, aby otworzyć najnowszą aplikację nawigacyjną, najnowszą aplikację muzyczną lub tylko program uruchamiający. Wymagany Android Auto 6.8 lub nowszy.</string>
+    <string name="coolwalk_daynight_tweak">Wybór akcji po uruchomieniu Android Auto.</string>
+    <string name="coolwalk_daynight_tutorial">Ta poprawka aktywuje nową opcję w ustawieniach Android Auto, która pozwoli użytkownikowi ustawić, co ma otwierać po uruchomieniu Android Auto. Możesz wybrać, aby otworzyć najnowszą aplikację nawigacyjną, najnowszą aplikację muzyczną lub tylko program uruchamiający. Wymagany Android Auto 6.8 lub nowszy.</string>
     <string name="custom_hotseat_option">Wybór pozycji kierowcy (lewo/prawo stronna)</string>
     <string name="tutorial_coolwalk">Ta poprawka aktywuje nowy projekt w Android Auto (nazwa kodowa Coolwalk), który można przełączać w ustawieniach Android Auto i który nieco poprawia wygląd na mniejszych ekranach. Ten projekt ma zawsze widoczny panel boczny i różne grafiki. Ta funkcja jest obecnie na wczesnym etapie. Wymagany Android Auto 6.9 lub nowszy </string>
     <string name="coolwalk_tweak">Podział ekranu (Coolwalk design)</string>

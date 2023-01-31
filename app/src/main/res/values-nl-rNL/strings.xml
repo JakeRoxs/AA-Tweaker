@@ -121,8 +121,8 @@ WAARSCHUWING: Deze tweak is niet uitgebreid getest en kan Android Auto mogelijk 
     <string name="remove_paired_car">Verwijder een gekoppelde auto</string>
     <string name="choose_cars">Kies auto(s)</string>
     <string name="tutorial_carremover">Wist je dat je alleen alle gekoppelde auto\'s van Android Auto kunt verwijderen en dat je ze niet één voor één kunt verwijderen? Deze optie zal je helpen indien je een auto van Android Auto wilt verwijderen, selecteer gewoon welke auto(s) je wilt en zij/zij zullen worden verwijderd.</string>
-    <string name="custom_startup_option">Aangepaste opstartoptie</string>
-    <string name="tutorial_custom_startup_option">Met deze tweak wordt een nieuwe optie ingeschakeld in de instellingen van Android Auto, waarmee de gebruiker kan instellen wat geopend moet worden wanneer Android Auto wordt gestart. U kunt de laatste gebruikte navigatie-app openen, de laatst gebruikte muziek app of het start menu. Android Auto 6.8 of hoger is vereist.</string>
+    <string name="coolwalk_daynight_tweak">Aangepaste opstartoptie</string>
+    <string name="coolwalk_daynight_tutorial">Met deze tweak wordt een nieuwe optie ingeschakeld in de instellingen van Android Auto, waarmee de gebruiker kan instellen wat geopend moet worden wanneer Android Auto wordt gestart. U kunt de laatste gebruikte navigatie-app openen, de laatst gebruikte muziek app of het start menu. Android Auto 6.8 of hoger is vereist.</string>
     <string name="custom_hotseat_option">Zitplaats optie</string>
     <string name="tutorial_coolwalk">Deze tweak zal een nieuw ontwerp activeren in Android Auto (codename Coolwalk) dat kan worden ingeschakeld in Android Auto\'s instellingen en dat het uiterlijk een beetje verandert op kleinere schermen. Dit ontwerp bevat een \"altijd aan\"-zijpaneel en een aantal verschillende afbeeldingen. Deze functie is op dit moment in een beta-fase. Android Auto 6.9 of hoger is vereist.</string>
     <string name="coolwalk_tweak">Coolwalk ontwerp</string>

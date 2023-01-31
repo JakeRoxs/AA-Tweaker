@@ -813,7 +813,7 @@
                     app:layout_constraintBottom_toBottomOf="@id/declinesms_tweak_button" />
 
                 <Button
-                    android:id="@+id/startup"
+                    android:id="@+id/coolwalkdaynighttweak"
                     android:paddingTop="9dp"
                     android:layout_width="0dp"
                     style="@style/ButtonStyle"
@@ -826,14 +826,14 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
-                    android:id="@+id/startupstatus"
+                    android:id="@+id/coolwalkdaynightstatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_check_circle_24"
                     android:layout_marginEnd="3dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/startup"
-                    app:layout_constraintBottom_toBottomOf="@id/startup" />
+                    app:layout_constraintTop_toTopOf="@id/coolwalkdaynighttweak"
+                    app:layout_constraintBottom_toBottomOf="@id/coolwalkdaynighttweak" />
 
                                <Button
                                   android:id="@+id/uxprototypetweak"
@@ -845,7 +845,7 @@
                                   android:focusable="true"
                                   android:drawablePadding="9dp"
                                   app:layout_constraintEnd_toStartOf="@id/message_autoread_tweak_status"
-                                  app:layout_constraintTop_toBottomOf="@id/startup"
+                                  app:layout_constraintTop_toBottomOf="@id/coolwalkdaynighttweak"
                                   app:layout_constraintStart_toStartOf="parent" />
 
                             <ImageView

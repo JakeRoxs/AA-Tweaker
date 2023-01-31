@@ -120,8 +120,8 @@ Android Auto 5.8以降が必要です。</string>
     <string name="remove_paired_car">ペアリングされた車を削除</string>
     <string name="choose_cars">車を選択</string>
     <string name="tutorial_carremover">ペアリングされた全ての車を一括でAndroid Autoから削除することしかできず、一度に1台だけ削除することはできないことをご存知ですか？このオプションは、車をAndroid Autoから削除したい場合に役立ちます。必要な車を選択するだけで、その車が削除されます。</string>
-    <string name="custom_startup_option">カスタム起動設定</string>
-    <string name="tutorial_custom_startup_option">この調整は、Android Autoの起動時に何を開くかをユーザーが設定できるようにする、Android Autoの設定内の新しい項目を有効にします。最後のナビアプリ、最後の音楽アプリ、またはランチャーを開くように選択できます。Android Auto 6.8以降が必要です。</string>
+    <string name="coolwalk_daynight_tweak">カスタム起動設定</string>
+    <string name="coolwalk_daynight_tutorial">この調整は、Android Autoの起動時に何を開くかをユーザーが設定できるようにする、Android Autoの設定内の新しい項目を有効にします。最後のナビアプリ、最後の音楽アプリ、またはランチャーを開くように選択できます。Android Auto 6.8以降が必要です。</string>
     <string name="custom_hotseat_option">カスタム座席設定</string>
     <string name="tutorial_coolwalk">この調整は、Android Autoの新しいデザイン (コードネーム Coolwalk) を有効にします。これはAndroid Auto内の設定で切り替えることができ、小さな画面での表示を微調整します。このデザインでは、常にサイドパネルといくつかの異なるグラフィックを備えています。現在、この機能は初期段階にあります。Android Auto 6.9以降が必要です。</string>
     <string name="coolwalk_tweak">Coolwalkのデザイン</string>

@@ -121,8 +121,8 @@ AVERTISSEMENT : Ce tweak n\'a pas été testé de manière approfondie et pourra
     <string name="remove_paired_car">Supprimer une voiture appairée</string>
     <string name="choose_cars">Sélectionner la ou les voitures</string>
     <string name="tutorial_carremover">Saviez-vous que sous Android Auto, il est uniquement possible de supprimer d\'un coup l\'intégralité des voitures appairées et non une à la fois ? Cette option sera très utile si vous voulez faire des suppressions spécifiques. Pour cela, il suffit de sélectionner la ou les voitures que vous voulez et elles seront supprimées.</string>
-    <string name="custom_startup_option">Option de démarrage personnalisée</string>
-    <string name="tutorial_custom_startup_option">Ce tweak activera une nouvelle option dans les paramètres d\'Android Auto permettant à l\'utilisateur de définir ce qui doit s\'ouvrir au démarrage d\'Android Auto. Vous pouvez choisir d\'ouvrir la dernière application de navigation, la dernière application de musique ou simplement le lanceur. Android Auto 6.8 ou supérieur est requis.</string>
+    <string name="coolwalk_daynight_tweak">Option de démarrage personnalisée</string>
+    <string name="coolwalk_daynight_tutorial">Ce tweak activera une nouvelle option dans les paramètres d\'Android Auto permettant à l\'utilisateur de définir ce qui doit s\'ouvrir au démarrage d\'Android Auto. Vous pouvez choisir d\'ouvrir la dernière application de navigation, la dernière application de musique ou simplement le lanceur. Android Auto 6.8 ou supérieur est requis.</string>
     <string name="custom_hotseat_option">Option du siège conducteur</string>
     <string name="tutorial_coolwalk">Ce tweak activera un nouveau design dans Android Auto (nom de code Coolwalk) qui peut être activé dans les paramètres d\'Android Auto et qui modifie un peu l\'apparence sur les écrans plus petits. Ce design comporte un panneau latéral toujours visible et des graphiques différents. Cette fonctionnalité n\'en est qu\'à ses débuts pour le moment. Android Auto 6.9 ou supérieur est requis.</string>
     <string name="coolwalk_tweak">Affichage Coolwalk</string>

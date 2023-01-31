@@ -123,8 +123,8 @@ ADVERTENCIA: Esta modificación no ha sido probada extensivamente y podría pote
     <string name="remove_paired_car">Eliminar un coche emparejado</string>
     <string name="choose_cars">Elegir coche(s)</string>
     <string name="tutorial_carremover">¿Sabías que sólo se pueden quitar los coches emparejados en Android Auto todos a la vez, y no de uno en uno? Esta opción te rescatará si quieres eliminar coches individuales en Android Auto; sólo tienes que seleccionar el(los) coche(s) que deseas y se eliminará(n).</string>
-    <string name="custom_startup_option">Opción de inicio personalizada</string>
-    <string name="tutorial_custom_startup_option">Esta modificación activará una nueva opción dentro de la configuración de Android Auto que permitirá al usuario establecer qué abrir cuando Android Auto se inicia. Puedes elegir entre abrir la última aplicación de navegación, la última aplicación de música, o simplemente el lanzador. Se requiere Android Auto 6.8 o superior.</string>
+    <string name="coolwalk_daynight_tweak">Opción de inicio personalizada</string>
+    <string name="coolwalk_daynight_tutorial">Esta modificación activará una nueva opción dentro de la configuración de Android Auto que permitirá al usuario establecer qué abrir cuando Android Auto se inicia. Puedes elegir entre abrir la última aplicación de navegación, la última aplicación de música, o simplemente el lanzador. Se requiere Android Auto 6.8 o superior.</string>
     <string name="custom_hotseat_option">Opción de asientos personalizada</string>
     <string name="tutorial_coolwalk">Esta modificación activará un nuevo diseño en Android Auto (con nombre en clave Coolwalk), que se puede activar en la configuración de Android Auto, y que ajusta ligeramente la apariencia en pantallas más pequeñas. Este diseño presenta un panel lateral siempre visible y con apariencia gráfica diferente. Esta característica está en su fase inicial de momento. Se requiere Android Auto 6.9 o superior.</string>
     <string name="coolwalk_tweak">Diseño Coolwalk</string>

@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     private Button rebootButton;
     private Button nospeed;
     private Button taplimitat;
-    private Button newStartupTweak;
+    private Button coolwalkDayNightTweak;
     private Button patchapps;
     private Button messageAutoReadTweak;
     private Button batteryoutline;
@@ -339,31 +339,31 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        newStartupTweak = findViewById(R.id.startup);
-        navstatus = findViewById(R.id.startupstatus);
-        if (load("aa_new_startup")) {
-            newStartupTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.custom_startup_option));
+        coolwalkDayNightTweak = findViewById(R.id.coolwalkdaynighttweak);
+        navstatus = findViewById(R.id.coolwalkdaynightstatus);
+        if (load("coolwalk_daynight_tweak")) {
+            coolwalkDayNightTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_daynight_tweak));
             changeStatus(navstatus, 2, false);
         } else {
-            newStartupTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.custom_startup_option));
+            coolwalkDayNightTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_daynight_tweak));
             changeStatus(navstatus, 0, false);
         }
-        newStartupTweak.setOnClickListener(
+        coolwalkDayNightTweak.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (load("aa_new_startup")) {
-                            revert("aa_new_startup");
-                            newStartupTweak.setText(getString(R.string.re_enable_tweak_string) + getString(R.string.custom_startup_option));
+                        if (load("coolwalk_daynight_tweak")) {
+                            revert("coolwalk_daynight_tweak");
+                            coolwalkDayNightTweak.setText(getString(R.string.re_enable_tweak_string) + getString(R.string.coolwalk_daynight_tweak));
                             changeStatus(navstatus, 0, true);
                             showRebootButton();
                         } else {
-                            navpatch();
+                            coolwalkdaynightpatch();
                         }
                     }
                 });
 
-        setOnLongClickListener(newStartupTweak, R.string.tutorial_custom_startup_option, R.string.restricted_coolwalk);
+        setOnLongClickListener(coolwalkDayNightTweak, R.string.coolwalk_daynight_tutorial, R.drawable.tutorial_coolwalkdaynight);
 
         patchapps = findViewById(R.id.patchapps);
         patchappstatus = findViewById(R.id.patchedappstatus);
@@ -567,7 +567,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
 
-        setOnLongClickListener(materialYouButton, R.string.tutorial_materialyou);
+        setOnLongClickListener(materialYouButton, R.string.tutorial_materialyou, R.drawable.tutorial_materialyou);
 
 
 
@@ -2114,7 +2114,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         }.start();
     }
 
-    public void navpatch() {
+    public void coolwalkdaynightpatch() {
         final TextView logs = initiateLogsText();
 
         final ProgressDialog dialog = ProgressDialog.show(MainActivity.this, "",
@@ -2123,11 +2123,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         final StringBuilder finalCommand = new StringBuilder();
 
 
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__custom_startup_app_enabled\", \"\" ,1,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__remove_startup_trampoline_kill_switch\", \"\" ,1,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__startup_app_policy\", \"\" ,4,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__day_night_theme_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
 
 
@@ -2145,28 +2141,28 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 appendText(logs, "\n\n--  run SQL method   --");
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'DROP TRIGGER IF EXISTS aa_new_startup;\nDROP TRIGGER IF EXISTS aa_new_startup_cleanup;\nDELETE FROM Flags WHERE name=\"SystemUI__startup_app_policy\";\nDELETE FROM Flags WHERE name=\"SystemUi__custom_startup_app_enabled\";\nDELETE FROM Flags WHERE name=\"SystemUi__remove_startup_trampoline_kill_switch\";\n"
+                                "'DROP TRIGGER IF EXISTS coolwalk_daynight_tweak;\n"
                                 + finalCommand + "'"
                 ).getStreamLogsWithLabels());
 
 
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'CREATE TRIGGER aa_new_startup AFTER DELETE\n" +
+                                "'CREATE TRIGGER coolwalk_daynight_tweak AFTER DELETE\n" +
                                 "On FlagOverrides\n" +
                                 "BEGIN\n" + finalCommand + "END;'\n"
                 ).getStreamLogsWithLabels());
-                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"aa_new_startup\";'").getInputStreamLog().length() <= 4) {
+                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"coolwalk_daynight_tweak\";'").getInputStreamLog().length() <= 4) {
                     suitableMethodFound = false;
                 } else {
                     appendText(logs, "\n--  end SQL method   --");
-                    save(true, "aa_new_startup");
+                    save(true, "coolwalk_daynight_tweak");
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
                             changeStatus(navstatus, 1, true);
                             showRebootButton();
-                            newStartupTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.custom_startup_option));
+                            coolwalkDayNightTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_daynight_tweak));
                         }
                     });
                 }
@@ -2186,7 +2182,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 if (!suitableMethodFound) {
                     final DialogFragment notSuccessfulDialog = new NotSuccessfulDialog();
                     Bundle bundle = new Bundle();
-                    bundle.putString("tweak", "aa_new_startup");
+                    bundle.putString("tweak", "coolwalk_daynight_tweak");
                     bundle.putString("log", logs.getText().toString());
                     notSuccessfulDialog.setArguments(bundle);
                     notSuccessfulDialog.show(getSupportFragmentManager(), "NotSuccessfulDialog");
@@ -2428,6 +2424,13 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__dashboard_placement_customization_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__media_notification_high_priority_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__launcher_settings_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__day_night_theme_enabled\", \"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+
 
 
 

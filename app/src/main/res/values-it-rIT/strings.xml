@@ -121,8 +121,8 @@ ATTENZIONE: Questo tweak non è stato testato estensivamente e potenzialmente pu
     <string name="remove_paired_car">Rimuovere un\'auto accoppiata</string>
     <string name="choose_cars">Scegliere auto</string>
     <string name="tutorial_carremover">Sapevi che su Android Auto non è possibile eliminare una singola auto accoppiata ma è solamente possibile eliminarle tutte in un colpo solo? Quest\'opzione ti verrà in aiuto nel caso si ha la necessità di rimuovere solo un\'auto. Basterà selezionarla ed eliminarla dal bottone dedicato.</string>
-    <string name="custom_startup_option">Avvio personalizzato</string>
-    <string name="tutorial_custom_startup_option">Questa modifica attiverà una nuova opzione all\'interno delle impostazioni di Android Auto, che permetterà all\'utente di impostare cosa aprire quando Android Auto viene avviato. È possibile scegliere di aprire l\'ultima app di navigazione, ultima app musicale o solo il launcher. È richiesto Android Auto 6.8 o superiore.</string>
+    <string name="coolwalk_daynight_tweak">Avvio personalizzato</string>
+    <string name="coolwalk_daynight_tutorial">Questa modifica attiverà una nuova opzione all\'interno delle impostazioni di Android Auto, che permetterà all\'utente di impostare cosa aprire quando Android Auto viene avviato. È possibile scegliere di aprire l\'ultima app di navigazione, ultima app musicale o solo il launcher. È richiesto Android Auto 6.8 o superiore.</string>
     <string name="custom_hotseat_option">Opzione posto guida</string>
     <string name="tutorial_coolwalk">Questo tweak attiverà un nuovo design di Android Auto (nome in codice Coolwalk) che può essere attivato nelle impostazioni di Android Auto e che modifica l\'aspetto su schermi più piccoli. Questo design è caratterizzato da un pannello laterale sempre e da una grafica diversa. Questa funzione è in fase iniziale al momento. Android Auto 6.9 o superiore è richiesto.</string>
     <string name="coolwalk_tweak">Coolwalk design</string>

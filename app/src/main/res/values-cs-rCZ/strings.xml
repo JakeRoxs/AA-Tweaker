@@ -133,8 +133,8 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="remove_paired_car">Odstranit spárované vozidlo</string>
     <string name="choose_cars">Vyberte vozidlo(a)</string>
     <string name="tutorial_carremover">Věděli jste, že si v Android Auto nemůžete vybrat, které vozidlo chcete odstranit a můžete odstranit pouze všechna vozidla najednou? Tato volba vás zachrání, když chcete smazat jen jedno vozidlo. Stačí si vybrat, které z aut chcete smazat a potvrdit.</string>
-    <string name="custom_startup_option">Vlastní nastavení spouštění</string>
-    <string name="tutorial_custom_startup_option">Toto nastavení aktivuje novou volbu uvnitř nastavení Android Auto, která povolí uživateli si vybrat, co chce otevřít při spuštění Android Auto. Můžete si vybrat mezi spuštěním poslední aplikace navigace, poslední hudební aplikace nebo pouze spouštěčem. Je vyžadováno Android Auto 6.8 nebo vyšší.</string>
+    <string name="coolwalk_daynight_tweak">Vlastní nastavení spouštění</string>
+    <string name="coolwalk_daynight_tutorial">Toto nastavení aktivuje novou volbu uvnitř nastavení Android Auto, která povolí uživateli si vybrat, co chce otevřít při spuštění Android Auto. Můžete si vybrat mezi spuštěním poslední aplikace navigace, poslední hudební aplikace nebo pouze spouštěčem. Je vyžadováno Android Auto 6.8 nebo vyšší.</string>
     <string name="custom_hotseat_option">Uživatelská volba pozice řidiče</string>
     <string name="tutorial_coolwalk">Toto nastavení aktivuje nový design v Android Auto (kódové označení Coolwalk), které je možno zapnout v nastavení Android Auto. Toto nastavení lehce upraví vzhled na menších obrazovkách. Tento design obsahuje vždy zobrazený postranní panel a změněnou grafiku. Tato funkce je v současnosti stále v rané fázi vývoje. Je vyžadováno Android Auto 6.9 nebo vyšší.</string>
     <string name="coolwalk_tweak">Design Coolwalk</string>

@@ -121,8 +121,8 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="remove_paired_car">Eşleştirilmiş bir arabayı kaldırma</string>
     <string name="choose_cars">Araba(ları) Seç</string>
     <string name="tutorial_carremover">Android Auto\'dan yalnızca eşleştirilmiş tüm arabaları kaldırabileceğinizi ve aynı anda yalnızca birini kaldıramayacağınızı biliyor muydunuz? Android Otomatik\'ten bir arabayı silmek istiyorsanız, bu seçenek sizi kurtarır, sadece istediğiniz arabaları seçin ve kaldırılır.</string>
-    <string name="custom_startup_option">Özel başlatma seçeneği</string>
-    <string name="tutorial_custom_startup_option">öğretici özel başlatma seçeneği</string>
+    <string name="coolwalk_daynight_tweak">Özel başlatma seçeneği</string>
+    <string name="coolwalk_daynight_tutorial">öğretici özel başlatma seçeneği</string>
     <string name="custom_hotseat_option">Özel oturma seçeneği</string>
     <string name="tutorial_coolwalk">This tweak will activate a new design in Android Auto (codename Coolwalk) that can be toggled in Android Auto\'s settings and that tweaks a bit the appearance on smaller screens. This design features a always on side panel and some different graphics. This feature is in early stage at the moment. Android Auto 6.9 or superior is required.</string>
     <string name="coolwalk_tweak">Geniş gidiş dizaynı </string>

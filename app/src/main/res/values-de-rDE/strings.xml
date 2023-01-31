@@ -121,8 +121,8 @@ WARNUNG: Dieser Tweak wurde nicht ausgiebig getestet und könnte möglicherweise
     <string name="remove_paired_car">Ein gekoppeltes Fahrzeug entfernen</string>
     <string name="choose_cars">Fahrzeug(e) wählen</string>
     <string name="tutorial_carremover">Wussten Sie, dass Sie nur alle gekoppelten Fahrzeuge gleichzeitig innerhalb von Android Auto entfernen können und nicht nur ein einzelnes? Diese Option wird Sie retten, wenn Sie ein Fahrzeug von Android Auto löschen wollen, wählen Sie einfach das/die gewünschte(n) Fahrzeug(e) aus und diese werden entfernt.</string>
-    <string name="custom_startup_option">Benutzerdefinierte Boot-Option</string>
-    <string name="tutorial_custom_startup_option">Mit diesem Tweak wird eine neue Option in den Einstellungen von Android Auto aktiviert, mit der der Benutzer festlegen kann, was beim Starten von Android Auto geöffnet werden soll. Sie können wählen, ob Sie die neueste Navigations-App, die neueste Musik-App oder nur den Launcher öffnen möchten. Android Auto 6.8 oder höher ist erforderlich.</string>
+    <string name="coolwalk_daynight_tweak">Benutzerdefinierte Boot-Option</string>
+    <string name="coolwalk_daynight_tutorial">Mit diesem Tweak wird eine neue Option in den Einstellungen von Android Auto aktiviert, mit der der Benutzer festlegen kann, was beim Starten von Android Auto geöffnet werden soll. Sie können wählen, ob Sie die neueste Navigations-App, die neueste Musik-App oder nur den Launcher öffnen möchten. Android Auto 6.8 oder höher ist erforderlich.</string>
     <string name="custom_hotseat_option">Eigene Sitzoption</string>
     <string name="tutorial_coolwalk">Dieser Tweak aktiviert ein neues Design in Android Auto (Codename Coolwalk), das in den Einstellungen von Android Auto umgeschaltet werden kann und das Aussehen auf kleineren Bildschirmen ein wenig verändert. Dieses Design bietet ein immer vorhandenes Seitenpanel und einige andere Grafiken. Diese Funktion befindet sich derzeit in einem frühen Stadium. Android Auto 6.9 oder höher ist erforderlich.</string>
     <string name="coolwalk_tweak">Coolwalk-Design</string>
