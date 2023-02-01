@@ -20,13 +20,13 @@ What this app does is making some SQLite queries in order to alter some features
 - Patch for custom Android Auto apps
 - Disable speed restrictions while driving (preview of messages will be shown always)
 - Disable six tap limit (the banner asking to pay attention to road will not be shown anymore)
-- Disable launch of Navigator app at start
 - Disable bluetooth auto connection
 - Enable force Widescreen (or force disable it)
 - Disable unnecessary telemetry
 - Set notification duration from 0ms to 20 seconds
 - Set media notification duration on Navbar to up to 15 minutes
 - Enable MultiDisplay and clustersim feature
+- Force enable Coolwalk UI
 
 And much more :)
 
