@@ -36,11 +36,11 @@ AA AIO TWEAKER is a fork of AA Phenotype Patcher and a lot of the original sourc
 
 # Can I use this app instead of AA Phenotype Patcher?
 
-Yes you can. If you are on Android Auto 6.0 or superior, be sure to re-do the patch of custom apps. This is because AA Phenotype Patcher has not been updated with the new methods.
+Yes you can. With Android Auto being updated, Phenotype Patcher does not have a suitable method anymore due to Android Auto's changes.
 
 # How is this different from Sensible Android Auto: Xposed?
 
-This app doesn't need Xposed, which in some cases is one more pain to have. Also, it should survive Android Auto updates (unless the flag are changed) without any user modification.
+This app doesn't need Xposed, which in some cases is one more pain to have. Also, it should survive Android Auto updates (as long as the flags don't need edits) without any user intrvention.
 
 # Can I use this app instead of Sensible Android Auto: Xposed?
 
