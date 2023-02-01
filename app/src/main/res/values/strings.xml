@@ -122,7 +122,7 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="choose_cars">Choose car(s)</string>
     <string name="tutorial_carremover">Did you know that you can only remove all the paired cars from Android Auto and you cannot remove just one at a time? This option will rescue you if you want to delete a car from Android Auto, just select which car(s) you want and it/they will be removed.</string>
     <string name="coolwalk_daynight_tweak">Light/Dark Coolwalk</string>
-    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can't handle switch very well.</string>
+    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can\'t handle switch very well.</string>
     <string name="custom_hotseat_option">Custom seating option</string>
     <string name="tutorial_coolwalk">This tweak will activate a new design in Android Auto (codename Coolwalk) that can be toggled in Android Auto\'s settings and that tweaks a bit the appearance on smaller screens. This design features a always on side panel and some different graphics. This feature is in early stage at the moment. Android Auto 6.9 or superior is required.</string>
     <string name="coolwalk_tweak">Coolwalk design</string>

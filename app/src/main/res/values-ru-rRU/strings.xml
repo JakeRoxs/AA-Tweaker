@@ -9,7 +9,7 @@
     <string name="patch_custom_apps">выбранные приложения</string>
     <string name="disable_speed_limitations">лимит касаний</string>
     <string name="unlimited_scrolling_when_driving">ограничение скорости</string>
-    <string name="message_auto_read">Автопрочтение сообщений</string>
+    <string name="message_auto_read">Авточтение сообщений</string>
     <string name="splash">Это приложение может изменить настройки Android Auto и обойти некоторые ограничения для безопасности, которые Google реализовал в Android Auto.\n
 Используя это приложение, Вы соглашаетесь с тем, что сами несёте исключительную ответственность за возможные последствия, которые могут привести к гибели \nи/или травмам людей и/или ущербу имущества.\n
 Ни при каких обстоятельствах автор этого приложения не несет ответственности за последствия от его использования.</string>
@@ -118,12 +118,12 @@
     <string name="ignore_for_now">Пока что игнорировать</string>
     <string name="many_accounts_warning">AIO TWEAKER обнаружил большое число (%1$s) аккаунтов Google, сохраненных на телефоне.\nЭто может негативно повлиять на работу AA AIO TWEAKER и патч может не удаться.\nВы можете либо выбрать учетную(ые) запись(и), используемую в основном с сервисами Google Play, чтобы применить патч только к ним (рекомендуется 2 или менее), либо активировать экспериментальный режим, который должен исправить все учетные записи.\nОбратите ВНИМАНИЕ, что экспериментальный режим может вызвать некоторые сбои в работе телефона во время работы патча.</string>
     <string name="dark_switch_tweak">выбрать день/ночь</string>
-    <string name="tutorial_assistant_suggestions">This tweak will activate a new feature that adds some quick shortcuts to Assistant actions on top of home screen.</string>
+    <string name="tutorial_assistant_suggestions">Эта настройка активирует новую функцию, которая добавляет несколько быстрых ярлыков действий Ассистента на домашнем экране.</string>
     <string name="remove_paired_car">Удалить подключенный автомобиль</string>
     <string name="choose_cars">Выбрать автомобиль(и)</string>
     <string name="tutorial_carremover">Знаете ли вы, что можно удалить только все подключенные автомобили из Android Auto, а удалить только один из них невозможно? Эта опция поможет вам удалить один автомобиль из Android Auto,  а не все сразу.</string>
-    <string name="coolwalk_daynight_tweak">Light/Dark Coolwalk</string>
-    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can\'t handle switch very well.</string>
+    <string name="coolwalk_daynight_tweak">Светлый/Темный Coolwalk</string>
+    <string name="coolwalk_daynight_tutorial">Эта настройка активирует дневной/ночной режим для режима Coolwalk. Выглядит сломанной на данный момент и может некорректно переключать.</string>
     <string name="custom_hotseat_option">Пользовательские параметры загрузки</string>
     <string name="tutorial_coolwalk">Этот твик активирует новый интерфейс  Android Auto (Codewalk), который можно включить в настройках Android Auto. При этом будет  незначительно изменён внешний вид и  добавятся дополнительные окна. Этот интерфейс  всегда отображает боковую панель и графику. Параметр в данный момент находится на ранней стадии тестирования. Требуется Android Auto 6.9 или новее.</string>
     <string name="coolwalk_tweak">Интерфейс Coolwalk </string>
@@ -143,8 +143,8 @@
     <string name="tappable_progress">Новый индикатор прогресса</string>
     <string name="tappable_progress_tutorial">Наконец-то нам доступен сенсорный прогресс бар воспроизводимого контента на Android Auto. Да, мы можем перематывать текущий трек. Требуется Android Auto 8.3 или выше.</string>
     <string name="uxprototype_tutorial">Все что делает этот твик, создает ярлык на главной странице, чтобы открыть веб-страницу. Это пасхалка, скрытая в Android Auto от 1 апреля 2022 года. Активируйте версию приложения \"Для разработчиков\" в настройках \"Для разработчиков\". Это единственный способ создать полноэкранное приложение на Android Auto прямо сейчас. ПРЕДУПРЕЖДЕНИЕ: Не выйти, используйте это, только если вы планируете использовать в своем автомобиле. Кнопка возврата также отсутствует.</string>
-    <string name="uxprototype_dialog">Enter a valid full URL</string>
+    <string name="uxprototype_dialog">Введите корректный URL</string>
     <string name="uxprototype_tweak">Пользовательский ярлык</string>
-    <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
-    <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
+    <string name="tutorial_new_seekbar">"Эта настройка включает панель поиска для медиа приложений."</string>
+    <string name="tutorial_materialyou">"Эта настройка включает Material you стиль для приложения Android Auto на телефоне. Тесты показали, что корректно работает только в Android Auto 8.8&gt;"</string>
 </resources>
