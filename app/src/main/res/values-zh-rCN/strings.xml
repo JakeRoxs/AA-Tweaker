@@ -127,8 +127,8 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="remove_paired_car">删除部分配对车辆</string>
     <string name="choose_cars">选择（一个或多个）车辆</string>
     <string name="tutorial_carremover">您知道吗？您只能从Android Auto 移除所有配对的汽车，不能一次只移除一个。如果您想要从 Android Auto 删除一辆汽车，此选项将会帮助您。 只需选择你想要的车，它/它们将被删除。</string>
-    <string name="coolwalk_daynight_tweak">自定义启动选项</string>
-    <string name="coolwalk_daynight_tutorial">此微调将激活Android Auto设置中的一个新选项，它将允许用户设置在Android Auto启动时打开的内容。 您可以选择打开最近的导航应用、最近的音乐应用或仅仅是主屏幕。需要Android Auto 6.8或更高版本。</string>
+    <string name="coolwalk_daynight_tweak">Light/Dark Coolwalk</string>
+    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can\'t handle switch very well.</string>
     <string name="custom_hotseat_option">自定义驾驶位选项</string>
     <string name="tutorial_coolwalk">这个微调将在 Android Auto 的设置中激活一个新设计(代码名Coolwalk)，可以在 Android Auto 的设置中切换开关。能在较小的屏幕上调整一些外观。 特色是一个固定的侧边栏和一些不同的图形。 此功能目前处于早期阶段，需要Android Auto 6.9或更高版本。</string>
     <string name="coolwalk_tweak">Coolwalk设计</string>
@@ -151,5 +151,5 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="uxprototype_dialog">Enter a valid full URL</string>
     <string name="uxprototype_tweak">Custom shortcut</string>
     <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
-    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
+    <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

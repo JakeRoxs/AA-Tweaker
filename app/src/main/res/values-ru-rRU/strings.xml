@@ -122,8 +122,8 @@
     <string name="remove_paired_car">Удалить подключенный автомобиль</string>
     <string name="choose_cars">Выбрать автомобиль(и)</string>
     <string name="tutorial_carremover">Знаете ли вы, что можно удалить только все подключенные автомобили из Android Auto, а удалить только один из них невозможно? Эта опция поможет вам удалить один автомобиль из Android Auto,  а не все сразу.</string>
-    <string name="coolwalk_daynight_tweak">Пользовательские параметры загрузки</string>
-    <string name="coolwalk_daynight_tutorial">Этот твик активирует новую опцию в настройках Android Auto, которая позволит пользователю установить, что открывать при запуске Android Auto. Вы можете открыть последнее навигационное приложение, последнее музыкальное приложение или просто лаунчер. Требуется Android Auto 6.8 или новее.</string>
+    <string name="coolwalk_daynight_tweak">Light/Dark Coolwalk</string>
+    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can\'t handle switch very well.</string>
     <string name="custom_hotseat_option">Пользовательские параметры загрузки</string>
     <string name="tutorial_coolwalk">Этот твик активирует новый интерфейс  Android Auto (Codewalk), который можно включить в настройках Android Auto. При этом будет  незначительно изменён внешний вид и  добавятся дополнительные окна. Этот интерфейс  всегда отображает боковую панель и графику. Параметр в данный момент находится на ранней стадии тестирования. Требуется Android Auto 6.9 или новее.</string>
     <string name="coolwalk_tweak">Интерфейс Coolwalk </string>
@@ -146,5 +146,5 @@
     <string name="uxprototype_dialog">Enter a valid full URL</string>
     <string name="uxprototype_tweak">Пользовательский ярлык</string>
     <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
-    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
+    <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

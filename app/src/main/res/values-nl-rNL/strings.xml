@@ -121,8 +121,8 @@ WAARSCHUWING: Deze tweak is niet uitgebreid getest en kan Android Auto mogelijk 
     <string name="remove_paired_car">Verwijder een gekoppelde auto</string>
     <string name="choose_cars">Kies auto(s)</string>
     <string name="tutorial_carremover">Wist je dat je alleen alle gekoppelde auto\'s van Android Auto kunt verwijderen en dat je ze niet één voor één kunt verwijderen? Deze optie zal je helpen indien je een auto van Android Auto wilt verwijderen, selecteer gewoon welke auto(s) je wilt en zij/zij zullen worden verwijderd.</string>
-    <string name="coolwalk_daynight_tweak">Aangepaste opstartoptie</string>
-    <string name="coolwalk_daynight_tutorial">Met deze tweak wordt een nieuwe optie ingeschakeld in de instellingen van Android Auto, waarmee de gebruiker kan instellen wat geopend moet worden wanneer Android Auto wordt gestart. U kunt de laatste gebruikte navigatie-app openen, de laatst gebruikte muziek app of het start menu. Android Auto 6.8 of hoger is vereist.</string>
+    <string name="coolwalk_daynight_tweak">Light/Dark Coolwalk</string>
+    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can\'t handle switch very well.</string>
     <string name="custom_hotseat_option">Zitplaats optie</string>
     <string name="tutorial_coolwalk">Deze tweak zal een nieuw ontwerp activeren in Android Auto (codename Coolwalk) dat kan worden ingeschakeld in Android Auto\'s instellingen en dat het uiterlijk een beetje verandert op kleinere schermen. Dit ontwerp bevat een \"altijd aan\"-zijpaneel en een aantal verschillende afbeeldingen. Deze functie is op dit moment in een beta-fase. Android Auto 6.9 of hoger is vereist.</string>
     <string name="coolwalk_tweak">Coolwalk ontwerp</string>
@@ -145,5 +145,5 @@ WAARSCHUWING: Deze tweak is niet uitgebreid getest en kan Android Auto mogelijk 
     <string name="uxprototype_dialog">Voer een geldige URL in</string>
     <string name="uxprototype_tweak">Aangepaste snelkoppeling</string>
     <string name="tutorial_new_seekbar">"Met deze tweak worden media files doorzoekbaar door middel van een zoekbalk."</string>
-    <string name="tutorial_materialyou">"Deze tweak schakelt \"Material You\" stijl in voor de Android Auto's instellingen op de telefoon. Dit werkt alleen op Android Auto 8.8&gt; zoals getest"</string>
+    <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>

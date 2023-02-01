@@ -120,8 +120,8 @@ Android Auto 5.8以降が必要です。</string>
     <string name="remove_paired_car">ペアリングされた車を削除</string>
     <string name="choose_cars">車を選択</string>
     <string name="tutorial_carremover">ペアリングされた全ての車を一括でAndroid Autoから削除することしかできず、一度に1台だけ削除することはできないことをご存知ですか？このオプションは、車をAndroid Autoから削除したい場合に役立ちます。必要な車を選択するだけで、その車が削除されます。</string>
-    <string name="coolwalk_daynight_tweak">カスタム起動設定</string>
-    <string name="coolwalk_daynight_tutorial">この調整は、Android Autoの起動時に何を開くかをユーザーが設定できるようにする、Android Autoの設定内の新しい項目を有効にします。最後のナビアプリ、最後の音楽アプリ、またはランチャーを開くように選択できます。Android Auto 6.8以降が必要です。</string>
+    <string name="coolwalk_daynight_tweak">Light/Dark Coolwalk</string>
+    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can\'t handle switch very well.</string>
     <string name="custom_hotseat_option">カスタム座席設定</string>
     <string name="tutorial_coolwalk">この調整は、Android Autoの新しいデザイン (コードネーム Coolwalk) を有効にします。これはAndroid Auto内の設定で切り替えることができ、小さな画面での表示を微調整します。このデザインでは、常にサイドパネルといくつかの異なるグラフィックを備えています。現在、この機能は初期段階にあります。Android Auto 6.9以降が必要です。</string>
     <string name="coolwalk_tweak">Coolwalkのデザイン</string>
@@ -144,5 +144,5 @@ Android Auto 5.8以降が必要です。</string>
     <string name="uxprototype_dialog">Enter a valid full URL</string>
     <string name="uxprototype_tweak">カスタムショートカット</string>
     <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
-    <string name="tutorial_materialyou">"This tweak enables \"Material You\" style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
+    <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
 </resources>
