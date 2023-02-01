@@ -20,13 +20,13 @@ What this app does is making some SQLite queries in order to alter some features
 - Patch for custom Android Auto apps
 - Disable speed restrictions while driving (preview of messages will be shown always)
 - Disable six tap limit (the banner asking to pay attention to road will not be shown anymore)
-- Disable launch of Navigator app at start
 - Disable bluetooth auto connection
 - Enable force Widescreen (or force disable it)
 - Disable unnecessary telemetry
 - Set notification duration from 0ms to 20 seconds
 - Set media notification duration on Navbar to up to 15 minutes
 - Enable MultiDisplay and clustersim feature
+- Force enable Coolwalk UI
 
 And much more :)
 
@@ -36,11 +36,11 @@ AA AIO TWEAKER is a fork of AA Phenotype Patcher and a lot of the original sourc
 
 # Can I use this app instead of AA Phenotype Patcher?
 
-Yes you can. If you are on Android Auto 6.0 or superior, be sure to re-do the patch of custom apps. This is because AA Phenotype Patcher has not been updated with the new methods.
+Yes you can. With Android Auto being updated, Phenotype Patcher does not have a suitable method anymore due to Android Auto's changes.
 
 # How is this different from Sensible Android Auto: Xposed?
 
-This app doesn't need Xposed, which in some cases is one more pain to have. Also, it should survive Android Auto updates (unless the flag are changed) without any user modification.
+This app doesn't need Xposed, which in some cases is one more pain to have. Also, it should survive Android Auto updates (as long as the flags don't need edits) without any user intrvention.
 
 # Can I use this app instead of Sensible Android Auto: Xposed?
 
