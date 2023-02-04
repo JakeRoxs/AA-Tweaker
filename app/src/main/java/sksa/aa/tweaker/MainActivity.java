@@ -1239,7 +1239,8 @@ public class MainActivity extends AppCompatActivity {
 
         coolwalkTweak = findViewById(R.id.coolwalk_tweak_button);
         coolwalkTweakStatus = findViewById(R.id.coolwalk_tweak_status);
-
+        nocoolwalkTweak = findViewById(R.id.nocoolwalk_tweak_button);
+        nocoolwalkTweakStatus = findViewById(R.id.nocoolwalk_tweak_status);
 
         if (load("aa_activate_coolwalk")) {
             coolwalkTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_tweak));
@@ -1260,8 +1261,7 @@ public class MainActivity extends AppCompatActivity {
                             showRebootButton();
                         } else {
                             if (load ("aa_deactivate_coolwalk")) {
-                                revert("aa_deactivate_coolwalk");
-                                nocoolwalkTweak.setText(R.string.force_disable_tweak + R.string.coolwalk_tweak);
+                                nocoolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
                                 changeStatus(nocoolwalkTweakStatus, 0, true);
                             }
                             activateCoolwalk();
@@ -1271,8 +1271,7 @@ public class MainActivity extends AppCompatActivity {
 
         setOnLongClickListener(coolwalkTweak, R.string.tutorial_coolwalk, R.drawable.cw5, R.drawable.tutorial_coolwalk_1, R.drawable.tutorial_coolwalk_3);
 
-        nocoolwalkTweak = findViewById(R.id.nocoolwalk_tweak_button);
-        nocoolwalkTweakStatus = findViewById(R.id.nocoolwalk_tweak_status);
+
 
 
         if (load("aa_deactivate_coolwalk")) {
@@ -1293,10 +1292,8 @@ public class MainActivity extends AppCompatActivity {
                             changeStatus(nocoolwalkTweakStatus, 0, true);
                             showRebootButton();
                         } else {
-                            if (load("aa_activate_coolwalk"))
-                            {
-                                revert("aa_activate_coolwalk");
-                                coolwalkTweak.setText(R.string.enable_tweak_string + R.string.coolwalk_tweak);
+                            if (load ("aa_activate_coolwalk")) {
+                                coolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
                                 changeStatus(coolwalkTweakStatus, 0, true);
                             }
                             deactivateCoolwalk();
@@ -2462,6 +2459,12 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__launcher_settings_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Weather__enabled\", \"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Weather__icon_enabled\", \"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Boardwalk__news_browser_available\", \"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
 
 
 
@@ -2476,11 +2479,15 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 String currentPolicy = gainOwnership(logs);
 
 
+                if (load ("aa_activate_coolwalk")) {
+                    coolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
+                    changeStatus(coolwalkTweakStatus, 0, true);
+                }
 
                 appendText(logs, "\n\n--  run SQL method   --");
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'DROP TRIGGER IF EXISTS aa_activate_coolwalk;\n" +
+                                "'DROP TRIGGER IF EXISTS aa_activate_coolwalk;\n DROP TRIGGER IF EXISTS aa_deactivate_coolwalk;\n" +
                                 finalCommand + "'"
                 ).getStreamLogsWithLabels());
 
@@ -2611,10 +2618,11 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
 
 
 
+
                 appendText(logs, "\n\n--  run SQL method   --");
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'DROP TRIGGER IF EXISTS aa_deactivate_coolwalk;\n" +
+                                "'DROP TRIGGER IF EXISTS aa_deactivate_coolwalk;\nDROP TRIGGER IF EXISTS aa_activate_coolwalk;\n" +
                                 finalCommand + "'"
                 ).getStreamLogsWithLabels());
 
@@ -2635,7 +2643,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                         public void run() {
                             changeStatus(nocoolwalkTweakStatus, 1, true);
                             showRebootButton();
-                            nocoolwalkTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_tweak));
+                            nocoolwalkTweak.setText(getString(R.string.re_enable_tweak_string) + getString(R.string.coolwalk_tweak));
                         }
                     });
                 }
@@ -2655,7 +2663,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 if (!suitableMethodFound) {
                     final DialogFragment notSuccessfulDialog = new NotSuccessfulDialog();
                     Bundle bundle = new Bundle();
-                    bundle.putString("tweak", "aa_activate_coolwalk");
+                    bundle.putString("tweak", "aa_deactivate_coolwalk");
                     bundle.putString("log", logs.getText().toString());
                     notSuccessfulDialog.setArguments(bundle);
                     notSuccessfulDialog.show(getSupportFragmentManager(), "NotSuccessfulDialog");

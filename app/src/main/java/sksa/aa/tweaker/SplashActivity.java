@@ -48,17 +48,6 @@ public class SplashActivity extends AppCompatActivity {
 
         final Intent intent = new Intent(this, MainActivity.class);
 
-        String CountUsers = runSuWithCmd(
-                getApplicationInfo().dataDir + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                        "'SELECT COUNT(DISTINCT USER) FROM ApplicationTags WHERE user !=\"\";'").getInputStreamLog();
-        int UserCount = 1;
-
-        try {
-            // Sometimes output returns empty string
-            UserCount = Integer.parseInt(CountUsers);
-        } catch (Exception e) { }
-
-        intent.putExtra("users" , UserCount);
         final NoRootDialog noRootDialog = new NoRootDialog();
         final StreamLogs isDeviceRooted =  runSuWithCmd("echo 1");
 
@@ -184,22 +173,21 @@ public class SplashActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             String fetchedVersion = response.getString("tag_name");
-                            Version actualCheck = new Version(actualVersion);
-                            Version newCheck = null;
+                            Version newCheck = new Version(fetchedVersion.substring(1));
+                            Version actualCheck = null;
                             try {
-                                newCheck = new Version(fetchedVersion.substring(1));
+                                actualCheck = new Version(actualVersion);
+                                if (actualCheck.compareTo(newCheck) == -1) {
+                                    newVersionName = fetchedVersion.substring(1);
+                                }
                             } catch (IllegalArgumentException e) {
                                 Toast.makeText(SplashActivity.this, "Debug build: could not check latest version", Toast.LENGTH_LONG).show();
                                 newVersionName = null;
                                 e.printStackTrace();
                             }
 
-                            if (actualCheck.compareTo(newCheck) == -1) {
-                                newVersionName = fetchedVersion.substring(1);
-                            }
 
-
-                        } catch (JSONException e) {
+                        } catch  (JSONException e) {
                             newVersionName = null;
                             Toast.makeText(SplashActivity.this, "Attention: could not check latest version. Ensure you have internet connectin.", Toast.LENGTH_LONG).show();
                             e.printStackTrace();
