@@ -1279,7 +1279,7 @@ public class MainActivity extends AppCompatActivity {
             nocoolwalkTweak.setText(getString(R.string.re_enable_tweak_string) + getString(R.string.coolwalk_tweak));
             changeStatus(nocoolwalkTweakStatus, 2, false);
         } else {
-            coolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
+            nocoolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
             changeStatus(nocoolwalkTweakStatus, 0, false);
         }
 
@@ -2044,7 +2044,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__keyboard_force_disabled\",\"\" ,0,0);");
             finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__lockout_ms\",\"\" ,80,0);");
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__lockout_ms\",\"\" ,100,0);");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, floatVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__permits_per_sec\",\"\" ,999.0,0);");
             finalCommand.append(System.getProperty("line.separator"));
