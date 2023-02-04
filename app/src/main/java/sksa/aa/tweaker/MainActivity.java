@@ -2733,7 +2733,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 if (!suitableMethodFound) {
                     final DialogFragment notSuccessfulDialog = new NotSuccessfulDialog();
                     Bundle bundle = new Bundle();
-                    bundle.putString("tweak", "aa_activate_coolwalk");
+                    bundle.putString("tweak", "aa_material_you");
                     bundle.putString("log", logs.getText().toString());
                     notSuccessfulDialog.setArguments(bundle);
                     notSuccessfulDialog.show(getSupportFragmentManager(), "NotSuccessfulDialog");
@@ -3287,7 +3287,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                         public void run() {
                             changeStatus(uxprototypeTweakStatus, 1, true);
                             showRebootButton();
-                            disableTelemetryButton.setText(getString(R.string.re_enable_tweak_string) + getString(R.string.telemetry_string));
+                            disableTelemetryButton.setText(getString(R.string.re_enable_tweak_string) + getString(R.string.uxprototype_tweak));
                         }
                     });
                 }
