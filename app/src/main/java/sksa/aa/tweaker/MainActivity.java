@@ -1304,7 +1304,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        setOnLongClickListener(coolwalkTweak, R.string.tutorial_coolwalk, R.drawable.cw5, R.drawable.tutorial_coolwalk_1, R.drawable.tutorial_coolwalk_3);
+        setOnLongClickListener(coolwalkTweak, R.string.tutorial_nocoolwalk);
 
 
         assistantTipsButton = findViewById(R.id.assistanttips_tweak_button);
