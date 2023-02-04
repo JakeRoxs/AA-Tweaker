@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView wifiBitrateStatus;
     private ImageView newSeekbarTweakStatus;
     private ImageView coolwalkTweakStatus;
+    private ImageView nocoolwalkTweakStatus;
     private ImageView assistantTipsTweakStatus;
     private ImageView declineSmsTweakStatus;
     private ImageView uxprototypeTweakStatus;
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
     private Button tweakWiFiBitrateButton;
     private Button newSeekbarTweakButton;
     private Button coolwalkTweak;
+    private Button nocoolwalkTweak;
     private Button deleteCarMode;
     private Button assistantTipsButton;
     private Button declineSmsTweak;
@@ -1257,7 +1259,47 @@ public class MainActivity extends AppCompatActivity {
                             changeStatus(coolwalkTweakStatus, 0, true);
                             showRebootButton();
                         } else {
+                            if (load ("aa_deactivate_coolwalk")) {
+                                revert("aa_deactivate_coolwalk");
+                                nocoolwalkTweak.setText(R.string.force_disable_tweak + R.string.coolwalk_tweak);
+                                changeStatus(nocoolwalkTweakStatus, 0, true);
+                            }
                             activateCoolwalk();
+                        }
+                    }
+                });
+
+        setOnLongClickListener(coolwalkTweak, R.string.tutorial_coolwalk, R.drawable.cw5, R.drawable.tutorial_coolwalk_1, R.drawable.tutorial_coolwalk_3);
+
+        nocoolwalkTweak = findViewById(R.id.nocoolwalk_tweak_button);
+        nocoolwalkTweakStatus = findViewById(R.id.nocoolwalk_tweak_status);
+
+
+        if (load("aa_deactivate_coolwalk")) {
+            nocoolwalkTweak.setText(getString(R.string.re_enable_tweak_string) + getString(R.string.coolwalk_tweak));
+            changeStatus(nocoolwalkTweakStatus, 2, false);
+        } else {
+            coolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
+            changeStatus(nocoolwalkTweakStatus, 0, false);
+        }
+
+        nocoolwalkTweak.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (load("aa_deactivate_coolwalk")) {
+                            revert("aa_deactivate_coolwalk");
+                            nocoolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
+                            changeStatus(nocoolwalkTweakStatus, 0, true);
+                            showRebootButton();
+                        } else {
+                            if (load("aa_activate_coolwalk"))
+                            {
+                                revert("aa_activate_coolwalk");
+                                coolwalkTweak.setText(R.string.enable_tweak_string + R.string.coolwalk_tweak);
+                                changeStatus(coolwalkTweakStatus, 0, true);
+                            }
+                            deactivateCoolwalk();
                         }
                     }
                 });
@@ -2028,17 +2070,9 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_map_interactivity_events_enabled\",\"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_non_scroll_events_enabled\",\"\" ,0,0);");
-            finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_max_grid_list_size\",\"\" ,1,0);");
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_non_scroll_events_enabled\",\"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__transcription_enabled\",\"\" ,1,0);");
-            finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_max_list_size\",\"\" ,999,0);");
-            finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_list_size\",\"\" ,0,0);");
-            finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_pane_list_size\",\"\" ,0,0);");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__keyboard_force_disabled\",\"\" ,0,0);");
             finalCommand.append(System.getProperty("line.separator"));
@@ -2422,13 +2456,11 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__use_widescreen_crossfade\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__dashboard_placement_customization_enabled\", \"\" ,1,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__dashboard_placement_customization_enabled\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__media_notification_high_priority_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__launcher_settings_kill_switch\", \"\" ,0,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__day_night_theme_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
 
 
@@ -2499,6 +2531,140 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
 
     }
 
+    public void deactivateCoolwalk() {
+        final TextView logs = initiateLogsText();
+
+        final ProgressDialog dialog = ProgressDialog.show(MainActivity.this, "",
+                getString(R.string.tweak_loading), true);
+
+        final StringBuilder finalCommand = new StringBuilder();
+
+
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Assistant__coolwalk_suggestions_grpc_enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__fishfood_nag_enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__media_rec_card_enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__opt_in _default\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rail_dock_enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rail_dock_four_app_enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rail_widget_enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__allow_focus_input\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__assistant_media_rec_shortcut_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__assistant_suggestions_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__canonical_vertical_rail_default\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__canonical_vertical_rail_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__choose_assistant_suggestion_over_app_suggestion\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Media__coolwalk_playback_gradient_scrim_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Media__favorites_button_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__streamed_media_recommendations_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__a4c_suggestions_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rotary_proximity_navigation\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__semi_wide_vertical_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__short_canonical_vertical_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__three_actions_hun_ui_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__indicate_severe_thermal_status\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__use_legacy_theme\", \"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__use_widescreen_crossfade\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__dashboard_placement_customization_enabled\", \"\" ,0.0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__media_notification_high_priority_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__launcher_settings_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+
+
+
+
+        new Thread() {
+            @Override
+            public void run() {
+                String path = getApplicationInfo().dataDir;
+                suitableMethodFound = true;
+                killps(logs);
+                String currentOwner = runSuWithCmd("stat -c \"%U\" /data/data/com.google.android.gms/databases/phenotype.db").getInputStreamLog();
+                String currentPolicy = gainOwnership(logs);
+
+
+
+                appendText(logs, "\n\n--  run SQL method   --");
+                appendText(logs, runSuWithCmd(
+                        path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
+                                "'DROP TRIGGER IF EXISTS aa_deactivate_coolwalk;\n" +
+                                finalCommand + "'"
+                ).getStreamLogsWithLabels());
+
+
+                appendText(logs, runSuWithCmd(
+                        path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
+                                "'CREATE TRIGGER aa_deactivate_coolwalk AFTER DELETE\n" +
+                                "On FlagOverrides\n" +
+                                "BEGIN\n" + finalCommand + "END;'\n"
+                ).getStreamLogsWithLabels());
+                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"aa_deactivate_coolwalk\";'").getInputStreamLog().length() <= 4) {
+                    suitableMethodFound = false;
+                } else {
+                    appendText(logs, "\n--  end SQL method   --");
+                    save(true, "aa_deactivate_coolwalk");
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+                            changeStatus(nocoolwalkTweakStatus, 1, true);
+                            showRebootButton();
+                            nocoolwalkTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_tweak));
+                        }
+                    });
+                }
+
+                appendText(logs, "\n\n--  restoring Google Play Services   --");
+                appendText(logs, runSuWithCmd("pm enable com.google.android.gms").getStreamLogsWithLabels());
+
+
+                appendText(logs, "\n\n--  Restoring ownership of the database   --");
+                appendText(logs, runSuWithCmd("chown " + currentOwner + " /data/data/com.google.android.gms/databases/phenotype.db").getStreamLogsWithLabels());
+
+                if (currentPolicy.toLowerCase().equals("permissive")) {
+                    appendText(logs, "\n\n--  Restoring SELINUX   --");
+                    appendText(logs, runSuWithCmd("setenforce 1").getStreamLogsWithLabels());
+                }
+                dialog.dismiss();
+                if (!suitableMethodFound) {
+                    final DialogFragment notSuccessfulDialog = new NotSuccessfulDialog();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("tweak", "aa_activate_coolwalk");
+                    bundle.putString("log", logs.getText().toString());
+                    notSuccessfulDialog.setArguments(bundle);
+                    notSuccessfulDialog.show(getSupportFragmentManager(), "NotSuccessfulDialog");
+                }
+            }
+        }.start();
+
+    }
+
     public void activateMaterialYou() {
         final TextView logs = initiateLogsText();
 
@@ -2547,7 +2713,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                         public void run() {
                             changeStatus(materialYouTweakStatus, 1, true);
                             showRebootButton();
-                            coolwalkTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_tweak));
+                            materialYouButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.materialyou_tweak));
                         }
                     });
                 }

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -83,6 +84,7 @@ public class SplashActivity extends AppCompatActivity {
         editor.putBoolean("aa_bitrate_wireless", false);
         editor.putBoolean("coolwalk_daynight_tweak", false);
         editor.putBoolean("aa_activate_coolwalk", false);
+        editor.putBoolean("aa_deactivate_coolwalk", false);
         editor.putBoolean("aa_activate_declinesms", false);
         editor.putBoolean("aa_activate_assistant_tips", false);
         editor.putBoolean("aa_new_seekbar", false);
@@ -138,6 +140,12 @@ public class SplashActivity extends AppCompatActivity {
 
     private void copyAssets() {
         String path = getApplicationInfo().dataDir;
+        boolean sqlite3 = new File(path, "sqlite3").exists();
+
+        if (sqlite3) {
+            return;
+        }
+
         File file = new File(path, "sqlite3");
             runOnUiThread(new Runnable() {
                 @Override
@@ -177,8 +185,14 @@ public class SplashActivity extends AppCompatActivity {
                         try {
                             String fetchedVersion = response.getString("tag_name");
                             Version actualCheck = new Version(actualVersion);
-                            Version newCheck = new Version(fetchedVersion.substring(1));
-
+                            Version newCheck = null;
+                            try {
+                                newCheck = new Version(fetchedVersion.substring(1));
+                            } catch (IllegalArgumentException e) {
+                                Toast.makeText(SplashActivity.this, "Debug build: could not check latest version", Toast.LENGTH_LONG).show();
+                                newVersionName = null;
+                                e.printStackTrace();
+                            }
 
                             if (actualCheck.compareTo(newCheck) == -1) {
                                 newVersionName = fetchedVersion.substring(1);
@@ -187,6 +201,7 @@ public class SplashActivity extends AppCompatActivity {
 
                         } catch (JSONException e) {
                             newVersionName = null;
+                            Toast.makeText(SplashActivity.this, "Attention: could not check latest version. Ensure you have internet connectin.", Toast.LENGTH_LONG).show();
                             e.printStackTrace();
                         }
 
