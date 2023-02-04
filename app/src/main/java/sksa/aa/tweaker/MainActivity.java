@@ -2465,6 +2465,11 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Boardwalk__news_browser_available\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__add_boardwalk_theme_attrs_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, floatVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__dashboard_top_card_debounce_milliseconds\", \"\" ,8000,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+
 
 
 
@@ -2935,18 +2940,18 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 appendText(logs, "\n\n--  run SQL method   --");
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'DROP TRIGGER IF EXISTS aa_new_sekbar;\n"
+                                "'DROP TRIGGER IF EXISTS aa_new_seekbar;\n"
                                 + finalCommand + "'"
                 ).getStreamLogsWithLabels());
 
 
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'CREATE TRIGGER aa_new_sekbar AFTER DELETE\n" +
+                                "'CREATE TRIGGER aa_new_seekbar AFTER DELETE\n" +
                                 "On FlagOverrides\n" +
                                 "BEGIN\n" + finalCommand + "END;'\n"
                 ).getStreamLogsWithLabels());
-                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"aa_new_sekbar\";'").getInputStreamLog().length() <= 4) {
+                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"aa_new_seekbar\";'").getInputStreamLog().length() <= 4) {
                     suitableMethodFound = false;
                 } else {
                     appendText(logs, "\n--  end SQL method   --");
@@ -3011,7 +3016,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.gms.car\",  0,\"BluetoothPairing__car_bluetooth_service_disable\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, longVal, committed) VALUES (\"com.google.android.gms.car\",  0,\"BluetoothPairing__connect_bluetooth_timeout\", \"\" ,1,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, floatVal, committed) VALUES (\"com.google.android.gms.car\",  0,\"BluetoothPairing__connect_bluetooth_timeout\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
 
 
