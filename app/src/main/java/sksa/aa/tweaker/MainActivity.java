@@ -1242,7 +1242,7 @@ public class MainActivity extends AppCompatActivity {
         nocoolwalkTweak = findViewById(R.id.nocoolwalk_tweak_button);
         nocoolwalkTweakStatus = findViewById(R.id.nocoolwalk_tweak_status);
 
-        if (load("aa_activate_coolwalk")) {
+        if (load("aa_deactivate_coolwalk")) {
             coolwalkTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_tweak));
             changeStatus(coolwalkTweakStatus, 2, false);
         } else {
@@ -1254,18 +1254,21 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (load("aa_activate_coolwalk")) {
-                            revert("aa_activate_coolwalk");
-                            coolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
-                            changeStatus(coolwalkTweakStatus, 0, true);
-                            showRebootButton();
-                        } else {
-                            if (load ("aa_deactivate_coolwalk")) {
-                                nocoolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
-                                changeStatus(nocoolwalkTweakStatus, 0, true);
+
+                            if (load ("aa_activate_coolwalk")) {
+                                coolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
+                                changeStatus(coolwalkTweakStatus, 1, true);
+                                revert("aa_activate_coolwalk");
+                            } else {
+                                if (load ("aa_deactivate_coolwalk")) {
+                                    revert("aa_deactivate_coolwalk");
+                                    nocoolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
+                                    changeStatus(nocoolwalkTweakStatus,0,false);
+
+                                }
+                                activateCoolwalk();
                             }
-                            activateCoolwalk();
-                        }
+
                     }
                 });
 
@@ -1286,18 +1289,21 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (load("aa_deactivate_coolwalk")) {
+
+                        if (load ("aa_deactivate_coolwalk")) {
+                            nocoolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
+                            changeStatus(nocoolwalkTweakStatus, 1, true);
                             revert("aa_deactivate_coolwalk");
-                            nocoolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
-                            changeStatus(nocoolwalkTweakStatus, 0, true);
-                            showRebootButton();
                         } else {
                             if (load ("aa_activate_coolwalk")) {
+                                revert("aa_activate_coolwalk");
                                 coolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
-                                changeStatus(coolwalkTweakStatus, 0, true);
+                                changeStatus(coolwalkTweakStatus,0,false);
+
                             }
                             deactivateCoolwalk();
                         }
+
                     }
                 });
 
@@ -2039,12 +2045,6 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__keyboard_force_disabled\",\"\" ,0,0);");
             finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, floatVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentForwardBrowse__invisalign_default_allowed_items_rotary\",\"\" ,999,0);");
-            finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, floatVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentForwardBrowse__invisalign_default_allowed_items_touch\",\"\" ,999,0);");
-            finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, floatVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentForwardBrowse__invisalign_default_allowed_items_touchpad\",\"\" ,999,0);");
-            finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Dialer__speedbump_enabled\",\"\" ,0,0);");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Mesquite__speedbump_enabled\",\"\" ,0,0);");
@@ -2065,27 +2065,50 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__permits_chart\",\"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__use_updated_list_view_kill_switch\",\"\" ,0,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"ContentBrowse__use_updated_list_view_kill_switch\",\"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"TouchpadUiNavigation__multimove_penalty_mm\",\"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_max_list_size\",\"\" ,60,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_max_list_size\",\"\" ,400,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_grid_list_size\",\"\" ,60,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_list_size\",\"\" ,400,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_pane_list_size\",\"\" ,60,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_max_grid_list_size\",\"\" ,300,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_route_preview_list_size\",\"\" ,60,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_template_stack_size\",\"\" ,999,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_max_list_size\",\"\" ,999,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_max_grid_list_size\",\"\" ,999,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__max_grid_list_size\",\"\" ,300,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Watevra__speedbump_map_interactivity_enabled\",\"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__max_list_size_with_speedbump\",\"\" ,300,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__add_default_screen_size_value_kill_switch\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__allow_long_text_while_parked_kill_switch\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__allow_secondary_actions_in_half_lists\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__cluster_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__list_template_fab_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__is_toggle_allowed_in_map_and_pane_templates_kill_switch\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__messaging_aap_host_logic_enabled\",\"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__tab_template_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__task_limit_restrictions_allows_overflow\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"AppQualityTester__developer_setting_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Assistant__transcription_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__app_driven_refresh_enabled\",\"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__app_driven_refresh_enabled_for_undefined_category\",\"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__allow_secondary_actions_in_half_lists\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
 
 
 
@@ -2105,7 +2128,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
 
                     appendText(logs, "\n\n--  run SQL method   --");
                     appendText(logs, runSuWithCmd(
-                            path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'DROP TRIGGER IF EXISTS aa_six_tap;\n" + finalCommand + "'"
+                            path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'DROP TRIGGER IF EXISTS aa_six_tap;\n" + finalCommand + "DELETE FROM Flags WHERE name LIKE \"%speedbump%\";'"
                     ).getStreamLogsWithLabels());
 
                     appendText(logs, runSuWithCmd(
@@ -2424,9 +2447,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__canonical_vertical_rail_default\", \"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__canonical_vertical_rail_enabled\", \"\" ,1,0);");
-            finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__choose_assistant_suggestion_over_app_suggestion\", \"\" ,0,0);");
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__choose_assistant_suggestion_over_app_suggestion\", \"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Media__coolwalk_playback_gradient_scrim_enabled\", \"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
@@ -2446,11 +2467,9 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__three_actions_hun_ui_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__launcher_settings_kill_switch\", \"\" ,0,0);");
-        finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__indicate_severe_thermal_status\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__focus_check_kill_switch\", \"\" ,0,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__focus_check_kill_switch\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__fix_status_bar_highlight_ghosting_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
@@ -2470,13 +2489,12 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Boardwalk__news_browser_available\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__migrate_launcher_to_cal\",\"\" ,0,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__migrate_launcher_to_cal\",\"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__custom_startup_app_enabled\",\"\" ,0,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rail_hotseat_check_app_available_kill_switch\",\"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Voip__watevra_in_call_view_enabled\",\"\" ,1,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__get_default_nav_app_kill_switch\",\"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
-
 
 
 
@@ -2613,8 +2631,6 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__dashboard_placement_customization_enabled\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__media_notification_high_priority_kill_switch\", \"\" ,0,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__launcher_settings_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
 
 
