@@ -116,6 +116,7 @@
             android:clickable="true"
             style="@style/ButtonStyle"
            android:focusable="true"
+            android:visibility="gone"
 
             android:text="@string/disable_speed_limitations"
             app:layout_constraintEnd_toEndOf="@id/patchapps"
@@ -123,6 +124,7 @@
             app:layout_constraintTop_toBottomOf="@id/toapp_button" />
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/sixtapstatus"
             android:layout_width="24dp"
             android:layout_height="24dp"

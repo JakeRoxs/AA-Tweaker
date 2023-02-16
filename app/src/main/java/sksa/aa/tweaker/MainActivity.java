@@ -1242,7 +1242,7 @@ public class MainActivity extends AppCompatActivity {
         nocoolwalkTweak = findViewById(R.id.nocoolwalk_tweak_button);
         nocoolwalkTweakStatus = findViewById(R.id.nocoolwalk_tweak_status);
 
-        if (load("aa_deactivate_coolwalk")) {
+        if (load("aa_activate_coolwalk")) {
             coolwalkTweak.setText(getString(R.string.disable_tweak_string) + getString(R.string.coolwalk_tweak));
             changeStatus(coolwalkTweakStatus, 2, false);
         } else {
@@ -1256,15 +1256,15 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
 
                             if (load ("aa_activate_coolwalk")) {
+
                                 coolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
-                                changeStatus(coolwalkTweakStatus, 1, true);
+                                changeStatus(coolwalkTweakStatus, 0, true);
                                 revert("aa_activate_coolwalk");
                             } else {
                                 if (load ("aa_deactivate_coolwalk")) {
                                     revert("aa_deactivate_coolwalk");
                                     nocoolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
                                     changeStatus(nocoolwalkTweakStatus,0,false);
-
                                 }
                                 activateCoolwalk();
                             }
@@ -1291,15 +1291,15 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
 
                         if (load ("aa_deactivate_coolwalk")) {
+
                             nocoolwalkTweak.setText(getString(R.string.force_disable_tweak) + getString(R.string.coolwalk_tweak));
-                            changeStatus(nocoolwalkTweakStatus, 1, true);
+                            changeStatus(nocoolwalkTweakStatus, 2, true);
                             revert("aa_deactivate_coolwalk");
                         } else {
                             if (load ("aa_activate_coolwalk")) {
                                 revert("aa_activate_coolwalk");
                                 coolwalkTweak.setText(getString(R.string.enable_tweak_string) + getString(R.string.coolwalk_tweak));
                                 changeStatus(coolwalkTweakStatus,0,false);
-
                             }
                             deactivateCoolwalk();
                         }
@@ -2427,8 +2427,6 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Assistant__coolwalk_suggestions_grpc_enabled\", \"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__fishfood_nag_enabled\", \"\" ,1,0);");
-            finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__media_rec_card_enabled\", \"\" ,1,0);");
             finalCommand.append(System.getProperty("line.separator"));
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__opt_in _default\", \"\" ,1,0);");
@@ -2459,7 +2457,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
             finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__a4c_suggestions_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rotary_proximity_navigation\", \"\" ,1,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rotary_proximity_navigation\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__semi_wide_vertical_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
@@ -2469,7 +2467,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__indicate_severe_thermal_status\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__focus_check_kill_switch\", \"\" ,1,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__focus_check_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__fix_status_bar_highlight_ghosting_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
@@ -2488,12 +2486,6 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Weather__preinstalled_frx_toggle_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Boardwalk__news_browser_available\", \"\" ,1,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__migrate_launcher_to_cal\",\"\" ,1,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__rail_hotseat_check_app_available_kill_switch\",\"\" ,0,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__get_default_nav_app_kill_switch\",\"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
 
 
