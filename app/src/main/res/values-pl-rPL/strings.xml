@@ -9,7 +9,7 @@ Jeśli nie jesteś pewien, co robi ta funkcja, przytrzymaj palec na niej długo 
     <string name="patch_custom_apps">aplikacje niestandardowe</string>
     <string name="disable_speed_limitations">limit stuknięć</string>
     <string name="unlimited_scrolling_when_driving">ograniczenia prędkości</string>
-    <string name="message_auto_read">Message auto-read</string>
+    <string name="message_auto_read">Automatycznie odczytane wiadomości</string>
     <string name="splash">Ta aplikacja może zmienić zachowanie Android Auto i ominąć niektóre zabezpieczenia, które Google zaimplementował w Android Auto.\n
 Używając tej aplikacji wyrażasz zgodę na to, że TY i TYLKO TY jesteś odpowiedzialny za jakiekolwiek możliwe konsekwencje, które mogą prowadzić do zmiany funkcji zabezpieczeń, takich, jak zranienie siebie i/lub innych, zniszczenie mienia, utrata życia.\n
 W żadnym wypadku autor tej aplikacji nie jest odpowiedzialny za jej użycie</string>

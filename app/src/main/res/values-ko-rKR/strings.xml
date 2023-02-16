@@ -26,75 +26,76 @@
     <string name="force_widescreen_text">강제 와이드스크린</string>
     <string name="media_notification_duration_to">미디어 알림 표시 시간</string>
     <string name="bluetooth_auto_connect">블루투스 자동연결</string>
-    <string name="tutorial_nospeed">이렇게 수정하면 Android Auto가 자동차의 속도가 0인것으로 인식하게 됩니다. 결과적으로 Android auto는 항상 메시지 미리보기를 표시합니다. 이 조정은 Android Auto의 키보드 또는 첫 번째 구성에는 적용되지 않습니다.</string>
-    <string name="tutorial_sixtap">기존 Android Auto의 6개의 탭 제한을 무시하고, 항상 콘텐츠를 무제한으로 탐색할 수 있도록 합니다.</string>
-    <string name="tutorial_shortcuts">활성화 하면 새 보조 바로 가기 기능이 잠금 해제됩니다. 일단 활성화 되면 Android Auto 설정으로 갈 수 있으며, 런처 맞춤설정 화면에서 Google Assistant 명령에 바로 가기 추가를 시작할 수 있습니다.</string>
-    <string name="tutorial_startup">Android Auto 시작 시 내비게이션 자동실행을 없애고, Android Auto 런처에서 시작되도록 합니다.\n 경우에 따라 이 
-트윅은 음악의 자동 시작을 비활성화합니다. 알려진 해결 방법은 Android Auto 설정 내에서 옵션을 비활성화했다가 다시 활성화하는것입니다.\n 특정 앱을 먼저 시작하도록 설정하는것은 불가능합니다.</string>
-    <string name="tutorial_widescreen">Android Auto가 와이드스크린 모드로 강제 전환 됩니다.</string>
-    <string name="tutorial_no_widescreen">Android Auto가 와이드스크린 모드가 아닙니다</string>
-    <string name="tutorial_autoplay_message">안드로이드 오토가 수신메세지를 읽을지의 여부를 설정할 수 있습니다.
-설정할 경우, 안드로이드 오토 8.3 버전 또는 더 높은 버전이 필요합니다</string>
+    <string name="tutorial_nospeed">안드로이드 오토에서 자동차가 운행중이지 않은 것으로 인식하게 됩니다. 결과적으로, 안드로이드 오토에 메시지 미리보기를 표시할수 있도록 합니다. 이 설정은 안드로이드 오토의 키보드 또는 첫 번째 구성에는 적용되지 않습니다.</string>
+    <string name="tutorial_sixtap">안드로이드 오토의 탭 개수 제한 6개를 무시하고, 콘텐츠를 무제한으로 탐색할 수 있도록 합니다.</string>
+    <string name="tutorial_shortcuts">활성화 하면 새 보조 바로 가기 기능이 잠금 해제됩니다. 활성화 되면 바로 안드로이드 오토 설정으로 갈 수 있으며, 런처 맞춤설정 화면에서 구글 어시스턴트 명령에 바로 가기 추가를 시작할 수 있습니다.</string>
+    <string name="tutorial_startup">안드로이드 오토 \"시작 시 내비게이션(지도 앱) 자동실행\"을 없애고, 안드로이드 오토 런처에서 시작되도록 합니다.\n 
+그러나, 경우에 따라 이 트윅은 \"음악의 자동 시작\"을 비활성화합니다. 현재 알려진 해결 방법은 안드로이드 오토 \"설정\" 에서 \"음악의 자동시작\" 옵션을 비활성화했다가 다시 활성화하는것입니다.\n 
+시스템 상 특정 앱을 먼저 시작하도록 설정하는것은 불가능합니다.</string>
+    <string name="tutorial_widescreen">안드로이드 오토 화면을 와이드스크린으로 강제 전환 합니다.</string>
+    <string name="tutorial_no_widescreen">안드로이드 오토가 와이드스크린 화면이 아닙니다.</string>
+    <string name="tutorial_autoplay_message">안드로이드 오토가 스마트폰의 수신메세지를 읽을지의 여부를 설정할 수 있습니다.
+설정할 경우, 안드로이드 오토 8.3 버전 또는 더 높은 버전에서 작동합니다</string>
     <string name="tutorial_statusbar_opaque">상태 표시줄이 항상 검은색으로 표시됩니다.</string>
     <string name="tutorial_battery_outline">배터리 세이버가 켜져 있을 때 빨간색 윤곽선으로 둘러싸인 배터리 아이콘이 표시되지 않습니다.</string>
     <string name="tutorial_hun">헤드업 알림에 대한 표시 시간을 설정 할 수 있습니다.</string>
     <string name="tutorial_media_hun">내비게이션 바에서 미디어 알림에 대한 표시 시간을 최대 15분으로 설정할 수 있습니다.</string>
-    <string name="tutorial_bluetooth">Android Auto를 연결할 때 블루투스를 비활성화 합니다. 블루투스가 이미 켜져있으면 이 수정은 적용되지 않습니다.</string>
-    <string name="tutorial_patchapps">이 수정 작업을 통해 Android Auto에서 사용자가 만든 커스텀 앱이 Android Auto에서 작동되게 해줍니다.\n 만약 당신이 AA Phenotype Patcher에 익숙하다면, 이 수정은 AA Phenotype Patcher과 거의 비슷합니다.\n Android Auto에 앱을 추가하는것은 불가능하지만, Android Auto에서 작동되기 위해 만들어진 MADE FOR Android Auto를 패치하는 것은 가능합니다.</string>
+    <string name="tutorial_bluetooth">안드로이드 오토를 연결할 때 블루투스를 비활성화 합니다. 블루투스가 이미 켜져있으면 이 수정은 적용되지 않으므로, 블루투스 비활성화 한 이후 설정하세요.</string>
+    <string name="tutorial_patchapps">안드로이드 오토에서 사용자가 만든 커스텀 앱이 안드로이드 오토에서 작동되게 해줍니다.\n 만약 당신이 AA Phenotype Patcher에 익숙하다면, 이 수정은 AA Phenotype Patcher과 거의 비슷합니다.\n 안드로이드 오토에 커스텀앱을 추가하는것은 불가능하지만, 안드로이드 오토에서 작동되기 위해 만들어진 MADE FOR Android Auto를 패치하는 것은 가능합니다.</string>
     <string name="multi_display_string">멀티 디스플레이</string>
-    <string name="tutorial_multidisplay">이 기능은 Android Auto의 숨겨진 기능으로, 와이드스크린 모드에서 세컨드 스크린 화면을 완전히 표시되는 실제 두 번째 디스플레이로 전환합니다. Google Maps는 내비게이션 상태, 음악 및 전화기가 전체 공간을 차지하는 전체 지도를 표시할 것입니다.\n
-        또한, 이 모드는 Android Auto의 세컨드 스크린의 화면에서 휴대폰의 화면을 띄워주는 다른 기능을 활성화합니다.\n
-        이 기능을 수정하기 위한 설정은 Android Auto 홈 화면에서 사용할 수 있습니다.\n
-        현재 Google Maps만 이 기능을 지원합니다.\n
-        이 기능은 개발 중이며 의도한 대로 작동되지 않을 수 있습니다.\n
-    Android Auto 5.8 이상 버전이 필요합니다.</string>
+    <string name="tutorial_multidisplay">이 기능은 안드로이드 오토의 숨겨진 기능으로, 와이드스크린 모드 사용 시 표시되는 세컨드 스크린 화면을 전체화면으로 표시되는 기능 입니다. 이 경우, \"구글 맵\"은 내비게이션 상태, 음악 및 스마트폰이 전체 화면으로 표시할 것입니다.\n
+그외, 안드로이드 오토의 세컨드 스크린에서 스마트폰에 사용 중에 나타나는 어떠한 것에 대해 활성화합니다.\n
+이 기능을 수정하기 위한 설정은 안드로이드 오토 홈 화면에서 사용할 수 있습니다.\n
+현재 \"구글 맵\"만 이 기능을 지원합니다.\n
+이 기능은 개발 중이며 의도한 대로 작동되지 않을 수 있습니다.\n
+안드로이드 오토 5.8 이상 버전이 필요합니다.</string>
     <string name="battery_warning">배터리 세이버 경고</string>
-    <string name="tutorial_battery_saver_warning">이렇게 조정하면 배터리 세이버 모드가 켜져있을 때 Android Auto에서 팝업 경고가 표시되지 않습니다.</string>
-    <string name="disable_tweak_string">비활성화\u0020</string>
+    <string name="tutorial_battery_saver_warning">배터리 세이버 모드가 켜져있을 때, 안드로이드 오토 사용 시 배터리 경고에 대한 팝업 경고가 표시되지 않습니다.</string>
+    <string name="disable_tweak_string">비 활성화\u0020</string>
     <string name="enable_tweak_string">활성화\u0020</string>
-    <string name="re_enable_tweak_string">비활성화\u0020</string>
+    <string name="re_enable_tweak_string">재 활성화\u0020</string>
     <string name="copy_log">로그 복사</string>
     <string name="about">정보</string>
     <string name="revert_everything">모두 리셋</string>
-    <string name="force_disable_tweak">강제 비활성화\u0020</string>
-    <string name="reset_tweak">재설정\u0020</string>
-    <string name="force_widescreen_warning">강제 와이드스크린 설정이 자동으로 비활성화됨</string>
-    <string name="force_disable_widescreen_warning">자동으로 강제 와이드 스크린 설정이 비활성화되었습니다.</string>
+    <string name="force_disable_tweak">강제 비 활성화\u0020</string>
+    <string name="reset_tweak">재 설정\u0020</string>
+    <string name="force_widescreen_warning">강제 와이드스크린 설정이 활성화 된 경우, 자동으로 비 활성화됨</string>
+    <string name="force_disable_widescreen_warning">강제 와이드스크린 설정이 비 활성화 된 경우, 자동으로 비 활성화됨</string>
     <string name="set_value">설정\u0020</string>
     <string name="reboot_to_apply">재부팅 후 적용</string>
     <string name="warning_title">경고</string>
     <string name="unpatch">패치 해제\u0020</string>
     <string name="patch_app">패치\u0020</string>
-    <string name="default_string">\u0020기본</string>
+    <string name="default_string">\u0020원래대로</string>
     <string name="app_list_label">앱 목록</string>
     <string name="translators_button">Translated by mabig, 스프라이트</string>
     <string name="about_part_one"><![CDATA[AA AIO TWEAKER은 Shmykelsa가 개발 및 유지 관리합니다.<br><br>소스 코드는 <a href=\"https://github.com/shmykelsa/AA-Tweaker\">GitHub</a><br><br>에서 사용할 수 있습니다.]]></string>
-    <string name="about_part_two"><![CDATA[저의 앱이 정말 마음에 드신다면, 기부를 고려해주세요. <br> 당신은 저에게 <a href=\"http://www.paypal.me/grizzo96\">PayPal</a>또는 아래 Bitcoin버튼을 눌러 제 비트코인 주소를 복사하셔도 됩니다. 적은 액수라도 매우 감사할 것입니다 :)]]></string>
+    <string name="about_part_two"><![CDATA[나의 앱이 마음에 드신다면, 기부를 해주세요. <br> 당신은 저에게 <a href=\"http://www.paypal.me/grizzo96\">PayPal</a>또는 아래 Bitcoin버튼을 눌러 제 비트코인 주소를 복사하셔도 됩니다. 적은 액수라도 매우 감사합니다 :)]]></string>
     <string name="copied_address_toast">BTC 주소가 클립보드에 복사되었습니다.</string>
     <string name="custom_wallpapers">배경화면</string>
-    <string name="tutorial_wallpapers">이 수정은 Android Auto에서 새로 생긴 배경화면 체인저를 활성화합니다.\n경고: Android Auto용 배경화면 사용자인 경우 최소 버전 3.0이상으로 업데이트해야합니다. 그렇지 않으면 이 수정으로 Android Auto용 배경화면 기능이 손상됩니다.</string>
-    <string name="tutorial_dark_mode">2020년 12월부터 구글은 안드로이드 10 이후 발생한 동작을 되돌렸습니다. 이전에는 Android Auto의 Light/Dark 모드가 사용자의 스마트폰 Light/Dark 모드에 따라 설정되었습니다. 이것은 스마트폰을 Dark 모드로 전환하는 것이 자동차에 영향을 미쳤거나, 스마트폰이 Dark 모드에 있고 자동차 화면에 불이 꺼진 경우 전화기의 조명 테마를 켜는 데 사용된다는 것을 의미했습니다.\n 그러나 \"독립적\" 다크 모드의 이 기능이 도입된 이후 애프터마켓 헤드 유닛을 가진 사용자는 실제로 스테레오를 자동차 조명에 배선하지 않고 더 이상 다크 모드로 전환할 방법이 없습니다.\n이 조정은 야간 모드가 다시 스마트폰에 종속되도록 하고 스마트폰의 명암 모드를 전환하는 것은 자동차에도 영향을 미칠 것입니다.</string>
-    <string name="dark_mode_tweak">독립적인 다크 모드</string>
+    <string name="tutorial_wallpapers">안드로이드 오토에 새로 생긴 배경화면 체인저를 활성화합니다.\n경고: 안드로이드 오토용 배경화면 사용자인 경우 최소 버전 3.0이상으로 업데이트해야합니다. 그렇지 않으면, 안드로이드 오토용 배경화면 기능이 손상됩니다.</string>
+    <string name="tutorial_dark_mode">2020년 12월부터 구글은 안드로이드 10 이후 발생한 동작을 되돌렸습니다. 이전에는 안드로이드 오토의 주간/야간 모드가 사용자의 스마트폰 주간/야간 모드에 따라 설정되었습니다. 이것은 스마트폰을 야간모드로 전환하는 것이 자동차에 영향을 미쳤거나, 스마트폰이 Dark 모드에 있고 자동차 화면에 불이 꺼진 경우 전화기의 조명 테마를 켜는 데 사용된다는 것을 의미했습니다.\n 그러나 \"독립적\" 야간 모드의 이 기능이 도입된 이후 애프터마켓 헤드 유닛을 가진 사용자는 실제로 스테레오를 자동차 조명에 배선하지 않고 더 이상 야간 모드로 전환할 방법이 없습니다.\n이 설정은 야간 모드가 다시 스마트폰에 설정에 종속되도록 하고 스마트폰의 명암 모드를 통해 전환하는 것을 자동차에도 설정 하는 것입니다.</string>
+    <string name="dark_mode_tweak">독립적인 야간 모드</string>
     <string name="telemetry_string">텔레메트리</string>
-    <string name="tutorial_telemetry">구글이 우리에 대한 많은 데이터를 기록하는 것은 이상한 일이 아닙니다. 이 설정은 Google Play Services 추적 및 로깅 작업을 중지하도록 만듭니다.\n
-경고: 이 결함은 광범위하게 테스트되지 않았으며 Android Auto를 손상시킬 수 있습니다. 이 조작으로 안드로이드 오토가 깨지는 것을 알게 되면 GitHub에 issue 해주세요</string>
+    <string name="tutorial_telemetry">이 설정은 구글 플레이 서비스가 정보추적 및 로깅 작업을 중지하도록 만듭니다.\n
+경고: 이 결함은 광범위하게 테스트되지 않았으며 안드로이드 오토를 손상시킬 수 있습니다. 이 설정으로 안드로이드 오토가 깨지는 것을 알게 되면 GitHub에 issue 해주세요</string>
     <string name="reboot_prompt">지금 기기를 재시작하시겠습니까?</string>
-    <string name="rebooting_action">재부팅...</string>
+    <string name="rebooting_action">재부팅 중...</string>
     <string name="added_app_action">"추가됨: "</string>
     <string name="removed_app_action">제거됨</string>
     <string name="root_access_warning">루트 권한이 없습니다. 루팅사용자만 가능합니다.</string>
     <string name="revert_everything_dialog">모두 되돌리시겠습니까? 앱을 수동으로 다시 시작하십시오</string>
     <string name="calendar_tweak">캘린더에 %1$s 날짜로 설정합니다</string>
     <string name="calendar_tweak_single">캘린더에 %1$s 날짜로 설정합니다</string>
-    <string name="tutorial_calendar_tweak">Android Auto의 캘린더 앱에 날짜를 표시할 수 있도록 설정합니다. 기존 Aundroid Auto는 날짜를 설정해도 이벤트를 보고 있는 날짜를 확인할 수 없습니다. 
-또한, 하루에 몇 개의 이벤트가 설정되어 있는지만 표시하고 날짜는 표시하지 않습니다.</string>
+    <string name="tutorial_calendar_tweak">안드로이드 오토 \"캘린더\" 앱에 날짜를 표시할 수 있도록 설정합니다. 
+기존 안드로이드 오토는 날짜를 설정해도 이벤트 날짜를 확인할 수 없습니다. 하루에 몇 개의 이벤트가 설정되어 있는지만 표시하고 날짜는 표시하지 않았습니다.</string>
     <string name="choose_apps_warning">화이트리스트 항목에 넣을 앱을 선택하세요</string>
     <string name="log_first_line">LOG:\n</string>
     <string name="menu_aa_settings">안드로이드 오토 설정 열기</string>
-    <string name="not_enabled_warning">Android Auto 가 실행되지 않았습니다.</string>
-    <string name="not_installed_warning">Android Auto 가 설치되지 않았습니다</string>
+    <string name="not_enabled_warning">안드로이드 오토가 활성화되지 않습니다</string>
+    <string name="not_installed_warning">안드로이드 오토가 설치되지 않았습니다</string>
     <string name="currently_set">"현재 설정되어 있습니다 "</string>
-    <string name="no_accounts_warning">AA AIIO TWAKER가 Google Play Services 데이터베이스에서 계정을 찾을 수 없습니다. 이 문제는 다음과 같은 몇 가지 다른 문제로 인해 발생할 수 있습니다. 예를 들어, 인터넷에 대부분 연결되지 않은 장치\n • 전화기의 Google Play Services 데이터베이스 새로 설치\n • 손상된 Google Play Services 데이터베이스 제거\n • Google Play Services의 지워진 데이터\n\n 이 시나리오에서는 AA AIO TWEAKER가 제대로 작동하지 않습니다. 최근에 Google 계정을 제거했거나 Google Play Services 데이터를 지운 경우 전화기를 인터넷에 연결한 상태로 유지하고 Google Play Services 데이터베이스를 완전히 구축하도록 하십시오. 이 작업에는 몇 시간이 걸릴 수 있으며 경우에 따라 며칠이 걸릴 수도 있습니다.\n\n위의 조건 중 하나가 아니라면 GitHub에서 이슈를 열어주세요</string>
+    <string name="no_accounts_warning">AA AIIO TWAKER는 구글 플레이 스토어 내에 서비스 데이터베이스에서 어떠한 계정이든 찾을 수 없습니다. 이러한 문제는 다음과 같은 몇 가지 다른 문제로 인해 발생할 수 있습니다. 예를 들어, 인터넷에 대부분 연결되지 않은 장치\n • 스마트폰의 구글 플레이 서비스 데이터베이스 새로 설치\n • 손상된 구글 플레이 서비스 데이터베이스 제거\n • 구글 플레이 서비스의 지워진 데이터\n\n 이러한 문제는 AA AIO TWEAKER가 제대로 작동하지 않습니다. 최근에 구글 계정을 제거했거나 구글 플레이 서비스 데이터를 지운 경우 스마트폰을 인터넷에 연결한 상태로 유지하고 구글 플레이 서비스가 작동하도록 데이터베이스를 완전히 구축하도록 하십시오. 이 작업에는 몇 시간이 걸릴 수 있으며 경우에 따라 며칠이 걸릴 수도 있습니다.\n\n위의 조건 중 하나가 아니라면 GitHub에서  Issue를 열어주세요</string>
     <string name="tweak_loading">트윅 설정중...</string>
     <string name="loading">로딩 중. 잠시만 기다려 주세요...</string>
     <string name="tutorial_bitrate">이 트윅은 비디오 비트 전송률을 증가시키거나 감소시킵니다. (최대 2.0x) 비트 전송률(1.0x 이상) 이 증가하면 차량에 더 많은 데이터가 스트리밍되고 비디오 스트리밍의 품질이 시각적 품질에서 향상될 수 있지만 불안정을 초래할 수 있습니다. 비트 전송률(1.0x 미만) 을 낮추면 차량에 스트림이 압축되고 품질이 저하되지만 연결 속도가 안정적이고 빨라집니다.</string>
@@ -102,7 +103,7 @@
     <string name="set_usb_bitrate">USB 비트레이트가 적용됩니다</string>
     <string name="choose_value_first">값을 선택 하십시오</string>
     <string name="open_issue_button">문제게시판에 올려주세요</string>
-    <string name="error_generic">명령이 성공하지 못했습니다. 잠시 기다렸다가 다시 시도하십시오. 문제가 계속 진행 중이면 GitHub 문제게시판에 올려주세요</string>
+    <string name="error_generic">명령이 성공하지 못했습니다. 잠시 기다렸다가 다시 시도하십시오. 문제가 계속 진행 중이면 GitHub 에 Issue 해주세요</string>
     <string name="tutorial_alphajump">이 트윅을 통해 문자로 목록을 검색하는 방법을 변경하는 새로운(숨겨진) 재설계가 활성화됩니다. 상단에 있는 A-Z 단추 대신 스크롤이 발생하지 않을 때 스크롤 막대에 단추가 표시되고 문자를 사용하여 다시 상단으로 이동할 필요가 없습니다.</string>
     <string name="alpha_jump_tweak">새로운 알파벳으로 이동</string>
     <string name="choose_accounts">계정을 선택하세요</string>
@@ -113,18 +114,18 @@
     <string name="go_to_new_version">새로운 버전의 AAAD(버전 %1$s) 를 GitHub에서 사용할 수 있습니다. 지금 다운로드하시겠습니까?</string>
     <string name="go_to_download">다운로드로 이동</string>
     <string name="ignore_for_now">지금은 무시하십시오.</string>
-    <string name="many_accounts_warning">AA AIIO Tweaker는 장치에 저장된 많은 수의 Google 계정(%1$s) 을 발견했습니다.\n이것은 패치 적용 프로세스의 성공에 부정적인 영향을 미칠 수 있으며 AA AIO TWIKER가 실패할 수 있습니다.\nGoogle Play Services에서 패치를 적용하기 위해 주로 사용하는 계정을 선택하거나(2개 이하 권장) 모든 계정에 패치를 적용하는 실험 모드를 활성화할 수 있습니다.\n실험 모드에서는 패치가 실행되는 동안 전화에 충돌이 발생할 수 있습니다.</string>
+    <string name="many_accounts_warning">AA AIIO Tweaker는 장치에 저장된 많은 수의 구글 계정(%1$s) 을 발견했습니다.\n이것은 패치 적용 프로세스의 성공에 부정적인 영향을 미칠 수 있으며 AA AIO TWIKER가 실패할 수 있습니다.\n구글 플레이 서비스에서 패치를 적용하기 위해 주로 사용하는 계정을 선택하거나(2개 이하 권장) 모든 계정에 패치를 적용하는 실험 모드를 활성화할 수 있습니다.\n실험 모드에서는 패치가 실행되는 동안 전화가 수/발신이 되지 않을 수 있습니다.</string>
     <string name="dark_switch_tweak">주간/야간 모드 설정</string>
     <string name="tutorial_assistant_suggestions">홈 스크린 위에 있는 Assistant action 작업에 몇 가지 바로 가기를 추가하는 새 기능이 활성화됩니다.</string>
     <string name="remove_paired_car">페어링이 제거되었습니다.</string>
     <string name="choose_cars">자동차를 선택하세요</string>
-    <string name="tutorial_carremover">안드로이드 오토에서 페어링된 모든 차량만 제거할 수 있고 한 번에 하나만 제거할 수 없다는 것을 알고 있었나요? Android Auto에서 차량을 삭제하려는 경우 이 옵션을 선택하면 차량이 제거됩니다.</string>
+    <string name="tutorial_carremover">안드로이드 오토에서 페어링에 등록 된 모든 차량을 제거 가능하며, 하나만 제거할 수 없다는 것을 알고 있었나요? 안드로이드 오토에서 차량을 삭제하려는 경우 이 옵션을 선택하면 하나만 제거 할 수 있습니다.</string>
     <string name="coolwalk_daynight_tweak">Coolwalk 주간/야간</string>
     <string name="coolwalk_daynight_tutorial">Coolwalk 모드의 주간/야간 모드를 활성화합니다. 경고: 지금은 불안정합니다.</string>
     <string name="custom_hotseat_option">사용자 정의 옵션</string>
-    <string name="tutorial_coolwalk">Android Auto의 설정에서 전환할 수 있고 작은 화면에서 모양을 약간 조정하는 Android Auto(코드명 Coolwalk) 의 새로운 디자인을 활성화합니다. 이 디자인은 항상 켜져 있는 측면 패널과 몇 가지 다른 그래픽을 특징으로 합니다. 이 기능은 현재 초기 단계에 있습니다. Android Auto 6.9 이상이 필요합니다.</string>
-    <string name="coolwalk_tweak">Andriod Auto (코드명: Coolwalk design)</string>
-    <string name="tutorial_focus_settings">Android Auto 가 새로운 옵션이 활성화 되었을 때, 스마트폰이 자동차에 연결하는 즉시 Android Auto가 시작해야 하는지 여부를 수동으로 사용자 지정할 수 있습니다. 
+    <string name="tutorial_coolwalk">안드로이드 오토의 설정을 전환할 수 있고, 안드로이드 오토 (코드명 Coolwalk) 의 새로운 디자인을 활성화합니다. 이 기능은 현재 초기 단계에 있습니다. 안드로이드 오토 6.9 이상이 필요합니다.</string>
+    <string name="coolwalk_tweak">쿨워크 디자인</string>
+    <string name="tutorial_focus_settings">안드로이드 오토가 새로운 옵션이 활성화 되었을 때, 스마트폰이 자동차에 연결하는 즉시 안드로이드 오토가 시작해야 하는지 여부를 수동으로 사용자 지정할 수 있습니다. 
 Android Auto 6.8 이상이 필요합니다.</string>
     <string name="focus_tweak">Focus 설정</string>
     <string name="assistant_tips">사용자 팁</string>
@@ -135,20 +136,20 @@ Android Auto 6.8 이상이 필요합니다.</string>
     <string name="section_two">스크린 설정 트윅</string>
     <string name="section_three">트윅이 설정됩니다</string>
     <string name="section_four">비디오 품질 설정</string>
-    <string name="section_five">기능 사전 활성화</string>
+    <string name="section_five">사전활성화 기능</string>
     <string name="restricted_coolwalk">이 옵션은 Coolwalk가 활성화된 상태에서는 작동하지 않습니다.</string>
     <string name="warning_patch_apps">경고합니다! 이 작업을 수행하면 선택한 앱에서 모든 데이터가 지워집니다. 데이터 백업이 있는지 확인하십시오. 그래도 계속 진행하시겠습니까?</string>
     <string name="tappable_progress">새로운 진행표시줄</string>
     <string name="tappable_progress_tutorial">마지막으로 Android Auto에서 재생 중인 항목에 대해 터치 가능한 진행률 표시줄을 얻습니다. 지금 현재 트랙을 탐색할 수 있습니다. 단, Android Auto 8.3 이상이 필요합니다.</string>
-    <string name="uxprototype_tutorial">기본적으로 웹 페이지를 열기 위해 홈 페이지에 무료 바로가기를 만드는 것입니다. 
-2022년 4월 1일에 출시된 Android Auto에 숨겨진 이스터 에그와 관련이 있습니다. 
+    <string name="uxprototype_tutorial">기본적으로 웹 페이지를 열기 위해서는 바탕화면에 바로가기를 만드는 것입니다. 
+2022년 4월 1일에 출시된 안드로이드 오토에 숨겨진 이스터 에그와 관련이 있습니다. 
 \"애플리케이션 모드\" 아래의 \"개발자 설정\"에서 \"개발자 모드\"를 활성화합니다. 
-현재 Android Auto에서 실제 전체 화면 앱을 사용할 수 있는 유일한 방법입니다. 
+현재 안드로이드 오토에서 실제 전체 화면 앱을 사용할 수 있는 유일한 방법입니다. 
 경고: 종료할 수 없습니다. 
 차량에서만 사용할 계획인 경우 사용하세요. 
 뒤로가기 버튼도 없습니다.</string>
     <string name="uxprototype_dialog">유효한 URL을 입력하세요</string>
     <string name="uxprototype_tweak">사용자 지정의 단축키</string>
     <string name="tutorial_new_seekbar">"미디어 앱을 위한 이동 검색 막대를 활성화합니다."</string>
-    <string name="tutorial_materialyou">"스마트폰에서 Android Auto 설정에 대해 스타일을 지정할 수 있습니다. 테스트한 대로 Android Auto 8.8&gt; 에서만 제대로 작동합니다."</string>
+    <string name="tutorial_materialyou">"스마트폰에서 안드로이드 오토 설정에 대해 스타일을 지정할 수 있습니다. 테스트한 대로 안드로이드 오토 8.8&gt; 에서만 제대로 작동합니다."</string>
 </resources>

@@ -116,7 +116,7 @@
             android:clickable="true"
             style="@style/ButtonStyle"
            android:focusable="true"
-            android:visibility="gone"
+
 
             android:text="@string/disable_speed_limitations"
             app:layout_constraintEnd_toEndOf="@id/patchapps"
@@ -124,7 +124,6 @@
             app:layout_constraintTop_toBottomOf="@id/toapp_button" />
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/sixtapstatus"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -247,6 +246,29 @@
             app:layout_constraintTop_toTopOf="@id/force__no_ws_button"
             app:layout_constraintBottom_toBottomOf="@id/force__no_ws_button"/>
 
+                <Button
+                    android:id="@+id/force_portrait_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    style="@style/ButtonStyle"
+                    android:focusable="true"
+                    app:layout_constraintEnd_toEndOf="@id/patchapps"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/force__no_ws_button" />
+
+                <ImageView
+
+                    android:id="@+id/force_portrait_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_baseline_check_circle_24"
+                    android:layout_marginEnd="3dp"
+                    app:layout_constraintStart_toEndOf="@id/force_portrait_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/force_portrait_button"
+                    app:layout_constraintBottom_toBottomOf="@id/force_portrait_button"/>
+
         <Button
             android:id="@+id/multi_display_button"
             android:layout_width="0dp"
@@ -258,7 +280,7 @@
             android:text="@string/multi_display_string"
             app:layout_constraintEnd_toEndOf="@id/patchapps"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/force__no_ws_button" />
+            app:layout_constraintTop_toBottomOf="@id/force_portrait_button" />
 
         <ImageView
             android:id="@+id/multi_display_status"

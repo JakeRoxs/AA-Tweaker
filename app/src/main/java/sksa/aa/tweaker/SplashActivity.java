@@ -63,6 +63,7 @@ public class SplashActivity extends AppCompatActivity {
         editor.putBoolean("aa_battery_outline", false);
         editor.putBoolean("force_ws", false);
         editor.putBoolean("force_no_ws", false);
+        editor.putBoolean("force_portrait", false);
         editor.putBoolean("aa_hun_ms", false);
         editor.putBoolean("aa_media_hun", false);
         editor.putBoolean("multi_display", false);

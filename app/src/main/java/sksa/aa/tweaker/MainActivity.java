@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView messageAutoReadStatus;
     private ImageView batteryOutlineStatus;
     private ImageView forceWideScreenStatus;
+    private ImageView forcePortraitStatus;
     private ImageView messagesHunStatus;
     private ImageView mediaHunStatus;
     private ImageView calendarTweakStatus;
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
     private Button batteryoutline;
     private Button forceNoWideScreen;
     private Button forceWideScreenButton;
+    private Button forcePortrait;
     private Button messagesHunThrottling;
     private Button mediathrottlingbutton;
     private Button moreCalendarButton;
@@ -605,8 +607,13 @@ public class MainActivity extends AppCompatActivity {
         forceNoWideScreen = findViewById(R.id.force__no_ws_button);
         forceNoWideScreenStatus = findViewById(R.id.force_no_ws_status);
 
+
         forceWideScreenButton = findViewById(R.id.force_ws_button);
         forceWideScreenStatus = findViewById(R.id.force_ws_status);
+
+        forcePortrait = findViewById(R.id.force_portrait_button);
+        forcePortraitStatus = findViewById(R.id.force_portrait_status);
+
 
         if (load("force_ws")) {
             forceWideScreenButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.force_widescreen_text));
@@ -626,13 +633,14 @@ public class MainActivity extends AppCompatActivity {
                             changeStatus(forceWideScreenStatus, 0, true);
                             showRebootButton();
                         } else {
-                            forceWideScreen(view, 470);
+                            forceWideScreen(view, 440);
                             forceWideScreenButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.force_widescreen_text));
-                            if (load("force_no_ws")) {
+                            if (load("force_no_ws") || load ("force_portrait")) {
                                 Toast.makeText(getApplicationContext(), getString(R.string.force_disable_widescreen_warning), Toast.LENGTH_LONG).show();
+                                revert("force_no_ws");
+                                revert("force_portrait");
                                 save(false, "force_no_ws");
-                                forceNoWideScreen.setText(getString(R.string.force_disable_tweak) + getString(R.string.base_no_ws));
-                                changeStatus(forceNoWideScreenStatus, 0, true);
+                                save(false, "force_portrait");
                             }
                         }
                     }
@@ -660,19 +668,52 @@ public class MainActivity extends AppCompatActivity {
                             changeStatus(forceNoWideScreenStatus, 0, true);
                             showRebootButton();
                         } else {
-                            forceWideScreen(view, 3000);
+                            forceWideScreen(view, 1920);
                             forceNoWideScreen.setText(getString(R.string.reset_tweak) + getString(R.string.base_no_ws));
-                            if (load("force_ws")) {
+                            if (load("force_portrait") || load ("force_ws")) {
+                                revert("force_portrait");
+                                revert("force_ws");
+                                save(false, "force_portrait");
                                 save(false, "force_ws");
-                                Toast.makeText(getApplicationContext(), R.string.force_widescreen_warning, Toast.LENGTH_LONG).show();
-                                forceWideScreenButton.setText(getString(R.string.enable_tweak_string) + getString(R.string.force_widescreen_text));
-                                changeStatus(forceWideScreenStatus, 0, true);
                             }
                         }
                     }
                 });
 
         setOnLongClickListener(forceNoWideScreen, R.string.tutorial_no_widescreen, R.drawable.tutorial_nowidescreen);
+
+        if (load("force_portrait")) {
+            forcePortrait.setText(getString(R.string.reset_tweak) + getString(R.string.portrait_layout));
+            changeStatus(forcePortraitStatus, 2, false);
+        } else {
+            forcePortrait.setText(getString(R.string.enable_tweak_string) + getString(R.string.portrait_layout));
+            changeStatus(forcePortraitStatus, 0, false);
+        }
+
+        forcePortrait.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (load("force_portrait")) {
+                            revert("force_portrait");
+                            forcePortrait.setText(getString(R.string.enable_tweak_string) + getString(R.string.portrait_layout));
+                            changeStatus(forcePortraitStatus, 0, true);
+                            showRebootButton();
+                        } else {
+                            forceWideScreen(view, 10);
+                            forcePortrait.setText(getString(R.string.disable_tweak_string) + getString(R.string.portrait_layout));
+                            if (load("force_no_ws") || load ("force_ws")) {
+                                Toast.makeText(getApplicationContext(), getString(R.string.force_disable_widescreen_warning), Toast.LENGTH_LONG).show();
+                                revert("force_no_ws");
+                                revert("force_ws");
+                                save(false, "force_no_ws");
+                                save(false, "force_ws");
+                            }
+                        }
+                    }
+                });
+
+        setOnLongClickListener(forcePortrait, R.string.tutorial_portrait, R.string.restricted_coolwalk, R.drawable.tutorial_portrait);
 
         messagesHunThrottling = findViewById(R.id.hunthrottlingbutton);
         final int[] messagesHunScrollbarValue = {0};
@@ -2186,7 +2227,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         final StringBuilder finalCommand = new StringBuilder();
 
 
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__day_night_theme_enabled\", \"\" ,1,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\", 0,\"Coolwalk__day_night_theme_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
 
 
@@ -2487,7 +2528,18 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Boardwalk__news_browser_available\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__car_ui_entry_use_configuration_context_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__media_switcher_page_while_started_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__projection_notification_hun_sbn_converter_hack_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__rail_assistant_media_rec_enabled_on_focus_screens\", \"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__wallpaper_backdrop_enabled\", \"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__wallpaper_backdrop_threshold\", \"\" ,15,0);");
+        finalCommand.append(System.getProperty("line.separator"));
 
 
 
@@ -2624,6 +2676,13 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__media_notification_high_priority_kill_switch\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__add_boardwalk_theme_attrs_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__choreograph_start_composition_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"Coolwalk__rail_hotseat_check_app_available_kill_switch\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+
 
 
 
@@ -3764,14 +3823,35 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         final StringBuilder finalCommand = new StringBuilder();
 
 
+
+        if (value == 10) {
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__short_portrait_breakpoint_dp\", \"\"," + value + ",0);");
+            finalCommand.append(System.getProperty("line.separator"));
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__portrait_breakpoint_dp\", \"\"," + value + ",0);");
+            finalCommand.append(System.getProperty("line.separator"));
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__widescreen_breakpoint_dp\", \"\"," + 3000 + ",0);");
+            finalCommand.append(System.getProperty("line.separator"));
+
+        }
+
+        if (value == 470) {
             finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__widescreen_breakpoint_dp\", \"\"," + value + ",0);");
             finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__semi_widescreen_breakpoint_dp\", \"\"," + value + ",0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__short_portrait_breakpoint_dp\", \"\"," + value + ",0);");
-        finalCommand.append(System.getProperty("line.separator"));
-            if (value == 3000) {
-                finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__regular_layout_max_width_dp\", \"\"," + value + ",0);");
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__rail_assistant_media_rec_enabled_min_screen_width\", \"\"," + value + ",0);");
+            finalCommand.append(System.getProperty("line.separator"));
+        }
+
+            if (value == 1920) {
+
+                finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__regular_layout_max_width_dp\", \"\"," + 1919 + ",0);");
+                finalCommand.append(System.getProperty("line.separator"));
+                finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__semi_widescreen_breakpoint_dp\", \"\"," + value + ",0);");
+                finalCommand.append(System.getProperty("line.separator"));
+                finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__widescreen_breakpoint_dp\", \"\"," + 2000 + ",0);");
+                finalCommand.append(System.getProperty("line.separator"));
+                finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__short_portrait_breakpoint_dp\", \"\"," + value + ",0);");
+                finalCommand.append(System.getProperty("line.separator"));
+                finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__portrait_breakpoint_dp\", \"\"," + value + ",0);");
                 finalCommand.append(System.getProperty("line.separator"));
             }
         
@@ -3798,8 +3878,12 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                         decideWhat = "force_ws";
                         break;
                     }
-                    case 3000: {
+                    case 1920: {
                         decideWhat = "force_no_ws";
+                        break;
+                    }
+                    case 10: {
+                        decideWhat = "force_portrait";
                         break;
                     }
                 }
@@ -3815,12 +3899,29 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                     appendText(logs, "\n--  end SQL method   --");
                     switch (value) {
                         case 470: {
+                            forceNoWideScreen.setText(getString(R.string.force_disable_tweak) + getString(R.string.base_no_ws));
+                            forcePortrait.setText(getString(R.string.enable_tweak_string) + getString(R.string.portrait_layout));
                             changeStatus(forceWideScreenStatus, 1, true);
+                            changeStatus(forceNoWideScreenStatus, 0, false);
+                            changeStatus(forcePortraitStatus, 0, false);
                             showRebootButton();
                             break;
                         }
-                        case 3000: {
+                        case 1920: {
+                            forceWideScreenButton.setText(getString(R.string.enable_tweak_string) + getString(R.string.base_no_ws));
+                            forcePortrait.setText(getString(R.string.enable_tweak_string) + getString(R.string.portrait_layout));
                             changeStatus(forceNoWideScreenStatus, 1, true);
+                            changeStatus(forceWideScreenStatus, 0, false);
+                            changeStatus(forcePortraitStatus, 0, false);
+                            showRebootButton();
+                            break;
+                        }
+                        case 10: {
+                            forceNoWideScreen.setText(getString(R.string.force_disable_tweak) + getString(R.string.base_no_ws));
+                            forceWideScreenButton.setText(getString(R.string.enable_tweak_string) + getString(R.string.base_no_ws));
+                            changeStatus(forcePortraitStatus, 1, true);
+                            changeStatus(forceNoWideScreenStatus, 0, false);
+                            changeStatus(forceWideScreenStatus, 0, false);
                             showRebootButton();
                             break;
                         }
