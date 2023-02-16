@@ -138,7 +138,7 @@
     <string name="section_three">Твики внешнего вида</string>
     <string name="section_four">Настройка качества видео</string>
     <string name="section_five">Активация скрытых функций</string>
-    <string name="restricted_coolwalk">Эта опция не будет работать с включенным Coolwalk.</string>
+    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">Внимание! Эта операция ОЧИСТИТ ВСЕ ДАННЫЕ из выбранных приложений. Пожалуйста, убедитесь, что у вас есть резервная копия данных. Вы все равно хотите продолжить?</string>
     <string name="tappable_progress">Новый индикатор прогресса</string>
     <string name="tappable_progress_tutorial">Наконец-то нам доступен сенсорный прогресс бар воспроизводимого контента на Android Auto. Да, мы можем перематывать текущий трек. Требуется Android Auto 8.3 или выше.</string>
@@ -147,4 +147,7 @@
     <string name="uxprototype_tweak">Пользовательский ярлык</string>
     <string name="tutorial_new_seekbar">"Эта настройка включает панель поиска для медиа приложений."</string>
     <string name="tutorial_materialyou">"Эта настройка включает Material you стиль для приложения Android Auto на телефоне. Тесты показали, что корректно работает только в Android Auto 8.8&gt;"</string>
+    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
+    <string name="portrait_layout">Portrait layout</string>
+    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
 </resources>

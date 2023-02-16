@@ -137,7 +137,7 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="section_three">Appearance tweaks</string>
     <string name="section_four">Video quality settings</string>
     <string name="section_five">Pre-activate features</string>
-    <string name="restricted_coolwalk">This option will not work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">Warning! This operation will ERASE ALL THE DATA from the selected app(s). Please make sure you have a backup of the data. Do you want to proceed anyways?</string>
     <string name="tappable_progress">New progress bar</string>
     <string name="tappable_progress_tutorial">Finally we are gaining a touchable progress bar for what\'s playing on Android Auto. Yes, we can seek through the current track Requires Android Auto 8.3 or superior.</string>
@@ -146,4 +146,7 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="uxprototype_tweak">Custom shortcut</string>
     <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
     <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
+    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
+    <string name="portrait_layout">Portrait layout</string>
+    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
 </resources>

@@ -139,7 +139,7 @@ ADVERTENCIA: Esta modificación no ha sido probada extensivamente y podría pote
     <string name="section_three">Ajustes de apariencia</string>
     <string name="section_four">Ajustes de calidad de vídeo</string>
     <string name="section_five">Pre-activar características</string>
-    <string name="restricted_coolwalk">Esta opción no funcionará con Coolwalk habilitado.</string>
+    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">¡Advertencia! Esta operación BORRARÁ TODOS LOS DATOS de la(s) aplicación(es) seleccionada(s). Por favor, asegúrate de que tienes un respaldo de los datos. ¿Deseas proceder de todas formas?</string>
     <string name="tappable_progress">Nueva barra de progreso</string>
     <string name="tappable_progress_tutorial">Por fin disponemos de una barra de progreso deslizable para ajustar lo que está sonando en Android Auto. Sí, podemos desplazarnos por la pista que se está reproduciendo en este momento. Se requiere de Android Auto 8.3 o superior.</string>
@@ -148,4 +148,7 @@ ADVERTENCIA: Esta modificación no ha sido probada extensivamente y podría pote
     <string name="uxprototype_tweak">Atajo personalizado</string>
     <string name="tutorial_new_seekbar">"Este ajuste permite activar la barra de búsqueda deslizable para las aplicaciones multimedia."</string>
     <string name="tutorial_materialyou">"Este ajuste aplica el estilo Material You a la configuración de Android Auto en el teléfono. Según ha sido probado esto sólo funciona correctamente en Android Auto 8.8 o superior"</string>
+    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
+    <string name="portrait_layout">Portrait layout</string>
+    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
 </resources>

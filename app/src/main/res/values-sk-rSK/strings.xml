@@ -139,7 +139,7 @@ UPOZORNENIE: Toto vylepšenie nebolo dôkladne testované a môže potenciálne 
     <string name="section_three">Vylepšenia vzhľadu</string>
     <string name="section_four">Nastavenia kvality videa</string>
     <string name="section_five">Vopred aktivujte funkcie</string>
-    <string name="restricted_coolwalk">Táto možnosť nebude fungovať so zapnutou funkciou Coolwalk.</string>
+    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">POZOR! Táto operácia VYMAŽE VŠETKY ÚDAJE z vybratých aplikácií. Uistite sa, že máte zálohu údajov. Chcete napriek tomu pokračovať?</string>
     <string name="tappable_progress">Nový panel priebehu</string>
     <string name="tappable_progress_tutorial">Nakoniec sme získali dotykový panel priebehu pre to, čo hrá v systéme Android Auto. Áno, môžeme vyhľadávať cez aktuálnu skladbu Vyžaduje Android Auto 8.3 alebo vyšší.</string>
@@ -148,4 +148,7 @@ UPOZORNENIE: Toto vylepšenie nebolo dôkladne testované a môže potenciálne 
     <string name="uxprototype_tweak">Nastavenie vlastných skratiek</string>
     <string name="tutorial_new_seekbar">"Toto vylepšenie umožňuje pohyblivý panel vyhľadávania pre mediálne aplikácie."</string>
     <string name="tutorial_materialyou">"Toto vylepšenie umožňuje spôsob, ktorým upravíte nastavenia Android Auto v telefóne. Správne to funguje iba v systéme Android Auto 8.8&gt; bolo testované"</string>
+    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
+    <string name="portrait_layout">Portrait layout</string>
+    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
 </resources>

@@ -137,7 +137,7 @@ ATTENZIONE: Questo tweak non è stato testato estensivamente e potenzialmente pu
     <string name="section_three">Impostazioni aspetto</string>
     <string name="section_four">Impostazioni di qualità grafica</string>
     <string name="section_five">Funzioni pre-attivabili</string>
-    <string name="restricted_coolwalk">Questa opzione non funzionerà con Coolwalk abilitato.</string>
+    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">Attenzione! Questa operazione eliminerà TUTTI I DATI dalle app selezionate. Assicurati di avere un backup dei dati. Vuoi procedere comunque?</string>
     <string name="tappable_progress">Nuova barra di avanzamento</string>
     <string name="tappable_progress_tutorial">Finalmente sembra che sarà nostro destino ottenere una barra di avanzamento toccabile per ciò che è in riproduzione su Android Auto. Sì, possiamo saltare tra il brano corrente. Richiede Android Auto 8.3 o superiore.</string>
@@ -146,4 +146,7 @@ ATTENZIONE: Questo tweak non è stato testato estensivamente e potenzialmente pu
     <string name="uxprototype_tweak">Collegamento personalizzato</string>
     <string name="tutorial_new_seekbar">"Questo tweak attiverà una barra di avanzamento spostabile per le applicazioni multimediali."</string>
     <string name="tutorial_materialyou">"Questa modifica abilita il Material You per le impostazioni di Android Auto sul telefono. Questo funziona correttamente solo su Android Auto 8.8&gt; come testato"</string>
+    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
+    <string name="portrait_layout">Portrait layout</string>
+    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
 </resources>
