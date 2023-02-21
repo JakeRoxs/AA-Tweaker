@@ -139,7 +139,7 @@ ADVERTENCIA: Esta modificación no ha sido probada extensivamente y podría pote
     <string name="section_three">Ajustes de apariencia</string>
     <string name="section_four">Ajustes de calidad de vídeo</string>
     <string name="section_five">Pre-activar características</string>
-    <string name="restricted_coolwalk">\nThis option will only work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">\nEsta opción solo funcionará con Coolwalk activado.</string>
     <string name="warning_patch_apps">¡Advertencia! Esta operación BORRARÁ TODOS LOS DATOS de la(s) aplicación(es) seleccionada(s). Por favor, asegúrate de que tienes un respaldo de los datos. ¿Deseas proceder de todas formas?</string>
     <string name="tappable_progress">Nueva barra de progreso</string>
     <string name="tappable_progress_tutorial">Por fin disponemos de una barra de progreso deslizable para ajustar lo que está sonando en Android Auto. Sí, podemos desplazarnos por la pista que se está reproduciendo en este momento. Se requiere de Android Auto 8.3 o superior.</string>
@@ -148,9 +148,9 @@ ADVERTENCIA: Esta modificación no ha sido probada extensivamente y podría pote
     <string name="uxprototype_tweak">Atajo personalizado</string>
     <string name="tutorial_new_seekbar">"Este ajuste permite activar la barra de búsqueda deslizable para las aplicaciones multimedia."</string>
     <string name="tutorial_materialyou">"Este ajuste aplica el estilo Material You a la configuración de Android Auto en el teléfono. Según ha sido probado esto sólo funciona correctamente en Android Auto 8.8 o superior"</string>
-    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
-    <string name="portrait_layout">Portrait layout</string>
-    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
-    <string name="inertial_scroll_tweak">Inertial scroll</string>
-    <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
+    <string name="tutorial_nocoolwalk">¿Detestas Coolwalk? Este ajuste es para ti.</string>
+    <string name="portrait_layout">Forzar diseño vertical</string>
+    <string name="tutorial_portrait">Este ajuste forzará el diseño vertical de Android Auto con el panel de control en la parte inferior.</string>
+    <string name="inertial_scroll_tweak">Desplazamiento inercial</string>
+    <string name="tutorial_inertial_scroll">Este ajuste sustituirá el comportamiento de desplazamiento nativo de Android Auto para que no se detenga página por página.</string>
 </resources>

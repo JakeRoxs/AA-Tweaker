@@ -149,7 +149,7 @@ UPOZORNENIE: Toto vylepšenie nebolo dôkladne testované a môže potenciálne 
     <string name="tutorial_new_seekbar">"Toto vylepšenie umožňuje pohyblivý panel vyhľadávania pre mediálne aplikácie."</string>
     <string name="tutorial_materialyou">"Toto vylepšenie umožňuje spôsob, ktorým upravíte nastavenia Android Auto v telefóne. Správne to funguje iba v systéme Android Auto 8.8&gt; bolo testované"</string>
     <string name="tutorial_nocoolwalk">Úplne neznášaš Coolwalk? Toto vylepšenie je pre vás.</string>
-    <string name="portrait_layout">Rozloženie na výšku</string>
+    <string name="portrait_layout">Force vertical layout</string>
     <string name="tutorial_portrait">Toto vylepšenie si vynúti rozloženie na výšku v systéme Android Auto s ovládacím panelom v spodnej časti.</string>
     <string name="inertial_scroll_tweak">Inertial scroll</string>
     <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>

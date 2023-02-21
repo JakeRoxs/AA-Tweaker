@@ -153,7 +153,7 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
     <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
     <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
-    <string name="portrait_layout">Portrait layout</string>
+    <string name="portrait_layout">Force vertical layout</string>
     <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
     <string name="inertial_scroll_tweak">Inertial scroll</string>
     <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>

@@ -147,7 +147,7 @@ WAARSCHUWING: Deze tweak is niet uitgebreid getest en kan Android Auto mogelijk 
     <string name="tutorial_new_seekbar">"Met deze tweak worden media files doorzoekbaar door middel van een zoekbalk."</string>
     <string name="tutorial_materialyou">"Deze tweak schakelt \"Material You\" stijl in voor de Android Auto instellingen op de telefoon. Dit werkt alleen op Android Auto 8.8&gt; zoals getest"</string>
     <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
-    <string name="portrait_layout">Portrait layout</string>
+    <string name="portrait_layout">Force vertical layout</string>
     <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
     <string name="inertial_scroll_tweak">Inertial scroll</string>
     <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>

@@ -146,7 +146,7 @@ Android Auto اصدار 5.8 او أعلى.</string>
     <string name="tutorial_new_seekbar">"يتيح هذا التعديل شريط تقديم لتطبيقات الوسائط."</string>
     <string name="tutorial_materialyou">"يتيح هذا التعديل نمط \"مظهرك\" لإعدادات Android Auto على الهاتف. يعمل هذا بشكل صحيح فقط على Android Auto 8.8&gt; كما تم اختباره"</string>
     <string name="tutorial_nocoolwalk">هل انت تكره Coolwalk حقاً؟ هذا التعديل من أجلك.</string>
-    <string name="portrait_layout">تخطيط عمودي</string>
+    <string name="portrait_layout">Force vertical layout</string>
     <string name="tutorial_portrait">سيؤدي هذا التعديل إلى فرض تخطيط عمودي لـAndroid Auto مع لوحة التحكم في الأسفل.</string>
     <string name="inertial_scroll_tweak">Inertial scroll</string>
     <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>

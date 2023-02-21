@@ -147,7 +147,7 @@ WARNUNG: Dieser Tweak wurde nicht ausgiebig getestet und könnte möglicherweise
     <string name="tutorial_new_seekbar">"Dieser Tweak ermöglicht eine bewegliche Suchleiste für Medien-Apps."</string>
     <string name="tutorial_materialyou">"Dieser Tweak aktiviert den \"Material You\"-Style für die Android Auto-Einstellungen auf dem Telefon. Dies funktioniert nur auf Android Auto Version 8.8&gt; soaktuell getestet"</string>
     <string name="tutorial_nocoolwalk">Du magst das Coolwalk Design überhaupt nicht? Dann ist dieser Tweak genau der richtige für dich.</string>
-    <string name="portrait_layout">Portrait/Hochformat-Layout</string>
+    <string name="portrait_layout">Force vertical layout</string>
     <string name="tutorial_portrait">Diese Einstellung wird das Hochformat von Android Auto mit Dashboard unten erzwingen.</string>
     <string name="inertial_scroll_tweak">Inertial scroll</string>
     <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>

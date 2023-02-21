@@ -146,7 +146,7 @@ Android Auto 5.8以降が必要です。</string>
     <string name="tutorial_new_seekbar">"この調整により、メディアアプリの可動シークバーが可能になります。"</string>
     <string name="tutorial_materialyou">"この調整により、端末のAndroid Autoの設定にMaterial Youスタイルを適用できます。これはテスト済みのAndroid Auto 8.8&gt; でのみ適切に動作します。"</string>
     <string name="tutorial_nocoolwalk">Coolwalkが完全に嫌いですか? この調整はあなたのためにあります。</string>
-    <string name="portrait_layout">縦向きのレイアウト</string>
+    <string name="portrait_layout">Force vertical layout</string>
     <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
     <string name="inertial_scroll_tweak">Inertial scroll</string>
     <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
