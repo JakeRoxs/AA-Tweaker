@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView forcePortraitStatus;
     private ImageView messagesHunStatus;
     private ImageView mediaHunStatus;
-    private ImageView calendarTweakStatus;
+    private ImageView intertialScrollStatus;
     private ImageView btstatus;
     private ImageView mdstatus;
     private ImageView batteryWarningStatus;
@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageView materialYouTweakStatus;
     private TextView currentlySetHun;
     private TextView currentlySetMediaHun;
-    private TextView currentlySetAgendaDays;
     private TextView currentlySetUSBSeekbar;
     private TextView currentlySetWiFiSeekbar;
     private Button rebootButton;
@@ -111,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     private Button forcePortrait;
     private Button messagesHunThrottling;
     private Button mediathrottlingbutton;
-    private Button moreCalendarButton;
+    private Button intertialScrollButton;
     private Button bluetoothoff;
     private Button mdbutton;
     private Button batteryWarning;
@@ -201,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView revertNotificationDuration = findViewById(R.id.revert_hun_throttling);
         ImageView revertMediaNotificationDuration = findViewById(R.id.revert_media_hun);
-        ImageView revertCalendarDays = findViewById(R.id.revert_calendar_days);
         ImageView revertWifiBitrate = findViewById(R.id.revert_bitrate_wifi);
         ImageView revertUsbBitrate = findViewById(R.id.revert_bitrate_usb);
 
@@ -892,8 +890,9 @@ public class MainActivity extends AppCompatActivity {
 
         setOnLongClickListener(mediathrottlingbutton, R.string.tutorial_media_hun, R.drawable.tutorial_media_hun);
 
-        moreCalendarButton = findViewById(R.id.calendar_more_events_button);
-        final int[] calendarSeekbarStatus = {0};
+        intertialScrollButton = findViewById(R.id.inertial_scroll_button);
+
+        /*final int[] calendarSeekbarStatus = {0};
         final TextView calendarSeekbarTextView = findViewById(R.id.calendar_days_seekbar_text);
         final SeekBar calendarSeekbar = findViewById(R.id.calendar_days_seekbar);
         calendarSeekbar.setProgress(1);
@@ -928,52 +927,35 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calendarSeekbar.setProgress(1);
             }
-        });
+        });*/
 
 
-        currentlySetAgendaDays = findViewById(R.id.calendar_days_currently_set);
-        calendarTweakStatus = findViewById(R.id.calendar_more_events_status);
+        intertialScrollStatus = findViewById(R.id.inertial_scroll_status);
 
-        if (load("calendar_aa_tweak")) {
-            moreCalendarButton.setText(getString(R.string.calendar_tweak_single, calendarSeekbar.getProgress()));
-            changeStatus(calendarTweakStatus, 2, false);
-            if (loadValue("agenda_value") == 0) {
-                try {
-                    saveValue(Integer.parseInt(runSuWithCmd(
-                            path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                    "'SELECT DISTINCT intVal FROM Flags WHERE name=\"McFly__num_days_in_agenda_view\";'").getInputStreamLog()), "agenda_value");
-                } catch (RuntimeException e) {
-                    e.printStackTrace();
-                }
-            }
-            currentlySetAgendaDays.setText(getString(R.string.currently_set) + loadValue("agenda_value"));
+        if (load("aa_inertial_scroll")) {
+            changeStatus(intertialScrollStatus, 2, false);
+            intertialScrollButton.setText(getString(R.string.enable_tweak_string) + getString(R.string.inertial_scroll_tweak));
         } else {
-            moreCalendarButton.setText(getString(R.string.calendar_tweak_single, calendarSeekbar.getProgress()));
-            changeStatus(calendarTweakStatus, 0, false);
+            intertialScrollButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.inertial_scroll_tweak));
+            changeStatus(intertialScrollStatus, 0, false);
         }
 
-        moreCalendarButton.setOnClickListener(
+        intertialScrollButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
-                        if (calendarSeekbar.getProgress() == 1) {
-                            if (load("calendar_aa_tweak")) {
-                                revert("calendar_aa_tweak");
-                                saveValue(1, "agenda_value");
-                                changeStatus(calendarTweakStatus, 0, true);
-                                currentlySetAgendaDays.setText("");
+                            if (load("aa_inertial_scroll")) {
+                                revert("aa_inertial_scroll");
+                                changeStatus(intertialScrollStatus, 0, true);
                                 showRebootButton();
                             } else {
-                                Toast.makeText(getApplicationContext(), getString(R.string.choose_value_first), Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            setCalendarEvents(view, calendarSeekbar.getProgress());
+                            inertialScrollTweak();
                         }
                     }
                 });
 
-        setOnLongClickListener(moreCalendarButton, R.string.tutorial_calendar_tweak, R.drawable.tutorial_agenda);
+        setOnLongClickListener(intertialScrollButton, R.string.tutorial_inertial_scroll);
 
         bluetoothoff = findViewById(R.id.bluetooth_disable_button);
         btstatus = findViewById(R.id.bt_disable_status);
@@ -2132,9 +2114,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__list_template_fab_enabled\",\"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__is_toggle_allowed_in_map_and_pane_templates_kill_switch\",\"\" ,1,0);");
-        finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__messaging_aap_host_logic_enabled\",\"\" ,0,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__grid_template_fab_enabled\",\"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__tab_template_enabled\",\"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
@@ -2150,6 +2130,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__allow_secondary_actions_in_half_lists\",\"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
+
 
 
 
@@ -2538,9 +2519,28 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__wallpaper_backdrop_enabled\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"SystemUi__wallpaper_backdrop_threshold\", \"\" ,15,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",0,\"AppListUi__use_updated_calendar_ui\", \"\" ,1,0);");
         finalCommand.append(System.getProperty("line.separator"));
-
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__is_toggle_allowed_in_map_and_pane_templates_kill_switch\",\"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__messaging_aap_host_logic_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CarAppLibrary__tab_template_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"CompanionDeviceManager__integration_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__allow_all_inputs_kill_switch\",\"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Coolwalk__use_legacy_theme\",\"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Media__favorites_button_enabled\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Media__show_album_art_for_suggestion\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Media__show_settings_button_in_browse_view\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"Performance__use_optimized_car_activities\",\"\" ,1,0);");
+        finalCommand.append(System.getProperty("line.separator"));
 
 
 
@@ -3255,6 +3255,8 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         finalCommand.append(System.getProperty("line.separator"));
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.gms.car\",0,\"Performance__use_optimized_car_activities\", \"\" ,0,0);");
         finalCommand.append(System.getProperty("line.separator"));
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType,  name, user, boolVal, committed) VALUES (\"com.google.android.gms.car\",0,\"Messaging__assistant_notification_data_sharing_enabled\", \"\" ,0,0);");
+        finalCommand.append(System.getProperty("line.separator"));
 
 
         new Thread() {
@@ -3738,7 +3740,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
 
     }
 
-    private void setCalendarEvents(View view, final int value) {
+    private void inertialScrollTweak() {
         final TextView logs = initiateLogsText();
 
         final ProgressDialog dialog = ProgressDialog.show(MainActivity.this, "",
@@ -3747,7 +3749,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         final StringBuilder finalCommand = new StringBuilder();
 
 
-            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"McFly__num_days_in_agenda_view\", \"\"," + value + ",0);");
+            finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__inertial_scrolling_enabled\", \"\",1,0);");
             finalCommand.append(System.getProperty("line.separator"));
 
         runOnUiThread(new Thread() {
@@ -3762,31 +3764,29 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
 
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'DROP TRIGGER IF EXISTS calendar_aa_tweak;\n" + "DELETE FROM Flags WHERE name=\"McFly__num_days_in_agenda_view\";\n" + finalCommand + "'"
+                                "'DROP TRIGGER IF EXISTS aa_inertial_scroll;\n"  + finalCommand + "'"
                 ).getStreamLogsWithLabels());
 
 
                 appendText(logs, "\n\n--  run SQL method   --");
                 appendText(logs, runSuWithCmd(
                         path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
-                                "'CREATE TRIGGER calendar_aa_tweak AFTER DELETE\n" +
+                                "'CREATE TRIGGER aa_inertial_scroll AFTER DELETE\n" +
                                 "On FlagOverrides\n" +
                                 "BEGIN\n" + finalCommand + "END;'\n"
                 ).getStreamLogsWithLabels());
 
 
-                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"calendar_aa_tweak\";'").getInputStreamLog().length() <= 4) {
+                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"aa_inertial_scroll\";'").getInputStreamLog().length() <= 4) {
                     suitableMethodFound = false;
                 } else {
                     appendText(logs, "\n--  end SQL method   --");
-                    save(true, "calendar_aa_tweak");
+                    save(true, "aa_inertial_scroll");
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
-                            changeStatus(calendarTweakStatus, 1, true);
+                            changeStatus(intertialScrollStatus, 1, true);
                             showRebootButton();
-                            saveValue(value, "agenda_value");
-                            currentlySetAgendaDays.setText(getString(R.string.currently_set) + value);
                         }
                     });
                 }
@@ -3806,7 +3806,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 if (!suitableMethodFound) {
                     final DialogFragment notSuccessfulDialog = new NotSuccessfulDialog();
                     Bundle bundle = new Bundle();
-                    bundle.putString("tweak", "calendar_aa_tweak");
+                    bundle.putString("tweak", "aa_inertial_scroll");
                     bundle.putString("log", logs.getText().toString());
                     notSuccessfulDialog.setArguments(bundle);
                     notSuccessfulDialog.show(getSupportFragmentManager(), "NotSuccessfulDialog");

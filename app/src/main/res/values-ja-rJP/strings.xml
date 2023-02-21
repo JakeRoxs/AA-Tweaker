@@ -9,7 +9,7 @@
     <string name="patch_custom_apps">カスタムアプリ</string>
     <string name="disable_speed_limitations">タップの制限</string>
     <string name="unlimited_scrolling_when_driving">速度制限</string>
-    <string name="message_auto_read">Message auto-read</string>
+    <string name="message_auto_read">メッセージの自動読み上げ</string>
     <string name="splash">本アプリは、Android Autoの動作を変更し、GoogleがAndroid Autoに実装した複数の安全機能を回避できます。\n
 本アプリを使用することにより、安全機能を変更した場合に発生する可能性のある結果、あなた自身および他人の負傷、物的損害、人命の損失などに対して、あなただけが単独で責任を負うことに同意するものとします。\n
 いかなる状況においても、本アプリの作者はその使用に責任を負いません。</string>
@@ -34,7 +34,7 @@
 特定のアプリを最初に起動するように設定することはできません。</string>
     <string name="tutorial_widescreen">この調整は、Android Autoのワイドスクリーンモードを強制的に有効にします。</string>
     <string name="tutorial_no_widescreen">この調整は、Android Autoのワイドスクリーンモードを強制的に無効にします。</string>
-    <string name="tutorial_autoplay_message">This tweak enables the possibility to set whether Android Auto must read the incoming messages or not. Android Auto 8.3 or superior is required.</string>
+    <string name="tutorial_autoplay_message">この調整により、Android Autoが受信メッセージを読み上げるかどうかを設定できます。</string>
     <string name="tutorial_statusbar_opaque">この調整は、ステータスバーを常に黒くします。</string>
     <string name="tutorial_battery_outline">この調整は、バッテリーセーバーがオンのときにバッテリーアイコンの赤い輪郭が表示されないようにします。</string>
     <string name="tutorial_hun">この調整は、ヘッドアップ通知に任意の継続時間を設定します。</string>
@@ -120,8 +120,8 @@ Android Auto 5.8以降が必要です。</string>
     <string name="remove_paired_car">ペアリングされた車を削除</string>
     <string name="choose_cars">車を選択</string>
     <string name="tutorial_carremover">ペアリングされた全ての車を一括でAndroid Autoから削除することしかできず、一度に1台だけ削除することはできないことをご存知ですか？このオプションは、車をAndroid Autoから削除したい場合に役立ちます。必要な車を選択するだけで、その車が削除されます。</string>
-    <string name="coolwalk_daynight_tweak">Light/Dark Coolwalk</string>
-    <string name="coolwalk_daynight_tutorial">This tweak will activate day/night mode for Coolwalk mode. Looks kind of broken right now and can\'t handle switch very well.</string>
+    <string name="coolwalk_daynight_tweak">ライト/ダーク Coolwalk</string>
+    <string name="coolwalk_daynight_tutorial">この調整は、Coolwalkモードの昼/夜モードを有効にします。現在壊れているようで、スイッチをうまく扱えません。</string>
     <string name="custom_hotseat_option">カスタム座席設定</string>
     <string name="tutorial_coolwalk">この調整は、Android Autoの新しいデザイン (コードネーム Coolwalk) を有効にします。これはAndroid Auto内の設定で切り替えることができ、小さな画面での表示を微調整します。このデザインでは、常にサイドパネルといくつかの異なるグラフィックを備えています。現在、この機能は初期段階にあります。Android Auto 6.9以降が必要です。</string>
     <string name="coolwalk_tweak">Coolwalkのデザイン</string>
@@ -136,16 +136,18 @@ Android Auto 5.8以降が必要です。</string>
     <string name="section_three">外観の調整</string>
     <string name="section_four">ビデオの品質設定</string>
     <string name="section_five">予め起動している機能</string>
-    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">\nThis option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">警告! この操作は選択したアプリのすべてのデータを消去します。 データのバックアップがあることを確認してください。とにかく続行しますか?</string>
     <string name="tappable_progress">新しいプログレスバー</string>
     <string name="tappable_progress_tutorial">ついに、Android Autoで再生中のコンテンツを調整するためのタッチ可能なスライド式プログレスバーが登場しました。はい、現在再生中のトラックをスクロールすることができます。Android Auto 8.3以降が必要です。</string>
-    <string name="uxprototype_tutorial">All this tweak does is basically creates a free shortcut on the home page to open a web page. It involves an Easter egg hidden in Android Auto released on 1st of April 2022. Activate \"Developer mode\" in \"Developer settings\" under \"Application mode\". It\'s the only way to have an actual fullscreen app on Android Auto right now. WARNING: Not exitable, use this if you only plan on using this on your car. There\'s no back button either.</string>
-    <string name="uxprototype_dialog">Enter a valid full URL</string>
+    <string name="uxprototype_tutorial">この調整は基本的にウェブページを開くための自由なショートカットを作成します。 これは、2022年4月1日にAndroid Autoでリリースされたイースターエッグを含みます。「デベロッパー向けの設定」の中の「アプリモード」で「デベロッパー」を有効にします。 現在、Android Autoで実際のフルスクリーンアプリを利用する唯一の方法です。 警告: 終了できないので、これを車でのみ使用する場合に使用してください。バックボタンもありません。</string>
+    <string name="uxprototype_dialog">有効なフルURLを入力してください</string>
     <string name="uxprototype_tweak">カスタムショートカット</string>
-    <string name="tutorial_new_seekbar">"This tweak enables a movable seekbar for media apps."</string>
-    <string name="tutorial_materialyou">"This tweak enables material you style for the Android Auto's settings on the phone. This properly works only on Android Auto 8.8&gt; as tested"</string>
-    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
-    <string name="portrait_layout">Portrait layout</string>
+    <string name="tutorial_new_seekbar">"この調整により、メディアアプリの可動シークバーが可能になります。"</string>
+    <string name="tutorial_materialyou">"この調整により、端末のAndroid Autoの設定にMaterial Youスタイルを適用できます。これはテスト済みのAndroid Auto 8.8&gt; でのみ適切に動作します。"</string>
+    <string name="tutorial_nocoolwalk">Coolwalkが完全に嫌いですか? この調整はあなたのためにあります。</string>
+    <string name="portrait_layout">縦向きのレイアウト</string>
     <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
+    <string name="inertial_scroll_tweak">Inertial scroll</string>
+    <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
 </resources>

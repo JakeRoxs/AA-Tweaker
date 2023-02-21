@@ -136,7 +136,7 @@ Android Auto اصدار 5.8 او أعلى.</string>
     <string name="section_three">تعديلات المظهر</string>
     <string name="section_four">إعدادات جودة الفيديو</string>
     <string name="section_five">تفعيل المميزات المستقبلية</string>
-    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">\nThis option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">تحذير! هذه العملية سوف ترسل جميع البيانات من التطبيق (التطبيقات) المحدد. الرجاء التأكد من أن لديك نسخة احتياطية من البيانات. هل تريد المتابعة على أي حال؟</string>
     <string name="tappable_progress">شريط التقدم الجديد</string>
     <string name="tappable_progress_tutorial">أخيراً نحن نحصل على شريط تقديم يدعم اللمس لما يتم تشغيله على Android Auto. نعم، يمكننا البحث من خلال المسار الحالي يتطلب أصدار Android Auto 8.3 أو أعلى.</string>
@@ -145,7 +145,9 @@ Android Auto اصدار 5.8 او أعلى.</string>
     <string name="uxprototype_tweak">تخصيص الاختصارات</string>
     <string name="tutorial_new_seekbar">"يتيح هذا التعديل شريط تقديم لتطبيقات الوسائط."</string>
     <string name="tutorial_materialyou">"يتيح هذا التعديل نمط \"مظهرك\" لإعدادات Android Auto على الهاتف. يعمل هذا بشكل صحيح فقط على Android Auto 8.8&gt; كما تم اختباره"</string>
-    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
-    <string name="portrait_layout">Portrait layout</string>
-    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
+    <string name="tutorial_nocoolwalk">هل انت تكره Coolwalk حقاً؟ هذا التعديل من أجلك.</string>
+    <string name="portrait_layout">تخطيط عمودي</string>
+    <string name="tutorial_portrait">سيؤدي هذا التعديل إلى فرض تخطيط عمودي لـAndroid Auto مع لوحة التحكم في الأسفل.</string>
+    <string name="inertial_scroll_tweak">Inertial scroll</string>
+    <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
 </resources>

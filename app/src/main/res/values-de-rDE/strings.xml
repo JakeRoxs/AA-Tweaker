@@ -137,7 +137,7 @@ WARNUNG: Dieser Tweak wurde nicht ausgiebig getestet und könnte möglicherweise
     <string name="section_three">Erscheinungs-Tweaks</string>
     <string name="section_four">Videoqualitätseinstellungen</string>
     <string name="section_five">Funktionen vor Aktivierung</string>
-    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">\nThis option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">Warnung! Dieser Vorgang wird ALLE DATEN von den ausgewählten App(s) löschen. Bitte stellen Sie sicher, dass Sie eine Sicherung der Daten haben. Möchten Sie trotzdem fortfahren?</string>
     <string name="tappable_progress">Neuer Fortschrittsbalken</string>
     <string name="tappable_progress_tutorial">Endlich gibt es einen berührbaren Fortschrittsbalken für die Wiedergabe auf Android Auto. Ja, wir können durch den aktuellen Titel suchen. Erfordert Android Auto 8.3 oder höher.</string>
@@ -146,7 +146,9 @@ WARNUNG: Dieser Tweak wurde nicht ausgiebig getestet und könnte möglicherweise
     <string name="uxprototype_tweak">Benutzerdefinierte Verknüpfung</string>
     <string name="tutorial_new_seekbar">"Dieser Tweak ermöglicht eine bewegliche Suchleiste für Medien-Apps."</string>
     <string name="tutorial_materialyou">"Dieser Tweak aktiviert den \"Material You\"-Style für die Android Auto-Einstellungen auf dem Telefon. Dies funktioniert nur auf Android Auto Version 8.8&gt; soaktuell getestet"</string>
-    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
-    <string name="portrait_layout">Portrait layout</string>
-    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
+    <string name="tutorial_nocoolwalk">Du magst das Coolwalk Design überhaupt nicht? Dann ist dieser Tweak genau der richtige für dich.</string>
+    <string name="portrait_layout">Portrait/Hochformat-Layout</string>
+    <string name="tutorial_portrait">Diese Einstellung wird das Hochformat von Android Auto mit Dashboard unten erzwingen.</string>
+    <string name="inertial_scroll_tweak">Inertial scroll</string>
+    <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
 </resources>

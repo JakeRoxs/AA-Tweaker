@@ -512,7 +512,7 @@
 
 
         <Button
-            android:id="@+id/calendar_more_events_button"
+            android:id="@+id/inertial_scroll_button"
             android:paddingTop="9dp"
             android:layout_width="0dp"
             style="@style/ButtonStyle"
@@ -521,69 +521,26 @@
             android:focusable="true"
             android:drawablePadding="9dp"
             android:text="@string/calendar_tweak"
-            app:layout_constraintEnd_toStartOf="@id/revert_calendar_days"
+            app:layout_constraintEnd_toEndOf="@id/multi_display_button"
             app:layout_constraintTop_toBottomOf="@id/second_seekbar_text"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/calendar_more_events_status"
+            android:id="@+id/inertial_scroll_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginEnd="3dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/calendar_more_events_button"
-            app:layout_constraintBottom_toBottomOf="@id/calendar_more_events_button" />
+            app:layout_constraintTop_toTopOf="@id/inertial_scroll_button"
+            app:layout_constraintBottom_toBottomOf="@id/inertial_scroll_button" />
 
-        <SeekBar
-            android:id="@+id/calendar_days_seekbar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/calendar_more_events_button"
-            app:layout_constraintEnd_toStartOf="@id/calendar_days_seekbar_text"
-            android:paddingVertical="15dp"
-            android:progressTint="#FF0000"
-            android:thumbTint="#660000"
-            android:thumb="@drawable/thumb_bg"
-            android:max="14" />
-
-                <ImageView
-                    android:id="@+id/revert_calendar_days"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:src="@drawable/ic_arrow_undo_circle"
-
-                    android:tint="@color/common_blue_revert"
-                    app:layout_constraintBottom_toBottomOf="@id/calendar_more_events_button"
-                    app:layout_constraintEnd_toEndOf="@id/revert_hun_throttling"
-                    app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toStartOf="@+id/revert_media_hun"
-                    app:layout_constraintTop_toTopOf="@id/calendar_more_events_button" />
-
-        <TextView
-            android:id="@+id/calendar_days_seekbar_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/calendar_days_seekbar"
-            android:layout_marginEnd="10dp"
-            android:gravity="center" />
-
-                <TextView
-                    android:id="@+id/calendar_days_currently_set"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/calendar_days_seekbar"
-                    android:layout_marginEnd="10dp"
-                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/section_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/calendar_days_seekbar"
+                    app:layout_constraintTop_toBottomOf="@id/inertial_scroll_button"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginBottom="15dp"
                     android:layout_marginStart="8dp"

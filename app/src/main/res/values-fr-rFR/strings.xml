@@ -137,7 +137,7 @@ AVERTISSEMENT : Ce tweak n\'a pas été testé de manière approfondie et pourra
     <string name="section_three">Tweaks liés à l\'apparence</string>
     <string name="section_four">Paramètres de qualité vidéo</string>
     <string name="section_five">Fonctionnalités préactivées</string>
-    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">\nThis option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">Attention ! Cette opération EFFACERA TOUTES LES DONNÉES des applis sélectionnées. Veuillez vous assurer que vous avez une sauvegarde des données. Voulez-vous quand même procéder ?</string>
     <string name="tappable_progress">Nouvelle barre de progression</string>
     <string name="tappable_progress_tutorial">Enfin, nous bénéficions d\'une barre de progression tactile pour la lecture sur Android Auto. Oui, on peut naviguer dans la piste en cours. Nécessite Android Auto 8.3 ou supérieur.</string>
@@ -146,7 +146,9 @@ AVERTISSEMENT : Ce tweak n\'a pas été testé de manière approfondie et pourra
     <string name="uxprototype_tweak">Raccourci personnalisé</string>
     <string name="tutorial_new_seekbar">"Ce tweak permet d'activer une barre de progression déplaçable pour les applications multimédia."</string>
     <string name="tutorial_materialyou">"Ce tweak active le style \"Material You\" pour les paramètres d'Android Auto sur le téléphone. Cela ne fonctionne correctement que sur Android Auto 8.8 ou supérieur comme testé"</string>
-    <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
-    <string name="portrait_layout">Portrait layout</string>
-    <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
+    <string name="tutorial_nocoolwalk">Vous détestez l\'interface Coolwalk ? Ce tweak est pour vous.</string>
+    <string name="portrait_layout">Mise en page portrait</string>
+    <string name="tutorial_portrait">Ce tweak forcera la mise en page portrait d\'Android Auto avec le tableau de bord en bas.</string>
+    <string name="inertial_scroll_tweak">Inertial scroll</string>
+    <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
 </resources>

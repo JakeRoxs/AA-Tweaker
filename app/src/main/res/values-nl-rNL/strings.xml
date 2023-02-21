@@ -137,7 +137,7 @@ WAARSCHUWING: Deze tweak is niet uitgebreid getest en kan Android Auto mogelijk 
     <string name="section_three">Uiterlijk aanpassingen</string>
     <string name="section_four">Videokwaliteitsinstellingen</string>
     <string name="section_five">Functies vooraf activeren</string>
-    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">\nThis option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">Waarschuwing! Deze bewerking zal ALLE DATA uit de geselecteerde app(s) verwijderen. Zorg ervoor dat u een back-up van de gegevens hebt. Wilt u toch doorgaan?</string>
     <string name="tappable_progress">Nieuwe voortgangsbalk</string>
     <string name="tappable_progress_tutorial">Eindelijk krijgen we een aanraakbare voortgangsbalk voor wat op Android Auto speelt. Ja, we kunnen door het huidige nummer zoeken. Android Auto 8.3 of hoger vereist.</string>
@@ -149,4 +149,6 @@ WAARSCHUWING: Deze tweak is niet uitgebreid getest en kan Android Auto mogelijk 
     <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
     <string name="portrait_layout">Portrait layout</string>
     <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
+    <string name="inertial_scroll_tweak">Inertial scroll</string>
+    <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
 </resources>

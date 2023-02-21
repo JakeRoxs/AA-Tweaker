@@ -124,7 +124,7 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="section_three">外觀調整</string>
     <string name="section_four">影像設置</string>
     <string name="section_five">預啟動功能</string>
-    <string name="restricted_coolwalk">This option will only work with Coolwalk enabled.</string>
+    <string name="restricted_coolwalk">\nThis option will only work with Coolwalk enabled.</string>
     <string name="warning_patch_apps">Warning! This operation will ERASE ALL THE DATA from the selected app(s). Please make sure you have a backup of the data. Do you want to proceed anyways?</string>
     <string name="tappable_progress">New progress bar</string>
     <string name="tappable_progress_tutorial">Finally we are gaining a touchable progress bar for what\'s playing on Android Auto. Yes, we can seek through the current track Requires Android Auto 8.3 or superior.</string>
@@ -136,4 +136,6 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="tutorial_nocoolwalk">Are you absolutely hating Coolwalk? This tweak is for you.</string>
     <string name="portrait_layout">Portrait layout</string>
     <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
+    <string name="inertial_scroll_tweak">Inertial scroll</string>
+    <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
 </resources>

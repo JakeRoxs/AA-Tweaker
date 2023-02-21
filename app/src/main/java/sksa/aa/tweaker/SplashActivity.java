@@ -69,7 +69,7 @@ public class SplashActivity extends AppCompatActivity {
         editor.putBoolean("multi_display", false);
         editor.putBoolean("battery_saver_warning", false);
         editor.putBoolean("kill_telemetry", false);
-        editor.putBoolean("calendar_aa_tweak", false);
+        editor.putBoolean("aa_inertial_scroll", false);
         editor.putBoolean("aa_bitrate_usb", false);
         editor.putBoolean("aa_bitrate_wireless", false);
         editor.putBoolean("coolwalk_daynight_tweak", false);
