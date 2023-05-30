@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView btstatus;
     private ImageView mdstatus;
     private ImageView batteryWarningStatus;
+    private ImageView verticalBarStatus;
     private ImageView telemetryStatus;
     private ImageView forceNoWideScreenStatus;
     private ImageView usbBitrateStatus;
@@ -906,6 +907,8 @@ public class MainActivity extends AppCompatActivity {
 
         intertialScrollButton = findViewById(R.id.inertial_scroll_button);
 
+
+
         /*final int[] calendarSeekbarStatus = {0};
         final TextView calendarSeekbarTextView = findViewById(R.id.calendar_days_seekbar_text);
         final SeekBar calendarSeekbar = findViewById(R.id.calendar_days_seekbar);
@@ -981,6 +984,33 @@ public class MainActivity extends AppCompatActivity {
             changeStatus(btstatus, 0, false);
 
         }
+
+        verticalBarStatus = findViewById(R.id.vertical_bar_tweak_status);
+
+        verticalBarTweakButton = findViewById(R.id.vertical_bar_tweak);
+        if (load("aa_vertical_bar")) {
+            verticalBarTweakButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.vertical_bar_tweak));
+            changeStatus(verticalBarStatus, 2, false);
+        } else {
+            verticalBarTweakButton.setText(getString(R.string.enable_tweak_string) + getString(R.string.vertical_bar_tweak));
+            changeStatus(verticalBarStatus, 0, false);
+        }
+
+        verticalBarTweakButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (load("aa_vertical_bar")) {
+                            revert("aa_vertical_bar");
+                            changeStatus(verticalBarStatus, 0, true);
+                            showRebootButton();
+                        } else {
+                            verticalBarTweak();
+                        }
+                    }
+                });
+
+        setOnLongClickListener(verticalBarTweakButton, R.string.tutorial_vertical_bar_tweak);
 
         bluetoothoff.setOnClickListener(
                 new View.OnClickListener() {
@@ -3843,7 +3873,82 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
     }
 
 
+    private void verticalBarTweak() {
+        final TextView logs = initiateLogsText();
 
+        final ProgressDialog dialog = ProgressDialog.show(MainActivity.this, "",
+                getString(R.string.tweak_loading), true);
+
+        final StringBuilder finalCommand = new StringBuilder();
+
+
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName,  flagType, name, user, intVal, committed) VALUES (\"com.google.android.projection.gearhead\",  0,\"SystemUi__horizontal_rail_canonical_breakpoint_dp\", \"\",40,0);");
+        finalCommand.append(System.getProperty("line.separator"));
+
+        runOnUiThread(new Thread() {
+            @Override
+            public void run() {
+                String path = getApplicationInfo().dataDir;
+                suitableMethodFound = true;
+                killps(logs);
+                String currentOwner = runSuWithCmd("stat -c \"%U\" /data/data/com.google.android.gms/databases/phenotype.db").getInputStreamLog();
+                String currentPolicy = gainOwnership(logs);
+
+
+                appendText(logs, runSuWithCmd(
+                        path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
+                                "'DROP TRIGGER IF EXISTS aa_vertical_bar;\n"  + finalCommand + "'"
+                ).getStreamLogsWithLabels());
+
+
+                appendText(logs, "\n\n--  run SQL method   --");
+                appendText(logs, runSuWithCmd(
+                        path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " +
+                                "'CREATE TRIGGER aa_vertical_bar AFTER DELETE\n" +
+                                "On FlagOverrides\n" +
+                                "BEGIN\n" + finalCommand + "END;'\n"
+                ).getStreamLogsWithLabels());
+
+
+                if (runSuWithCmd(path + "/sqlite3 -batch /data/data/com.google.android.gms/databases/phenotype.db " + "'SELECT name FROM sqlite_master WHERE type=\"trigger\" AND name=\"aa_vertical_bar\";'").getInputStreamLog().length() <= 4) {
+                    suitableMethodFound = false;
+                } else {
+                    appendText(logs, "\n--  end SQL method   --");
+                    save(true, "aa_vertical_bar");
+                    verticalBarTweakButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.vertical_bar_tweak));
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+                            changeStatus(verticalBarStatus, 1, true);
+                            showRebootButton();
+                        }
+                    });
+                }
+
+                appendText(logs, "\n\n--  restoring Google Play Services   --");
+                appendText(logs, runSuWithCmd("pm enable com.google.android.gms").getStreamLogsWithLabels());
+
+
+                appendText(logs, "\n\n--  Restoring ownership of the database   --");
+                appendText(logs, runSuWithCmd("chown " + currentOwner + " /data/data/com.google.android.gms/databases/phenotype.db").getStreamLogsWithLabels());
+
+                if (currentPolicy.toLowerCase().equals("permissive")) {
+                    appendText(logs, "\n\n--  Restoring SELINUX   --");
+                    appendText(logs, runSuWithCmd("setenforce 1").getStreamLogsWithLabels());
+                }
+                dialog.dismiss();
+                if (!suitableMethodFound) {
+                    final DialogFragment notSuccessfulDialog = new NotSuccessfulDialog();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("tweak", "aa_vertical_bar");
+                    bundle.putString("log", logs.getText().toString());
+                    notSuccessfulDialog.setArguments(bundle);
+                    notSuccessfulDialog.show(getSupportFragmentManager(), "NotSuccessfulDialog");
+                }
+            }
+        });
+
+    }
 
     public void forceWideScreen(View view, final int value) {
         final TextView logs = initiateLogsText();
