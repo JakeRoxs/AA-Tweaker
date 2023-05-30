@@ -152,4 +152,6 @@ WARNING: This tweak has not been extensively tested and could potentially break 
     <string name="tutorial_portrait">This tweak will force the portrait layout of Android Auto with dashboard on the bottom.</string>
     <string name="inertial_scroll_tweak">Inertial scroll</string>
     <string name="tutorial_inertial_scroll">This tweak will override the default scrolling behaviour of Android Auto making so that it doesn\'t stop page by page.</string>
+    <string name="vertical_bar_tweak">Vertical Bar</string>
+    <string name="vertical_bar_tweak">This tweak will force the bar to be vertical. This tweak will only work on Coolwalk UI.</string>
 </resources>

@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bluetoothoff;
     private Button mdbutton;
     private Button batteryWarning;
+    private Button verticalBarTweakButton;
     private Button disableTelemetryButton;
     private Button tweakUSBBitrateButton;
     private Button tweakWiFiBitrateButton;
@@ -2219,6 +2220,8 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
 
 
         finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\", 0,\"Coolwalk__day_night_theme_enabled\", \"\" ,1,0);");
+        finalCommand.append("INSERT OR REPLACE INTO FlagOverrides (packageName, flagType, name, user, boolVal, committed) VALUES (\"com.google.android.projection.gearhead\", 0,\"Coolwalk__enable_palette_swap_by_broadcast\", \"\" ,1,0);");
+
         finalCommand.append(System.getProperty("line.separator"));
 
 
@@ -3804,6 +3807,7 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 } else {
                     appendText(logs, "\n--  end SQL method   --");
                     save(true, "aa_inertial_scroll");
+                    intertialScrollButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.inertial_scroll_tweak));
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
@@ -3837,6 +3841,9 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
         });
 
     }
+
+
+
 
     public void forceWideScreen(View view, final int value) {
         final TextView logs = initiateLogsText();

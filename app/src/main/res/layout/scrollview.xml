@@ -352,6 +352,8 @@
             app:layout_constraintTop_toTopOf="@id/battery_warning_button"
             app:layout_constraintBottom_toBottomOf="@id/battery_warning_button"/>
 
+
+
         <Button
             android:id="@+id/battoutline"
             android:layout_width="0dp"
@@ -374,6 +376,27 @@
             app:layout_constraintTop_toTopOf="@id/battoutline"
             app:layout_constraintBottom_toBottomOf="@id/battoutline" />
 
+                <Button
+                    android:id="@+id/vertical_bar_tweak"
+                    android:layout_width="0dp"
+                    style="@style/ButtonStyle"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintEnd_toStartOf="@id/message_autoread_tweak_status"
+                    app:layout_constraintTop_toBottomOf="@id/battoutline"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/vertical_bar_tweak_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_check_circle_24"
+                    android:layout_marginEnd="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/vertical_bar_tweak"
+                    app:layout_constraintBottom_toBottomOf="@id/vertical_bar_tweak" />
+
         <Button
             android:id="@+id/hunthrottlingbutton"
             android:layout_width="0dp"
@@ -384,7 +407,7 @@
             app:layout_constraintHorizontal_weight="12"
             android:text="@string/set_notification_duration_to"
             app:layout_constraintEnd_toStartOf="@id/revert_hun_throttling"
-            app:layout_constraintTop_toBottomOf="@id/battoutline"
+            app:layout_constraintTop_toBottomOf="@id/vertical_bar_tweak"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <ImageView

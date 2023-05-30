@@ -80,6 +80,7 @@ public class SplashActivity extends AppCompatActivity {
         editor.putBoolean("aa_new_seekbar", false);
         editor.putBoolean("uxprototype_tweak", false);
         editor.putBoolean("aa_material_you", false);
+        editor.putBoolean("aa_vertical_bar", false);
         editor.commit();
 
         requestLatest();
