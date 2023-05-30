@@ -3807,12 +3807,12 @@ appendText(logs, "\n\n--  Restoring ownership of the database   --");
                 } else {
                     appendText(logs, "\n--  end SQL method   --");
                     save(true, "aa_inertial_scroll");
-                    intertialScrollButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.inertial_scroll_tweak));
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
                             changeStatus(intertialScrollStatus, 1, true);
                             showRebootButton();
+                            intertialScrollButton.setText(getString(R.string.disable_tweak_string) + getString(R.string.inertial_scroll_tweak));
                         }
                     });
                 }
